@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "surface-container": "#ebedff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed": "#21005e", "primary-container": "#4965f9", "surface": "#faf8ff", "outline": "#757687", "secondary-fixed-dim": "#cebdff", "primary-fixed-dim": "#bac3ff", "outline-variant": "#c5c5d8", "on-primary-fixed": "#00105b", "secondary-container": "#7f58ed", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-tertiary-fixed": "#002020", "on-primary-container": "#fffbff", "primary-fixed": "#dee0ff", "secondary-fixed": "#e8ddff", "on-primary": "#ffffff", "tertiary-container": "#008283", "surface-tint": "#2d4ce2", "on-surface-variant": "#444655", "on-secondary": "#ffffff", "surface-container-highest": "#dce1fd", "on-tertiary-container": "#f3fffe", "on-primary-fixed-variant": "#002fc9", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "surface-dim": "#d4d9f4", "surface-container-high": "#e3e7ff", "surface-variant": "#dce1fd", "tertiary-fixed": "#6df7f8", "background": "#faf8ff", "on-error": "#ffffff", "inverse-surface": "#2a3044", "tertiary": "#006768", "surface-container-lowest": "#ffffff", "secondary": "#663bd2", "on-secondary-fixed-variant": "#501dbc", "error-container": "#ffdad6", "on-surface": "#151b2e", "inverse-on-surface": "eff0ff", "inverse-primary": "#bac3ff", "primary": "#2a49df", "on-tertiary": "#ffffff", "surface-bright": "#faf8ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", gutter: "0.75rem", "space-sm": "0.5rem", margin: "1rem", "space-lg": "1.25rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "metric-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen relative antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container/60 transition-colors text-on-surface -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="text-headline-md font-headline-md text-on-surface tracking-tight truncate max-w-[200px]">App Lock &amp; Security</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28 space-y-space-lg">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full">
+<div class="absolute -top-10 -left-6 w-56 h-56 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-24 -right-10 w-64 h-64 bg-tertiary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-96 left-8 w-60 h-60 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Security Status Hero Card -->
+<section class="relative overflow-hidden rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl shadow-sm p-space-lg flex flex-col space-y-space-md">
+<!-- Decorative Shield Background SVG Motif -->
+<div class="absolute -right-6 -bottom-6 w-36 h-36 opacity-10 pointer-events-none text-primary">
+<svg class="w-full h-full" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 8.97-7 10.15-3.87-1.18-7-5.48-7-10.15V6.3l7-3.12zM12 7c-1.66 0-3 1.34-3 3v2H8v6h8v-6h-1v-2c0-1.66-1.34-3-3-3zm0 2c.55 0 1 .45 1 1v2h-2v-2c0-.55.45-1 1-1z"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div class="flex flex-col">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-container text-on-tertiary-container w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed mr-1.5 animate-pulse"></span>
+              Vault Active
+            </span>
+<span class="text-label-sm font-label-sm text-outline mt-0.5">Momentum Shield v2.4</span>
+</div>
+</div>
+<!-- Master Switch -->
+<button aria-checked="true" class="w-13 h-7 w-12 h-7 bg-primary rounded-full relative p-0.5 flex items-center transition-colors duration-200" id="master-toggle" role="switch" type="button">
+<span class="w-6 h-6 bg-surface rounded-full shadow-sm transform translate-x-5 transition-transform duration-200 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+</span>
+</button>
+</div>
+<div class="pt-1">
+<h2 class="text-headline-md font-headline-md text-on-surface">App Lock is Active</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Your spiritual journals, reflective notes, personal finances, and intentional schedules are encrypted with biometric security.
+        </p>
+</div>
+<!-- Quick stats micro-strip -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="bg-surface-container-low/70 rounded-md p-2.5 flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Encrypted State</span>
+<span class="text-body-sm font-body-sm text-on-surface">AES-256 GCM</span>
+</div>
+</div>
+<div class="bg-surface-container-low/70 rounded-md p-2.5 flex items-center space-x-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">key</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Secure Enclave</span>
+<span class="text-body-sm font-body-sm text-on-surface">Hardware Bound</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Authentication Methods Section -->
+<div class="pt-space-md space-y-space-md">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Authentication Methods</h3>
+<span class="text-label-sm font-label-sm text-outline">2 Methods Configured</span>
+</div>
+<!-- Biometric Card -->
+<div class="rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">fingerprint</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg text-on-surface">Biometrics (Face / Fingerprint)</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Instant entry upon opening Momentum</p>
+</div>
+</div>
+<button aria-checked="true" class="w-11 h-6 bg-primary rounded-full relative p-0.5 flex items-center transition-colors duration-200" id="toggle-bio" role="switch" type="button">
+<span class="w-5 h-5 bg-surface rounded-full shadow-sm transform translate-x-5 transition-transform duration-200"></span>
+</button>
+</div>
+<div class="rounded bg-surface-container-low/60 p-2.5 flex items-start space-x-2">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">info</span>
+<p class="text-body-sm font-body-sm text-outline leading-snug">
+            Requires your backup PIN whenever biometrics fail, after device reboot, or after 72 hours of inactivity.
+          </p>
+</div>
+</div>
+<!-- PIN Protection Card -->
+<div class="rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">password</span>
+</div>
+<div>
+<h4 class="text-body-lg font-body-lg text-on-surface">PIN Protection</h4>
+<p class="text-body-sm font-body-sm text-secondary flex items-center gap-1 font-medium">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+                Active (••••)
+              </p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-outline">Primary Backup</span>
+</div>
+<div class="grid grid-cols-1 gap-2 pt-1">
+<button class="w-full flex items-center justify-between p-3 rounded bg-surface-container-low hover:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">edit_note</span>
+<span class="text-body-md font-body-md text-on-surface">Change 4-Digit PIN</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded bg-surface-container-low hover:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock_reset</span>
+<span class="text-body-md font-body-md text-on-surface">Switch to Alphanumeric Passcode</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lock Timing & Trigger Behavior -->
+<div class="pt-space-md space-y-space-md">
+<div class="px-1">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Lock Timing &amp; Trigger</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Specify how swiftly Momentum re-secures your data</p>
+</div>
+<div class="rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg shadow-sm space-y-space-md">
+<!-- Radio-style trigger selection -->
+<div class="space-y-2" id="timing-options">
+<!-- Option 1: Immediately (Selected) -->
+<div class="timing-item flex items-center justify-between p-3 rounded cursor-pointer bg-primary-fixed/30 text-on-primary-fixed transition-colors" data-value="immediate">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<div>
+<p class="text-body-md font-body-md font-semibold text-on-surface">Immediately upon exiting</p>
+<p class="text-label-sm font-label-sm text-outline">Maximum protection recommended</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[14px]">check</span>
+</div>
+</div>
+<!-- Option 2: 1 min -->
+<div class="timing-item flex items-center justify-between p-3 rounded cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors" data-value="1min">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline text-[20px]">timer</span>
+<div>
+<p class="text-body-md font-body-md text-on-surface">After 1 minute in background</p>
+<p class="text-label-sm font-label-sm text-outline">Balanced for multi-tasking</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center timing-check hidden">
+<span class="material-symbols-outlined text-on-surface text-[14px]">check</span>
+</div>
+</div>
+<!-- Option 3: 5 min -->
+<div class="timing-item flex items-center justify-between p-3 rounded cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors" data-value="5min">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<div>
+<p class="text-body-md font-body-md text-on-surface">After 5 minutes in background</p>
+<p class="text-label-sm font-label-sm text-outline">Convenient during continuous sessions</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center timing-check hidden">
+<span class="material-symbols-outlined text-on-surface text-[14px]">check</span>
+</div>
+</div>
+<!-- Option 4: On Lock -->
+<div class="timing-item flex items-center justify-between p-3 rounded cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors" data-value="lock">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-outline text-[20px]">phonelink_lock</span>
+<div>
+<p class="text-body-md font-body-md text-on-surface">When device locks</p>
+<p class="text-label-sm font-label-sm text-outline">Matches OS display power-off</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-dim flex items-center justify-center timing-check hidden">
+<span class="material-symbols-outlined text-on-surface text-[14px]">check</span>
+</div>
+</div>
+</div>
+<!-- Privacy Shield in Multitasking -->
+<div class="pt-2 border-t border-transparent">
+<div class="p-3 rounded bg-surface-container-low flex items-center justify-between">
+<div class="flex items-start space-x-3 pr-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">blur_on</span>
+<div>
+<p class="text-body-md font-body-md text-on-surface font-medium">Hide App Screen in Multitasking</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Blurs app preview snapshot in recent apps carousel</p>
+</div>
+</div>
+<button aria-checked="true" class="w-11 h-6 bg-primary rounded-full relative p-0.5 flex items-center transition-colors duration-200 shrink-0" id="toggle-multitasking" role="switch" type="button">
+<span class="w-5 h-5 bg-surface rounded-full shadow-sm transform translate-x-5 transition-transform duration-200"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sensitive Feature Guardrails -->
+<div class="pt-space-md space-y-space-md">
+<div class="px-1 flex items-center justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Selective Guardrails</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Granular security per sacred &amp; personal domain</p>
+</div>
+<span class="material-symbols-outlined text-outline">tune</span>
+</div>
+<div class="rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg shadow-sm space-y-3">
+<!-- Finance & Expenses -->
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface font-medium">Finance &amp; Halal Expenses</p>
+<p class="text-label-sm font-label-sm text-outline">Requires re-verification</p>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-on-surface-variant font-medium">
+            Always Locked
+          </span>
+</div>
+<!-- Notes & Journals -->
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface font-medium">Reflections &amp; Intimate Notes</p>
+<p class="text-label-sm font-label-sm text-outline">Requires re-verification</p>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-on-surface-variant font-medium">
+            Always Locked
+          </span>
+</div>
+<!-- Quick Tasbeeh Exception -->
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/50 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">flare</span>
+</div>
+<div>
+<p class="text-body-md font-body-md text-on-surface font-medium">Allow Quick Dhikr Counter</p>
+<p class="text-label-sm font-label-sm text-outline">Permit Tasbeeh widget without unlocking</p>
+</div>
+</div>
+<button aria-checked="true" class="w-11 h-6 bg-primary rounded-full relative p-0.5 flex items-center transition-colors duration-200 shrink-0" id="toggle-tasbeeh" role="switch" type="button">
+<span class="w-5 h-5 bg-surface rounded-full shadow-sm transform translate-x-5 transition-transform duration-200"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Zero-Knowledge Encryption Trust Note -->
+<div class="pt-space-md">
+<div class="rounded-lg bg-surface-container-high/60 backdrop-blur-md p-space-md flex items-start space-x-3 shadow-none">
+<div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+</div>
+<div class="space-y-0.5">
+<h5 class="text-label-md font-label-md text-on-surface">Zero-Knowledge Architecture</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+            Your PIN, passcodes, and biometrics never leave this hardware unit. Authentication keys are held exclusively within your device Secure Element.
+          </p>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-space-lg">
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary via-secondary-container to-tertiary flex items-center justify-center space-x-2 text-on-primary font-body-lg text-body-lg shadow-md hover:shadow-lg active:scale-[0.98] transition-all" id="save-btn" type="button">
+<span>Save Security Preferences</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="text-center mt-2.5">
+<span class="text-label-sm font-label-sm text-outline">Last modified: Today at 07:42 AM</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive micro-interactions for toggles and timing options
+  (function () {
+    // Toggle Helper
+    function setupToggle(id) {
+      const toggle = document.getElementById(id);
+      if (!toggle) return;
+      toggle.addEventListener('click', function () {
+        const isChecked = this.getAttribute('aria-checked') === 'true';
+        const nextState = !isChecked;
+        this.setAttribute('aria-checked', String(nextState));
+        const indicator = this.querySelector('span');
+
+        if (nextState) {
+          this.classList.remove('bg-surface-dim');
+          this.classList.add('bg-primary');
+          indicator.classList.remove('translate-x-0');
+          indicator.classList.add('translate-x-5');
+        } else {
+          this.classList.remove('bg-primary');
+          this.classList.add('bg-surface-dim');
+          indicator.classList.remove('translate-x-5');
+          indicator.classList.add('translate-x-0');
+        }
+      });
+    }
+
+    setupToggle('master-toggle');
+    setupToggle('toggle-bio');
+    setupToggle('toggle-multitasking');
+    setupToggle('toggle-tasbeeh');
+
+    // Radio Selection for Timing
+    const timingItems = document.querySelectorAll('.timing-item');
+    timingItems.forEach(item => {
+      item.addEventListener('click', () => {
+        timingItems.forEach(i => {
+          i.classList.remove('bg-primary-fixed/30', 'text-on-primary-fixed');
+          i.classList.add('bg-surface-container-low');
+          const check = i.querySelector('.timing-check') || i.querySelector('.w-5.h-5');
+          if (check) {
+            check.classList.add('hidden', 'bg-surface-dim');
+            check.classList.remove('bg-primary', 'flex');
+          }
+        });
+
+        item.classList.remove('bg-surface-container-low');
+        item.classList.add('bg-primary-fixed/30', 'text-on-primary-fixed');
+        let check = item.querySelector('.timing-check');
+        if (!check) {
+          check = item.querySelector('.w-5.h-5');
+        }
+        if (check) {
+          check.classList.remove('hidden', 'bg-surface-dim');
+          check.classList.add('bg-primary', 'flex');
+          const checkIcon = check.querySelector('span');
+          if (checkIcon) {
+            checkIcon.classList.remove('text-on-surface');
+            checkIcon.classList.add('text-on-primary');
+          }
+        }
+      });
+    });
+
+    // Save button subtle feedback
+    const saveBtn = document.getElementById('save-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const originalContent = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">check_circle</span><span>Preferences Saved</span>';
+        saveBtn.classList.remove('from-primary', 'via-secondary-container', 'to-tertiary');
+        saveBtn.classList.add('bg-tertiary');
+        setTimeout(() => {
+          saveBtn.innerHTML = originalContent;
+          saveBtn.classList.add('from-primary', 'via-secondary-container', 'to-tertiary');
+          saveBtn.classList.remove('bg-tertiary');
+        }, 1800);
+      });
+    }
+  })();
+</script></main></body></html>

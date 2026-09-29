@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#090d16;}body{overscroll-behavior:none;font-family:'Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ffb4ab", "background": "#090d16", "surface-container-low": "#111827", "on-tertiary-container": "#f3fffe", "on-secondary-fixed": "#001f26", "on-error": "#690005", "primary": "#818cf8", "on-secondary-container": "#00424e", "on-tertiary-fixed": "#002020", "inverse-primary": "#2a49df", "error-container": "#93000a", "primary-fixed": "#312e81", "on-secondary": "#003640", "on-primary": "#ffffff", "primary-fixed-dim": "#c0c1ff", "on-surface-variant": "#94a3b8", "secondary": "#38bdf8", "primary-container": "#4f46e5", "outline-variant": "#334155", "surface-container-lowest": "#0b0f19", "on-tertiary": "#ffffff", "tertiary": "#2dd4bf", "surface-container-highest": "#1e293b", "surface": "#090d16", "outline": "#64748b", "secondary-container": "#0284c7", "surface-container-high": "#1a2234", "on-surface": "#f8fafc", "on-primary-fixed": "#e0e7ff", "surface-dim": "#080c14", "on-primary-container": "#ffffff", "on-tertiary-fixed-variant": "#004f50", "tertiary-container": "#0f766e", "secondary-fixed": "#082f49", "on-secondary-fixed-variant": "#004e5c", "surface-variant": "#1e293b", "inverse-surface": "#f8fafc", "surface-bright": "#1e293b", "surface-container": "#131b2c", "surface-tint": "#818cf8", "tertiary-fixed": "#134e4a", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#c7d2fe", "on-background": "#f8fafc", "tertiary-fixed-dim": "#2dd4bf", "inverse-on-surface": "#0f172a", "secondary-fixed-dim": "#38bdf8" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "margin": "1rem", "space-xl": "1.75rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "gutter": "0.75rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "metric-lg": ["Inter"], "display-lg": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#090d16] text-on-surface min-h-screen relative flex flex-col selection:bg-indigo-500/30 selection:text-indigo-200">
+<!-- Subtle ambient background gradients matching Dark Mode Finance screen -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-indigo-600/15 blur-3xl"></div>
+<div class="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-cyan-600/15 blur-3xl"></div>
+<div class="absolute bottom-20 left-1/2 -translate-x-1/2 w-[32rem] h-72 rounded-full bg-teal-500/10 blur-3xl"></div>
+</div>
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#090d16]/75 backdrop-blur-xl border-b border-white/5 shadow-[0_1px_12px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-slate-300 hover:text-white hover:bg-white/5 active:bg-white/10 transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-white select-none tracking-tight">Edit Expense</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search or secondary action" class="w-11 h-11 flex items-center justify-center rounded-full text-slate-400 hover:text-white hover:bg-white/5 transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center shadow-[0_2px_10px_rgba(99,102,241,0.35)]"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-transparent pt-16 pb-safe px-margin"><div class="flex flex-col w-full pb-28 space-y-4">
+<!-- Mode Pill & Quick Context Indicator -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-space-xs bg-[#131b2c]/80 border border-white/10 px-3 py-1.5 rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.3)]">
+<span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-slate-400 font-medium tracking-wide">EDITING TRANSACTION</span>
+<span class="font-label-sm text-label-sm text-indigo-300 font-bold ml-0.5">#TX-8924</span>
+</div>
+<button class="flex items-center gap-1 text-rose-300 bg-rose-500/15 border border-rose-500/30 hover:bg-rose-500/25 px-3 py-1.5 rounded-full transition-colors active:scale-95 shadow-sm" id="delete-header-btn" type="button">
+<span class="material-symbols-outlined text-[15px]">delete</span>
+<span class="font-label-sm text-label-sm font-semibold">Delete</span>
+</button>
+</div>
+<!-- Hero Amount Card (Glassmorphic) -->
+<div class="w-full bg-[#131b2c]/75 backdrop-blur-2xl rounded-lg p-5 border border-white/10 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.5),0_1px_2px_rgba(255,255,255,0.05)_inset] relative overflow-hidden flex flex-col items-center">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-indigo-500/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -left-8 -bottom-8 w-28 h-28 bg-sky-500/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between w-full mb-3 relative z-10">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-slate-400">Expense Amount</span>
+<div class="flex items-center bg-[#0b0f19]/80 border border-white/10 rounded-full p-0.5 shadow-inner">
+<button class="currency-btn active-curr px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-indigo-600 text-white font-semibold shadow-sm transition-all" type="button">USD ($)</button>
+<button class="currency-btn px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-slate-400 hover:text-white transition-all" type="button">EUR (€)</button>
+<button class="currency-btn px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-slate-400 hover:text-white transition-all" type="button">AFN (؋)</button>
+</div>
+</div>
+<!-- Editable Amount Display -->
+<div class="flex items-baseline justify-center gap-1 my-2 relative z-10">
+<span class="font-display-lg text-display-lg text-indigo-400 select-none font-bold">$</span>
+<input class="font-display-lg text-display-lg text-white bg-transparent text-center focus:outline-none max-w-[190px] font-bold tracking-tight caret-indigo-400" id="amount-input" inputmode="decimal" type="text" value="64.50"/>
+</div>
+<p class="font-body-sm text-body-sm text-slate-400 mb-4 relative z-10">Tap number to adjust custom balance</p>
+<!-- Quick Increment Chips -->
+<div class="flex items-center justify-center flex-wrap gap-2 w-full pt-1 relative z-10">
+<button class="px-3 py-1.5 rounded-full bg-[#1e293b]/70 hover:bg-[#1e293b] border border-white/10 text-slate-200 font-label-md text-label-md transition-all active:scale-95 shadow-sm" onclick="adjustAmount(10)" type="button">
+        + $10
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-[#1e293b]/70 hover:bg-[#1e293b] border border-white/10 text-slate-200 font-label-md text-label-md transition-all active:scale-95 shadow-sm" onclick="adjustAmount(25)" type="button">
+        + $25
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-[#1e293b]/70 hover:bg-[#1e293b] border border-white/10 text-slate-200 font-label-md text-label-md transition-all active:scale-95 shadow-sm" onclick="adjustAmount(50)" type="button">
+        + $50
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-400/30 text-indigo-300 font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1 shadow-sm" onclick="roundUpAmount()" type="button">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+        Round Up
+      </button>
+</div>
+</div>
+<!-- Category Selector Bento Container -->
+<div class="w-full bg-[#131b2c]/75 backdrop-blur-2xl rounded-lg p-5 border border-white/10 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.5),0_1px_2px_rgba(255,255,255,0.05)_inset] space-y-3">
+<div class="flex items-baseline justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-white tracking-tight">Category</h2>
+<p class="font-body-sm text-body-sm text-slate-400">Classify this transaction</p>
+</div>
+<span class="font-label-sm text-label-sm text-indigo-300 font-medium" id="selected-category-label">Food &amp; Dining</span>
+</div>
+<!-- Category Chips Flow -->
+<div class="grid grid-cols-3 gap-2 pt-1" id="category-grid">
+<!-- Food (Active Default) -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-indigo-600 text-white font-label-md text-label-md shadow-[0_4px_14px_rgba(79,70,229,0.35)] border border-indigo-400/30 transition-all text-left" data-cat="Food &amp; Dining" type="button">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+<span class="truncate">Food</span>
+<span class="material-symbols-outlined text-[15px] ml-auto category-check">check</span>
+</button>
+<!-- Transportation -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Transportation" type="button">
+<span class="material-symbols-outlined text-[18px] text-indigo-400">directions_car</span>
+<span class="truncate">Transport</span>
+</button>
+<!-- Shopping -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Shopping" type="button">
+<span class="material-symbols-outlined text-[18px] text-sky-400">shopping_bag</span>
+<span class="truncate">Shopping</span>
+</button>
+<!-- Bills -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Bills &amp; Utilities" type="button">
+<span class="material-symbols-outlined text-[18px] text-teal-400">receipt_long</span>
+<span class="truncate">Bills</span>
+</button>
+<!-- Rent -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Rent &amp; Housing" type="button">
+<span class="material-symbols-outlined text-[18px] text-indigo-400">home</span>
+<span class="truncate">Rent</span>
+</button>
+<!-- Health -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Health &amp; Fitness" type="button">
+<span class="material-symbols-outlined text-[18px] text-rose-400">ecg_heart</span>
+<span class="truncate">Health</span>
+</button>
+<!-- Education -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Education" type="button">
+<span class="material-symbols-outlined text-[18px] text-purple-400">school</span>
+<span class="truncate">Education</span>
+</button>
+<!-- Entertainment -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Entertainment" type="button">
+<span class="material-symbols-outlined text-[18px] text-cyan-400">movie</span>
+<span class="truncate">Entertain</span>
+</button>
+<!-- Family -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Family &amp; Care" type="button">
+<span class="material-symbols-outlined text-[18px] text-indigo-400">group</span>
+<span class="truncate">Family</span>
+</button>
+<!-- Work -->
+<button class="cat-pill flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Work &amp; Professional" type="button">
+<span class="material-symbols-outlined text-[18px] text-slate-400">business_center</span>
+<span class="truncate">Work</span>
+</button>
+<!-- Other -->
+<button class="cat-pill col-span-2 flex items-center gap-2 p-2.5 rounded-DEFAULT bg-[#111827]/70 hover:bg-[#1a2234] border border-white/5 text-slate-200 font-label-md text-label-md transition-all text-left" data-cat="Other" type="button">
+<span class="material-symbols-outlined text-[18px] text-slate-400">more_horiz</span>
+<span class="truncate">Other / Uncategorized</span>
+</button>
+</div>
+</div>
+<!-- Transaction Details Card -->
+<div class="w-full bg-[#131b2c]/75 backdrop-blur-2xl rounded-lg p-5 border border-white/10 shadow-[0_12px_32px_-4px_rgba(0,0,0,0.5),0_1px_2px_rgba(255,255,255,0.05)_inset] space-y-4">
+<h2 class="font-headline-sm text-headline-sm text-white tracking-tight">Transaction Details</h2>
+<!-- Date & Time Row -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider">Date &amp; Time</label>
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-[#0b0f19]/70 border border-white/5 hover:border-white/10 hover:bg-[#0b0f19] transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/20 flex items-center justify-center text-indigo-300">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-white">Today, Oct 24, 2026</p>
+<p class="font-body-sm text-body-sm text-slate-400">10:15 AM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">edit_calendar</span>
+</div>
+</div>
+<!-- Merchant / Payee Row -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider">Merchant / Payee</label>
+<div class="flex items-center gap-2.5 p-3 rounded-DEFAULT bg-[#0b0f19]/70 border border-white/5 focus-within:border-indigo-400/40 focus-within:bg-[#0b0f19] transition-colors">
+<div class="w-8 h-8 rounded-full bg-sky-500/20 border border-sky-400/20 flex items-center justify-center text-sky-300 shrink-0">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<input class="w-full font-body-md text-body-md font-semibold text-white bg-transparent focus:outline-none" placeholder="Who did you pay?" type="text" value="Organic Groceries Market"/>
+</div>
+</div>
+<!-- Payment Account Row -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider">Payment Account</label>
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-[#0b0f19]/70 border border-white/5 hover:border-white/10 hover:bg-[#0b0f19] transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-teal-500/20 border border-teal-400/20 flex items-center justify-center text-teal-300">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-white">Default Checking</p>
+<p class="font-body-sm text-body-sm text-slate-400">•••• 4821</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Note & Receipt Preview -->
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-slate-400 uppercase tracking-wider">Notes &amp; Receipt</label>
+<span class="font-label-sm text-label-sm text-slate-500" id="char-counter">44 / 140</span>
+</div>
+<div class="p-3 rounded-DEFAULT bg-[#0b0f19]/70 border border-white/5 focus-within:border-indigo-400/40 focus-within:bg-[#0b0f19] transition-colors flex flex-col gap-2">
+<textarea class="w-full font-body-md text-body-md text-slate-200 placeholder:text-slate-500 bg-transparent focus:outline-none resize-none" id="note-input" maxlength="140" placeholder="Add an optional note..." rows="2">Weekly fresh produce, oats, and almond milk</textarea>
+<div class="flex items-center gap-2 pt-1 border-t border-white/5">
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1e293b]/70 border border-white/10 hover:bg-[#1e293b] text-slate-300 font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px] text-teal-300">receipt</span>
+<span>Receipt Attached</span>
+</button>
+<button class="flex items-center gap-1 px-2 py-1 rounded-full text-indigo-300 hover:bg-indigo-500/10 font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add_a_photo</span>
+<span>Replace</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary & Secondary Action Block -->
+<div class="space-y-3 pt-2">
+<button class="w-full py-3.5 px-4 rounded-full bg-gradient-to-r from-indigo-500 via-indigo-600 to-purple-600 text-white font-headline-sm text-headline-sm shadow-[0_8px_24px_rgba(79,70,229,0.4)] hover:shadow-[0_12px_28px_rgba(79,70,229,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="save-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Save Changes</span>
+</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="w-full py-3 px-4 rounded-full bg-[#131b2c]/85 border border-white/10 hover:bg-[#1a2234] text-slate-300 hover:text-white font-body-lg text-body-lg text-center transition-colors active:scale-95" onclick="history.back()" type="button">
+        Cancel
+      </button>
+<button class="w-full py-3 px-4 rounded-full bg-rose-500/20 border border-rose-500/30 text-rose-300 hover:bg-rose-500/30 font-body-lg text-body-lg text-center active:scale-95 transition-all flex items-center justify-center gap-1.5" id="delete-bottom-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function adjustAmount(delta) {
+    const input = document.getElementById('amount-input');
+    let current = parseFloat(input.value) || 0;
+    current += delta;
+    input.value = current.toFixed(2);
+  }
+
+  function roundUpAmount() {
+    const input = document.getElementById('amount-input');
+    let current = parseFloat(input.value) || 0;
+    input.value = (Math.ceil(current)).toFixed(2);
+  }
+
+  // Interactive Category Selection
+  const categoryPills = document.querySelectorAll('.cat-pill');
+  const label = document.getElementById('selected-category-label');
+
+  categoryPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      categoryPills.forEach(p => {
+        p.classList.remove('bg-indigo-600', 'text-white', 'shadow-[0_4px_14px_rgba(79,70,229,0.35)]', 'border-indigo-400/30');
+        p.classList.add('bg-[#111827]/70', 'text-slate-200', 'border-white/5');
+        const check = p.querySelector('.category-check');
+        if (check) check.remove();
+      });
+
+      pill.classList.remove('bg-[#111827]/70', 'text-slate-200', 'border-white/5');
+      pill.classList.add('bg-indigo-600', 'text-white', 'shadow-[0_4px_14px_rgba(79,70,229,0.35)]', 'border-indigo-400/30');
+
+      const checkIcon = document.createElement('span');
+      checkIcon.className = 'material-symbols-outlined text-[15px] ml-auto category-check';
+      checkIcon.innerText = 'check';
+      pill.appendChild(checkIcon);
+
+      if (label) {
+        label.innerText = pill.getAttribute('data-cat') || 'Selected';
+      }
+    });
+  });
+
+  // Note Character Counter
+  const noteInput = document.getElementById('note-input');
+  const charCounter = document.getElementById('char-counter');
+  if (noteInput && charCounter) {
+    noteInput.addEventListener('input', (e) => {
+      charCounter.innerText = `${e.target.value.length} / 140`;
+    });
+  }
+
+  // Delete Action Prompt
+  const deleteActions = [document.getElementById('delete-header-btn'), document.getElementById('delete-bottom-btn')];
+  deleteActions.forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', () => {
+        if (confirm('Delete this expense transaction of $64.50?')) {
+          history.back();
+        }
+      });
+    }
+  });
+
+  // Save changes feedback
+  const saveBtn = document.getElementById('save-btn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Saving...</span>';
+      setTimeout(() => {
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Updated!</span>';
+        setTimeout(() => history.back(), 500);
+      }, 600);
+    });
+  }
+</script></main></body></html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0e131f;color:#dde2f3;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#d0bcff", "surface-container-low": "#161c28", "on-surface-variant": "#c7c4d7", "tertiary-fixed-dim": "#d0bcff", "tertiary-container": "#a078ff", "background": "#0e131f", "on-tertiary-container": "#340080", "primary-fixed-dim": "#c0c1ff", "primary-fixed": "#e1e0ff", "secondary-container": "#03b5d3", "surface-container-highest": "#2f3542", "surface": "#0e131f", "on-tertiary-fixed-variant": "#5516be", "surface-dim": "#0e131f", "on-background": "#dde2f3", "surface-container-high": "#242a36", "on-secondary": "#003640", "surface-variant": "#2f3542", "on-secondary-fixed": "#001f26", "on-primary-container": "#0d0096", "error-container": "#93000a", "inverse-primary": "#494bd6", "on-error-container": "#ffdad6", "primary": "#c0c1ff", "on-secondary-container": "#00424e", "on-primary-fixed": "#07006c", "on-secondary-fixed-variant": "#004e5c", "on-error": "#690005", "tertiary-fixed": "#e9ddff", "on-surface": "#dde2f3", "surface-container-lowest": "#080e1a", "on-tertiary": "#3c0091", "secondary-fixed-dim": "#4cd7f6", "outline": "#908fa0", "on-tertiary-fixed": "#23005c", "surface-container": "#1a202c", "secondary-fixed": "#acedff", "outline-variant": "#464554", "on-primary": "#1000a9", "primary-container": "#8083ff", "secondary": "#4cd7f6", "on-primary-fixed-variant": "#2f2ebe", "surface-bright": "#343946", "inverse-on-surface": "#2b303d", "surface-tint": "#c0c1ff", "error": "#ffb4ab", "inverse-surface": "#dde2f3" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin": "3rem", "margin-mobile": "1rem", "space-md": "1rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "label-sm": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"] }, fontSize: { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate max-w-[200px]">Quick Counter Modal</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Contextual drafts" class="h-11 px-space-md flex items-center justify-center gap-space-xs rounded-full text-secondary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">drafts</span><span class="font-label-md text-label-md hidden sm:inline">Drafts</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface flex-1"><div class="flex flex-col w-full">
+<div class="w-full max-w-xl mx-auto px-gutter-mobile py-space-md space-y-space-md">
+<!-- Sub-bar (Capsule status & reset action) -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          NEW DHIKR
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Custom Counter</span>
+</div>
+<button aria-label="Reset fields" class="w-8 h-8 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant flex items-center justify-center transition-colors shadow-sm" title="Reset counter form" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+<!-- Section 1: Dhikr Title Card -->
+<section class="rounded-xl bg-surface-container-low/75 backdrop-blur-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Dhikr Title <span class="text-secondary">*</span></span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Primary Name</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Required</span>
+</div>
+<!-- Title Input Box -->
+<div class="relative flex items-center">
+<input class="w-full h-11 pl-space-md pr-11 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-inner focus:outline-none focus:bg-surface-container" id="dhikr-input" placeholder="Enter Dhikr title" type="text" value="Astaghfirullah wa Atubu Ilayh"/>
+<span class="material-symbols-outlined absolute right-3 text-secondary text-[20px] pointer-events-none">menu_book</span>
+</div>
+<!-- Calligraphy Preview Sub-Card -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container-lowest p-space-md shadow-inner">
+<!-- Ambient decorative backdrop image -->
+<div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" data-alt="Moody celestial Islamic sanctuary courtyard with glowing architectural arches, soft geometric watermarks, serene midnight dark ambient lighting, subtle cyan and indigo accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoSMPgQPcZ86kAXer27XkmLlOReRH-t75X9QqCgWKeeVT8Y7Kpu8rv5bzcJ8c8W6BdC7ZmYt5Czf6B7gZUDvIAEiDI8M-06lIEkOKpePpoS3eKOOqZjvJBcqVor9eVJ37YcqpKLp4LnunIj67d2ZzZ_Ivf_yJX8AKXKeuEy5eSV72SYZChuKZloE1hZgksjljHwSTn_9sQcocVpJ2fFeuothGqSYyXLXAh50RprSeof9SItotFjmE')"></div>
+<div class="relative z-10 flex flex-col items-center justify-center text-center py-space-sm space-y-space-xs">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-secondary/80">Preview (Script)</span>
+<p class="text-[26px] leading-[46px] font-semibold text-primary-fixed tracking-wide" id="arabic-preview" style="font-family: 'Space Grotesk', serif; direction: rtl;">
+            أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ
+          </p>
+</div>
+</div>
+<!-- Preset Suggestions -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold">Preset Suggestions</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap to fill</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="selectPreset('SubhanAllah', 'سُبْحَانَ اللَّهِ', 'Glory be to Allah', 33)" type="button">
+            SubhanAllah
+          </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="selectPreset('Alhamdulillah', 'الْحَمْدُ لِلَّهِ', 'All praise is due to Allah', 33)" type="button">
+            Alhamdulillah
+          </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="selectPreset('Allahu Akbar', 'اللَّهُ أَكْبَرُ', 'Allah is the Greatest', 34)" type="button">
+            Allahu Akbar
+          </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="selectPreset('Astaghfirullah', 'أَسْتَغْفِرُ اللَّهَ', 'I seek forgiveness of Allah', 100)" type="button">
+            Astaghfirullah
+          </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="selectPreset('La ilaha illallah', 'لَا إِلٰهَ إِلَّا اللَّهُ', 'None has the right to be worshipped but Allah', 100)" type="button">
+            La ilaha illallah
+          </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Transliteration & Meaning -->
+<section class="rounded-xl bg-surface-container-low/75 backdrop-blur-xl p-space-md shadow-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Transliteration &amp; Meaning</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Optional</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-inner focus:outline-none focus:bg-surface-container resize-none" id="meaning-input" placeholder="Add custom English translation or personal reflection note..." rows="2">I seek forgiveness of Allah and repent to Him.</textarea>
+</div>
+</section>
+<!-- Section 3: Target Count Card -->
+<section class="rounded-xl bg-surface-container-low/75 backdrop-blur-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Target Count</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Total loop target per session</p>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span id="cycle-label">100 cycles</span>
+</div>
+</div>
+<!-- Preset Grid (2 rows x 3 cols) -->
+<div class="grid grid-cols-3 gap-space-xs" id="preset-grid">
+<button class="preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm" onclick="setCount(33, this)" type="button">
+          33
+        </button>
+<button class="preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm" onclick="setCount(99, this)" type="button">
+          99
+        </button>
+<button class="preset-btn py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold transition-colors text-center shadow-md" onclick="setCount(100, this)" type="button">
+          100
+        </button>
+<button class="preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm" onclick="setCount(500, this)" type="button">
+          500
+        </button>
+<button class="preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm" onclick="setCount(1000, this)" type="button">
+          1,000
+        </button>
+<button class="preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm flex items-center justify-center gap-1" onclick="promptCustomCount(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          Custom
+        </button>
+</div>
+<!-- Stepper Controls Row -->
+<div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-lowest shadow-inner">
+<button aria-label="Decrease target count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface active:scale-95 flex items-center justify-center transition-all shadow-sm" onclick="stepCount(-1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight" id="stepper-val">100</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Beads Count</span>
+</div>
+<button aria-label="Increase target count" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface active:scale-95 flex items-center justify-center transition-all shadow-sm" onclick="stepCount(1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</section>
+<!-- Section 4: Cadence & Daily Goal -->
+<section class="rounded-xl bg-surface-container-low/75 backdrop-blur-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Daily Goal</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Track towards daily momentum ring</p>
+</div>
+</div>
+<!-- Glowing Toggle Switch -->
+<button aria-label="Toggle daily goal tracking" class="relative w-12 h-7 rounded-full bg-secondary transition-colors p-1 shadow-inner focus:outline-none" id="toggle-goal" onclick="toggleSwitch('toggle-goal', 'toggle-goal-knob')" type="button">
+<div class="w-5 h-5 rounded-full bg-on-secondary shadow-md transform translate-x-5 transition-transform duration-200 ease-out" id="toggle-goal-knob"></div>
+</button>
+</div>
+<!-- Segmented Buttons -->
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-lg bg-surface-container-lowest">
+<button class="cadence-btn py-2 rounded-md bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold text-center transition-all shadow-sm" onclick="setCadenceSegment(this)" type="button">
+          Daily Practice
+        </button>
+<button class="cadence-btn py-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium text-center transition-all" onclick="setCadenceSegment(this)" type="button">
+          Specific Occasions
+        </button>
+</div>
+</section>
+<!-- Section 5: Reminder Notice -->
+<section class="rounded-xl bg-surface-container-low/75 backdrop-blur-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Reminder Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gentle prompt before evening</p>
+</div>
+</div>
+<!-- Glowing Toggle Switch -->
+<button aria-label="Toggle reminder notification" class="relative w-12 h-7 rounded-full bg-secondary transition-colors p-1 shadow-inner focus:outline-none" id="toggle-reminder" onclick="toggleSwitch('toggle-reminder', 'toggle-reminder-knob')" type="button">
+<div class="w-5 h-5 rounded-full bg-on-secondary shadow-md transform translate-x-5 transition-transform duration-200 ease-out" id="toggle-reminder-knob"></div>
+</button>
+</div>
+<!-- Preferred Window Dropdown Row -->
+<div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-body-sm text-body-sm">Preferred Window</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span id="window-label">After Asr (5:15 PM)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Visual Divider Accent with subtle decorative illustration placeholder -->
+<div class="rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-20 bg-cover bg-center flex items-center justify-between px-space-md" data-alt="Panoramic minimal Islamic geometric pattern woven with starry constellations, deep obsidian midnight blues, soft luminous indigo dust, modern spiritual aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxFxGmryc51HCAdncWU2hehZjwa6mWdfpFbeAXZQwitHjuCFZiPinpO-p6b7cvAhErEg7tZh0BzCwEyMslARqbX86XONPCwHYqYSSjUa4YDvmrv5nWh4TdF93XXdCrm9aPRhpn3ESin4SHYktDi0Obj4KfAzcF5ybamd4tmaTxLVONLRrrQA2CXusk1TWMOjjYPYt0t0TSPNQ-OPhzMNPlhkj3PW9PDfexxWIiXaOG_YaP2ZfBiKA')">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest/80 backdrop-blur-md flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary-fixed font-semibold">Momentum Streak Active</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">14 continuous days logged</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-lowest/80 text-secondary backdrop-blur-sm">+25 XP</span>
+</div>
+</div>
+<!-- Actions at Bottom -->
+<div class="pt-space-xs pb-space-lg space-y-space-sm">
+<!-- Primary Save Button -->
+<button class="w-full h-12 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-surface-container-lowest font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-lg shadow-primary-container/20 active:scale-[0.99] transition-transform" type="button">
+<span>Save Tasbeeh</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Secondary Frosted Cancel Button -->
+<button class="w-full h-11 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-medium flex items-center justify-center transition-colors shadow-sm" onclick="history.back()" type="button">
+        Cancel
+      </button>
+<!-- Soft Muted Dark Crimson Pill: Delete Tasbeeh -->
+<div class="flex justify-center pt-space-xs">
+<button class="px-space-md py-1.5 rounded-full bg-error-container/30 hover:bg-error-container/50 text-error font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Delete Tasbeeh</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentCount = 100;
+
+  function updateCountDisplay(val) {
+    currentCount = Math.max(1, val);
+    const stepper = document.getElementById('stepper-val');
+    const cycle = document.getElementById('cycle-label');
+    if (stepper) stepper.innerText = currentCount;
+    if (cycle) cycle.innerText = currentCount + ' cycles';
+  }
+
+  function setCount(val, btn) {
+    updateCountDisplay(val);
+    document.querySelectorAll('.preset-btn').forEach(b => {
+      b.className = 'preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm';
+    });
+    if (btn) {
+      btn.className = 'preset-btn py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold transition-colors text-center shadow-md';
+    }
+  }
+
+  function stepCount(delta) {
+    updateCountDisplay(currentCount + delta);
+    document.querySelectorAll('.preset-btn').forEach(b => {
+      b.className = 'preset-btn py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors text-center shadow-sm';
+    });
+  }
+
+  function promptCustomCount(btn) {
+    const val = prompt('Enter custom target bead count:', currentCount);
+    if (val && !isNaN(val) && Number(val) > 0) {
+      setCount(parseInt(val, 10), btn);
+    }
+  }
+
+  function selectPreset(title, arabic, meaning, count) {
+    const input = document.getElementById('dhikr-input');
+    const preview = document.getElementById('arabic-preview');
+    const meaningBox = document.getElementById('meaning-input');
+    if (input) input.value = title;
+    if (preview) preview.innerText = arabic;
+    if (meaningBox) meaningBox.value = meaning;
+    setCount(count, null);
+  }
+
+  function toggleSwitch(btnId, knobId) {
+    const btn = document.getElementById(btnId);
+    const knob = document.getElementById(knobId);
+    if (!btn || !knob) return;
+    const isActive = btn.classList.contains('bg-secondary');
+    if (isActive) {
+      btn.classList.remove('bg-secondary');
+      btn.classList.add('bg-surface-container-highest');
+      knob.classList.remove('translate-x-5', 'bg-on-secondary');
+      knob.classList.add('translate-x-0', 'bg-outline');
+    } else {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-secondary');
+      knob.classList.remove('translate-x-0', 'bg-outline');
+      knob.classList.add('translate-x-5', 'bg-on-secondary');
+    }
+  }
+
+  function setCadenceSegment(activeBtn) {
+    document.querySelectorAll('.cadence-btn').forEach(b => {
+      b.className = 'cadence-btn py-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium text-center transition-all';
+    });
+    activeBtn.className = 'cadence-btn py-2 rounded-md bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold text-center transition-all shadow-sm';
+  }
+</script></main></body></html>

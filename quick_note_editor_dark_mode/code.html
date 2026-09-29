@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "tertiary-fixed": "#6df7f8", "tertiary-container": "#008283", "on-secondary-fixed": "#21005e", "surface-container-low": "#f2f3ff", "surface-container-highest": "#dce1fd", "on-primary-container": "#fffbff", "inverse-on-surface": "#eff0ff", "on-surface-variant": "#444655", "on-tertiary-fixed": "#002020", "on-background": "#151b2e", "surface-container": "#ebedff", "primary-container": "#4965f9", "secondary-fixed-dim": "#cebdff", "on-primary": "#ffffff", "on-tertiary-container": "#f3fffe", "error-container": "#ffdad6", "surface-tint": "#2d4ce2", "outline-variant": "#c5c5d8", "primary-fixed": "#dee0ff", "on-primary-fixed": "#00105b", "on-tertiary-fixed-variant": "#004f50", "on-tertiary": "#ffffff", "outline": "#757687", "tertiary": "#006768", "background": "#faf8ff", "surface-dim": "#d4d9f4", "secondary-fixed": "#e8ddff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed-variant": "#501dbc", "on-surface": "#151b2e", "surface": "#faf8ff", "inverse-surface": "#2a3044", "error": "#ba1a1a", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container-high": "#e3e7ff", "secondary": "#663bd2", "on-secondary": "#ffffff", "primary": "#2a49df", "on-primary-fixed-variant": "#002fc9", "inverse-primary": "#bac3ff", "secondary-container": "#7f58ed", "surface-bright": "#faf8ff", "surface-variant": "#dce1fd", "primary-fixed-dim": "#bac3ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", "space-lg": "1.25rem", "space-md": "0.75rem", gutter: "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", margin: "1rem" }, fontFamily: { "metric-lg": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"] }, fontSize: { "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/75 backdrop-blur-xl shadow-[0_1px_12px_rgba(42,73,223,0.05)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm border-b border-outline-variant/20 bg-surface-container-lowest/80 backdrop-blur-xl"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Back or Close" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Create New Note</h1><span class="font-label-sm text-label-sm text-secondary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block animate-pulse"></span>Saved to Cloud</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Share Note" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><button aria-label="More Options" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-outline-variant/30 shadow-md" src="https://lh3.googleusercontent.com/aida/AEtjO1Xqivgb8WnRmLof77BnZPzyZBpzbvUP1AVCrs3mvDfnB_f1RZXcFmBFA_a6HG6vfOogCi-CZxVreOdw6r686Kaf2HymZuMc7nO4lOXpxAOngehZRKb6t3YLAb7DlypVWHqhxt-xTwWeYAmsI6XFcvhYPOLlUX2ysjARmRemkhivrzCI4_28-zoF78qcnwkZuMSSN64w1b-y6TJvnm0moiPO0NRZ0PsoCWGadzO9EQbk1caL1rDfzQ7UFe5rUxR7vqgqDpSqy2PQ"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full relative pb-12 overflow-hidden">
+<!-- Ambient Atmospheric Gradient Glows -->
+<div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-gradient-to-tr from-secondary-fixed/50 to-primary-fixed/40 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-72 -right-16 w-72 h-72 rounded-full bg-gradient-to-bl from-tertiary-fixed/30 via-primary-fixed/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute bottom-20 left-4 w-80 h-80 rounded-full bg-gradient-to-r from-secondary-fixed-dim/20 to-surface-container-high/40 blur-3xl pointer-events-none -z-10"></div>
+<!-- Note Workspace Shell -->
+<div class="px-margin flex flex-col gap-space-md w-full max-w-xl mx-auto"><!-- 1. Top Sub-Bar & Autosave Indicator -->
+<div class="flex items-center justify-between py-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/60 backdrop-blur-md shadow-sm text-secondary font-label-md text-label-md border border-outline-variant/20">
+<span class="material-symbols-outlined text-[14px] text-secondary animate-pulse" style="font-variation-settings: 'FILL' 1;">bolt</span>
+          Autosaved • 10:45 AM
+        </span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high/60 backdrop-blur-md px-1.5 py-1 rounded-full shadow-sm border border-outline-variant/20">
+<button aria-label="Pin Note" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90" id="pinToggleBtn" title="Pin Note">
+<span class="material-symbols-outlined text-[19px]" id="pinIcon">push_pin</span>
+</button>
+<button aria-label="Appearance Options" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90" title="Color Theme">
+<span class="material-symbols-outlined text-[19px]">palette</span>
+</button>
+<button aria-label="Delete Quick Note" class="w-8 h-8 rounded-full flex items-center justify-center text-error hover:bg-error-container/40 transition-all active:scale-90" title="Discard Note">
+<span class="material-symbols-outlined text-[19px]">delete_outline</span>
+</button>
+</div>
+</div>
+<!-- 2. Category & Scope Chips (Horizontal Flow) -->
+<div class="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar select-none -mx-margin px-margin">
+<button class="category-pill group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface border border-outline-variant/30 shadow-sm active:scale-95 transition-all text-label-md font-label-md shrink-0">
+<span class="text-sm">💡</span>
+<span>Idea</span>
+</button>
+<button class="category-pill group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container shadow-md shadow-primary/25 active:scale-95 transition-all text-label-md font-label-md shrink-0 border border-primary/40">
+<span class="text-sm">✅</span>
+<span>Checklist</span>
+</button>
+<button class="category-pill group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface border border-outline-variant/30 shadow-sm active:scale-95 transition-all text-label-md font-label-md shrink-0">
+<span class="text-sm">✨</span>
+<span>Spiritual</span>
+</button>
+<button class="category-pill group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface border border-outline-variant/30 shadow-sm active:scale-95 transition-all text-label-md font-label-md shrink-0">
+<span class="text-sm">💼</span>
+<span>Work</span>
+</button>
+<button class="category-pill group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface border border-outline-variant/30 shadow-sm active:scale-95 transition-all text-label-md font-label-md shrink-0">
+<span class="text-sm">🌿</span>
+<span>Personal</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-primary hover:bg-surface-container-high active:scale-95 transition-all text-label-md font-label-md shrink-0 border border-outline-variant/20">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Tag</span>
+</button>
+</div>
+<!-- 3. Primary Writing Canvas Glass Card -->
+<div class="relative rounded-3xl bg-surface-container-low/90 backdrop-blur-2xl shadow-xl shadow-primary/5 p-space-lg flex flex-col gap-space-md border border-outline-variant/25 transition-colors duration-300" id="notePaperCard">
+<!-- Optional Title Input -->
+<div class="flex items-center gap-2">
+<input class="w-full bg-transparent font-headline-md text-headline-md text-on-surface placeholder:text-outline focus:outline-none tracking-tight" id="noteTitleInput" placeholder="Note Title (Optional)" type="text" value="Friday Family Dinner Prep"/>
+<span class="flex h-2.5 w-2.5 rounded-full bg-secondary shrink-0 shadow-sm shadow-secondary/50" title="Synchronized live"></span>
+</div>
+<!-- Accent Tone Palette Row (Luminous Serenity Pastels) -->
+<div class="flex items-center gap-2 py-1">
+<span class="text-on-surface-variant font-label-sm text-label-sm mr-1">Tint:</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant/40 shadow-sm ring-2 ring-primary/40 active:scale-90 transition-transform" onclick="setCardTint('default')" title="Default Midnight"></button>
+<button class="w-6 h-6 rounded-full bg-[#162e28] border border-secondary/40 shadow-sm active:scale-90 transition-transform" onclick="setCardTint('mint')" title="Deep Mint"></button>
+<button class="w-6 h-6 rounded-full bg-[#261f3d] border border-tertiary/40 shadow-sm active:scale-90 transition-transform" onclick="setCardTint('lavender')" title="Deep Lavender"></button>
+<button class="w-6 h-6 rounded-full bg-[#162738] border border-secondary-container/40 shadow-sm active:scale-90 transition-transform" onclick="setCardTint('sky')" title="Night Dew"></button>
+<button class="w-6 h-6 rounded-full bg-[#352516] border border-tertiary-container/40 shadow-sm active:scale-90 transition-transform" onclick="setCardTint('amber')" title="Warm Amber"></button>
+</div>
+<!-- Writing Body Area -->
+<div class="relative w-full min-h-[160px] flex flex-col">
+<textarea class="w-full bg-transparent font-body-lg text-body-lg text-on-surface-variant placeholder:text-outline focus:outline-none resize-none leading-relaxed tracking-normal" id="noteContentArea" placeholder="What's flowing in your mind right now..." rows="6">Pick up fresh figs, organic honey, and cardamom pods from the local market before Asr prayer.
+
+Remind Uncle Tariq about arriving at 6:30 PM.
+Prepare the outdoor seating with warm lanterns.</textarea>
+</div>
+<!-- Voice Recording Wave Pill (Delight Element) -->
+<div class="flex items-center justify-between bg-surface-container-high/60 border border-outline-variant/20 backdrop-blur-md rounded-2xl p-2.5 shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<button aria-label="Play voice note" class="w-9 h-9 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-md shadow-secondary-container/20 active:scale-90 transition-transform shrink-0" id="voicePlayBtn">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface truncate">Audio Memo 01</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">🎙️ 0:42</span>
+</div>
+<!-- Mini Animated Audio Wave Bars -->
+<div class="flex items-center gap-1 h-3 mt-1">
+<span class="w-1 bg-secondary rounded-full h-2 animate-pulse"></span>
+<span class="w-1 bg-secondary rounded-full h-3 animate-pulse"></span>
+<span class="w-1 bg-secondary rounded-full h-1.5"></span>
+<span class="w-1 bg-secondary rounded-full h-2.5 animate-pulse"></span>
+<span class="w-1 bg-secondary/60 rounded-full h-2"></span>
+<span class="w-1 bg-secondary/40 rounded-full h-1"></span>
+<span class="w-1 bg-secondary/50 rounded-full h-2.5"></span>
+<span class="w-1 bg-secondary rounded-full h-3 animate-pulse"></span>
+<span class="w-1 bg-secondary/70 rounded-full h-1.5"></span>
+<span class="w-1 bg-secondary/40 rounded-full h-2"></span>
+</div>
+</div>
+</div>
+<button aria-label="Remove audio recording" class="w-7 h-7 flex items-center justify-center text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Attached Visual Asset Preview -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-sm group border border-outline-variant/20">
+<img class="w-full h-36 object-cover object-center" data-alt="A tranquil sunlit wooden dining table set outdoors with earthenware plates, small glass lantern candles, fresh figs on a ceramic dish, and green olive branches under warm golden afternoon light in a minimalist, serene garden sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmDYdDHJGMLw90lWK8KxrUltdEN1Ir76VyY92raPuSWqJX-V5SwxtFjxaA9UJQRkr-QmmPkHbjT3GVuveKBB92BMAwYUxWReGmX9zfPpnz3hQbOB2qGTU2dvZflYc6O_92JKS5MqrVl_s04z2qwylZA0sC-3xdHdnT6DKoFDQukSXZ8pG_NbZbOmcGKAy8kA_PHHqLeHbGm1NwU0U7p52jkKMz9a9Tk3ClBwpVvY979KDlLOC2s6A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent flex items-end justify-between p-3">
+<span class="text-on-surface font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span>
+            Inspiration_Table_Setup.jpg
+          </span>
+<button aria-label="Remove image" class="w-6 h-6 rounded-full bg-surface-container-highest/80 backdrop-blur-md text-on-surface flex items-center justify-center hover:bg-error hover:text-on-error transition-colors border border-outline-variant/30">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Format Toolbar (Sticky on top of card bottom) -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1">
+<button aria-label="Insert Checkbox" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-90 transition-all" title="Toggle Checkbox">
+<span class="material-symbols-outlined text-[20px]">check_box</span>
+</button>
+<button aria-label="Bullet List" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-90 transition-all" title="Bullet List">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</button>
+<button aria-label="Record Audio" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-90 transition-all" title="Record Audio">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button aria-label="Attach Photo" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-90 transition-all" title="Attach Photo">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+</button>
+<button aria-label="Add Label" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-90 transition-all" title="Set Tag">
+<span class="material-symbols-outlined text-[20px]">label</span>
+</button>
+</div>
+<button class="px-2.5 py-1 rounded-xl bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all border border-primary/30">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+          Scribble
+        </button>
+</div>
+</div>
+<!-- 4. Reminder Context & Metadata Pill -->
+<div class="flex flex-col gap-2">
+<!-- Active Reminder Card -->
+<div class="flex items-center justify-between bg-surface-container-low/90 border border-outline-variant/20 backdrop-blur-xl px-space-md py-2.5 rounded-2xl shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-xl bg-secondary-container/30 border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Reminder: Today at 5:00 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Triggers 1 hour before Asr prayer</span>
+</div>
+</div>
+<button class="text-secondary hover:text-primary font-label-md text-label-md px-2 py-1 rounded-lg hover:bg-surface-container-high transition-colors">
+          Edit
+        </button>
+</div>
+<!-- Real-time Stats Footnote -->
+<div class="flex items-center justify-between px-2 text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+          Created Today • 10:45 AM
+        </span>
+<span id="charCountDisplay">48 words • 284 chars</span>
+</div>
+</div>
+<!-- 5. Primary CTAs (Moments of Delight & Direct Flow) -->
+<div class="flex flex-col gap-2.5 pt-space-xs">
+<!-- High-glow Primary Action -->
+<button class="w-full relative group overflow-hidden rounded-2xl py-3.5 px-6 bg-gradient-to-r from-primary via-secondary to-tertiary text-on-primary font-headline-sm text-headline-sm shadow-lg shadow-primary/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-center" id="saveNoteBtn">
+<span class="relative z-10 flex items-center gap-2">
+<span>Save Quick Note</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+<div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<!-- Subordinate Actions Group -->
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-3 px-4 rounded-2xl bg-surface-container-high/60 border border-outline-variant/20 backdrop-blur-md text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" onclick="history.back()">
+<span class="material-symbols-outlined text-[17px]">close</span>
+          Cancel Changes
+        </button>
+<button class="w-full py-3 px-4 rounded-2xl bg-error-container/40 border border-error/20 text-error font-label-md text-label-md hover:bg-error-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" id="deleteNoteBtn">
+<span class="material-symbols-outlined text-[17px]">delete</span>
+          Delete Note
+        </button>
+</div>
+</div></div>
+<!-- Notification Toast Simulation (Hidden by default) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 pointer-events-none opacity-0 transition-opacity duration-300 z-50" id="saveToast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md">Momentum note preserved to cloud</span>
+</div>
+</div>
+<script>
+  // Pin Toggle Behavior
+  const pinBtn = document.getElementById('pinToggleBtn');
+  const pinIcon = document.getElementById('pinIcon');
+  let isPinned = false;
+
+  pinBtn?.addEventListener('click', () => {
+    isPinned = !isPinned;
+    if (isPinned) {
+      pinIcon.style.fontVariationSettings = "'FILL' 1";
+      pinBtn.classList.add('text-primary');
+    } else {
+      pinIcon.style.fontVariationSettings = "'FILL' 0";
+      pinBtn.classList.remove('text-primary');
+    }
+  });
+
+  // Dynamic Word & Character Counter
+  const textarea = document.getElementById('noteContentArea');
+  const charDisplay = document.getElementById('charCountDisplay');
+
+  function updateMetrics() {
+    if (!textarea || !charDisplay) return;
+    const text = textarea.value.trim();
+    const words = text ? text.split(/\s+/).length : 0;
+    const chars = textarea.value.length;
+    charDisplay.textContent = `${words} words • ${chars} chars`;
+  }
+
+  textarea?.addEventListener('input', updateMetrics);
+
+  // Background tint selector
+  window.setCardTint = function(theme) {
+    const card = document.getElementById('notePaperCard');
+    if (!card) return;
+    
+    // Reset tinted colors
+    card.classList.remove('bg-[#E6F8F3]/90', 'bg-[#F1EEFE]/90', 'bg-[#E9F3FF]/90', 'bg-[#FFF5E6]/90');
+    
+    if (theme === 'mint') {
+      card.classList.add('bg-[#E6F8F3]/90');
+    } else if (theme === 'lavender') {
+      card.classList.add('bg-[#F1EEFE]/90');
+    } else if (theme === 'sky') {
+      card.classList.add('bg-[#E9F3FF]/90');
+    } else if (theme === 'amber') {
+      card.classList.add('bg-[#FFF5E6]/90');
+    }
+  };
+
+  // Save Toast Feedback
+  const saveBtn = document.getElementById('saveNoteBtn');
+  const toast = document.getElementById('saveToast');
+
+  saveBtn?.addEventListener('click', () => {
+    if (toast) {
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2200);
+    }
+  });
+
+  // Interactive Category Pills
+  const pills = document.querySelectorAll('.category-pill');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-md', 'shadow-primary/20');
+        p.classList.add('bg-surface-container-lowest/90', 'text-on-surface', 'shadow-sm');
+      });
+      pill.classList.remove('bg-surface-container-lowest/90', 'text-on-surface');
+      pill.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-md', 'shadow-primary/20');
+    });
+  });
+</script></main></body></html>

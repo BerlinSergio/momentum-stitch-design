@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#c0c1ff", "secondary-container": "#03b5d3", "background": "#0e131f", "on-primary-fixed": "#07006c", "error": "#ffb4ab", "secondary-fixed-dim": "#4cd7f6", "on-surface-variant": "#c7c4d7", "primary": "#c0c1ff", "error-container": "#93000a", "on-error-container": "#ffdad6", "surface-container-lowest": "#080e1a", "tertiary-fixed": "#e9ddff", "surface-variant": "#2f3542", "on-secondary-fixed": "#001f26", "on-primary-container": "#0d0096", "surface-dim": "#0e131f", "on-surface": "#dde2f3", "on-secondary-container": "#00424e", "on-tertiary-fixed-variant": "#5516be", "secondary-fixed": "#acedff", "inverse-surface": "#dde2f3", "outline": "#908fa0", "on-tertiary": "#3c0091", "on-error": "#690005", "on-secondary": "#003640", "primary-container": "#8083ff", "tertiary": "#d0bcff", "tertiary-container": "#a078ff", "on-background": "#dde2f3", "outline-variant": "#464554", "surface": "#0e131f", "tertiary-fixed-dim": "#d0bcff", "surface-container-highest": "#2f3542", "inverse-primary": "#494bd6", "on-tertiary-fixed": "#23005c", "on-primary": "#1000a9", "on-primary-fixed-variant": "#2f2ebe", "primary-fixed-dim": "#c0c1ff", "on-tertiary-container": "#340080", "surface-container-high": "#242a36", "surface-container": "#1a202c", "surface-container-low": "#161c28", "secondary": "#4cd7f6", "on-secondary-fixed-variant": "#004e5c", "inverse-on-surface": "#2b303d", "primary-fixed": "#e1e0ff", "surface-bright": "#343946" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "margin-mobile": "1rem", "margin": "3rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem" }, fontFamily: { "display-hero-mobile": ["Space Grotesk"], "label-sm": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "label-md": ["JetBrains Mono"], "display-hero": ["Space Grotesk"] }, fontSize: { "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "500" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>@layer base { html, body { width: 100vw; min-height: 100vh; margin: 0; padding: 0; background-color: #0e131f; color: #dde2f3; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant/40 transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[220px]">Background Preview &amp; Blur Control — Dark Mode</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Actions" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full px-gutter-mobile pb-10 space-y-6">
+<!-- Top Section: Large Live Canvas Simulator -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-surface-container-lowest">
+<!-- Simulated Wallpaper Container -->
+<div class="relative w-full h-[470px] overflow-hidden">
+<!-- Background Image Layer with Blur -->
+<div class="absolute inset-0 bg-cover bg-center transition-all duration-300 transform scale-105" data-alt="Deep nocturnal calm horizon with luminous violet and serene cyan atmospheric gradient glow in night sky over subtle minimalist geometric landscape. Moody, contemplative, cinematic obsidian dark tone." id="simulator-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaig7-T9Ut89nyFyu1Du-dMNzPzF5Qxf0RazDinqOKHbEAR-CeA1voyGA9ByB6PXq9IK0uBvN2y5vBWRtmh-Y_f6vwIoAbmoj7IId1lvcjZB033ZQfZT5zighC0UfsPY1fHc2_5dHjPaSLfYEWD_H77Fh-qxaHEa9uUdUaAN8flle0yLQV7E9lcZ0B-ScGtxqsKP7Y4qyefQU_moefVtLuQK-zoAcv-JRXtsQoTc0uQcol18mr58k'); filter: blur(18px); -webkit-filter: blur(18px);"></div>
+<!-- Scrim Overlays for Depth and Dim Guardrail -->
+<div class="absolute inset-0 bg-surface-container-lowest/40 transition-opacity duration-200" id="simulator-scrim"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/80 pointer-events-none"></div>
+<!-- Simulator Top Meta Bar -->
+<div class="relative z-10 p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Live Canvas Simulator</span>
+</div>
+<div class="px-2.5 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">Serene Horizon</span>
+</div>
+</div>
+<!-- Simulated Floating UI Cards Over Dynamic Background -->
+<div class="relative z-10 px-4 pt-1 pb-4 flex flex-col space-y-3">
+<!-- Pill Greeting Badge -->
+<div class="self-start px-3 py-1.5 rounded-full bg-surface-container-low/75 backdrop-blur-xl shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Good morning, Aisha • Fajr in 12m</span>
+</div>
+<!-- Simulated Task Card -->
+<div class="w-full p-3.5 rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-lg flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold">Priority</span>
+<div class="w-5 h-5 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span>
+</div>
+</div>
+<p class="font-headline-sm text-[16px] leading-snug text-on-surface font-semibold truncate">
+            Review financial milestone projections
+          </p>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-[12px]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">timer</span>
+              Focus routine
+            </span>
+<span>•</span>
+<span>15 mins</span>
+</div>
+</div>
+<!-- Simulated Prayer Card -->
+<div class="w-full p-3.5 rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-lg flex flex-col space-y-2.5">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Next: Fajr Prayer</span>
+<h4 class="font-headline-md text-headline-sm text-on-surface">05:14 AM</h4>
+</div>
+<!-- Mosque Decorative Graphic -->
+<div class="w-9 h-9 rounded-lg bg-surface-container-high/60 flex items-center justify-center text-primary">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M12 2C11.5 3.5 9 5 9 7v2H7V8H5v1H4v11h16V10h-1V9h-2v1h-2V7c0-2-2.5-3.5-3-5zm0 9a2 2 0 110 4 2 2 0 010-4zm-5 4h2v3H7v-3zm8 0h2v3h-2v-3z"></path>
+</svg>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Calm focus window</span>
+<span class="text-secondary font-medium">82% completed</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary via-secondary to-primary w-[82%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Mini Simulated Floating Dock -->
+<div class="self-center px-4 py-1.5 rounded-full bg-surface-container-low/90 backdrop-blur-2xl shadow-xl flex items-center gap-6 mt-1">
+<button aria-label="Home" class="flex flex-col items-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-on-primary shadow-md">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</div>
+<button aria-label="Planner" class="flex flex-col items-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+<!-- Simulator Bottom Indicator Badge -->
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-10">
+<div class="px-3 py-1 rounded-full bg-surface-container-lowest/85 backdrop-blur-md shadow-sm">
+<span class="font-label-sm text-label-sm text-primary tracking-wide" id="simulator-badge-text">Live Rendering: 18px blur</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Section: Blur Control & Configuration -->
+<div class="flex flex-col space-y-4">
+<!-- Heading Area -->
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Background Blur Intensity</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adjust ambient refraction behind floating elements</p>
+</div>
+<div class="px-3 py-1.5 rounded-full bg-surface-container-high flex items-center shadow-inner">
+<span class="font-label-md text-label-md font-semibold text-primary" id="value-pill">18 px</span>
+</div>
+</div>
+<!-- Recommendation Banner -->
+<div class="w-full p-3.5 rounded-xl bg-surface-container-low shadow-md flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div>
+<span class="font-body-md text-body-md font-semibold text-on-surface block leading-tight">Soft Focus (Recommended)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Preserves visual atmosphere while reading</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase font-semibold px-2 py-0.5 rounded bg-secondary-container/20 text-secondary">
+        Optimal Contrast
+      </span>
+</div>
+<!-- Tactile Slider Container -->
+<div class="p-4 rounded-xl bg-surface-container space-y-3">
+<div class="relative flex items-center w-full">
+<input aria-label="Blur Intensity" class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none" id="blur-slider" max="40" min="0" step="1" type="range" value="18"/>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant px-0.5">
+<span>0px (Crisp)</span>
+<span>20px</span>
+<span>40px (Dreamy)</span>
+</div>
+</div>
+<!-- Discrete Blur Level Quick Buttons -->
+<div class="grid grid-cols-5 gap-1.5">
+<button class="preset-btn py-2 px-1 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center hover:bg-surface-container-high transition-all" data-val="0" type="button">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Crisp</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">0px</span>
+</button>
+<button class="preset-btn py-2 px-1 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center hover:bg-surface-container-high transition-all" data-val="8" type="button">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Subtle</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">8px</span>
+</button>
+<button class="preset-btn py-2 px-1 rounded-lg bg-primary-container text-center flex flex-col items-center justify-center shadow-lg transition-all" data-val="18" type="button">
+<span class="font-body-sm text-[12px] font-semibold text-on-primary-container">Soft</span>
+<span class="font-label-sm text-[10px] text-on-primary-container/80">18px</span>
+</button>
+<button class="preset-btn py-2 px-1 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center hover:bg-surface-container-high transition-all" data-val="28" type="button">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Deep</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">28px</span>
+</button>
+<button class="preset-btn py-2 px-1 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center hover:bg-surface-container-high transition-all" data-val="40" type="button">
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">Dreamy</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">40px</span>
+</button>
+</div>
+</div>
+<!-- Guardrail Toggles -->
+<div class="flex flex-col space-y-2.5">
+<!-- Sync Blur Toggle Card -->
+<label class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between cursor-pointer select-none">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div>
+<span class="font-body-md text-body-md font-medium text-on-surface block leading-tight">Sync Blur with Dark Mode</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Auto-scales depth when dark theme triggers</span>
+</div>
+</div>
+<input checked="" class="w-4 h-4 rounded accent-primary bg-surface-container-highest cursor-pointer" type="checkbox"/>
+</label>
+<!-- Dim Wallpaper Toggle Card -->
+<label class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between cursor-pointer select-none">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">contrast</span>
+</div>
+<div>
+<span class="font-body-md text-body-md font-medium text-on-surface block leading-tight">Dim wallpaper slightly</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">+10% subtle scrim to enhance readability</span>
+</div>
+</div>
+<input checked="" class="w-4 h-4 rounded accent-primary bg-surface-container-highest cursor-pointer" id="dim-toggle" type="checkbox"/>
+</label>
+</div>
+<!-- Bottom Action Dock -->
+<div class="pt-2 flex items-center gap-3">
+<button class="flex-1 py-3 px-4 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-[0.98] transition-all" id="reset-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+      Reset Blur
+    </button>
+<button class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg shadow-primary-container/20 active:scale-[0.98] transition-all" type="button">
+<span>Apply to All</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  (function () {
+    const slider = document.getElementById('blur-slider');
+    const bg = document.getElementById('simulator-bg');
+    const badgeText = document.getElementById('simulator-badge-text');
+    const valuePill = document.getElementById('value-pill');
+    const presetBtns = document.querySelectorAll('.preset-btn');
+    const dimToggle = document.getElementById('dim-toggle');
+    const scrim = document.getElementById('simulator-scrim');
+    const resetBtn = document.getElementById('reset-btn');
+
+    function updateBlur(px) {
+      const val = parseInt(px, 10);
+      slider.value = val;
+      bg.style.filter = 'blur(' + val + 'px)';
+      bg.style.webkitFilter = 'blur(' + val + 'px)';
+      badgeText.textContent = 'Live Rendering: ' + val + 'px blur';
+      valuePill.textContent = val + ' px';
+
+      // Update preset buttons state
+      presetBtns.forEach(btn => {
+        const btnVal = parseInt(btn.getAttribute('data-val'), 10);
+        const titleSpan = btn.children[0];
+        const subSpan = btn.children[1];
+        if (btnVal === val) {
+          btn.className = 'preset-btn py-2 px-1 rounded-lg bg-primary-container text-center flex flex-col items-center justify-center shadow-lg transition-all';
+          titleSpan.className = 'font-body-sm text-[12px] font-semibold text-on-primary-container';
+          subSpan.className = 'font-label-sm text-[10px] text-on-primary-container/80';
+        } else {
+          btn.className = 'preset-btn py-2 px-1 rounded-lg bg-surface-container-low text-center flex flex-col items-center justify-center hover:bg-surface-container-high transition-all';
+          titleSpan.className = 'font-body-sm text-[12px] font-semibold text-on-surface';
+          subSpan.className = 'font-label-sm text-[10px] text-on-surface-variant';
+        }
+      });
+    }
+
+    slider.addEventListener('input', (e) => {
+      updateBlur(e.target.value);
+    });
+
+    presetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetVal = btn.getAttribute('data-val');
+        updateBlur(targetVal);
+      });
+    });
+
+    if (dimToggle && scrim) {
+      dimToggle.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          scrim.classList.remove('opacity-0');
+          scrim.classList.add('opacity-100');
+        } else {
+          scrim.classList.remove('opacity-100');
+          scrim.classList.add('opacity-0');
+        }
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        updateBlur(18);
+        if (dimToggle && !dimToggle.checked) {
+          dimToggle.checked = true;
+          scrim.classList.remove('opacity-0');
+          scrim.classList.add('opacity-100');
+        }
+      });
+    }
+  })();
+</script></main></body></html>

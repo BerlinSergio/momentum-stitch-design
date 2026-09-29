@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#002fc9", "secondary-fixed-dim": "#cebdff", "secondary-container": "#7f58ed", "surface-variant": "#dce1fd", "background": "#faf8ff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-surface": "#151b2e", "on-secondary-container": "#fffbff", "on-primary-container": "#fffbff", "tertiary": "#006768", "inverse-primary": "#bac3ff", "surface-container-low": "#f2f3ff", "on-secondary": "#ffffff", "inverse-surface": "#2a3044", "surface-bright": "#faf8ff", "outline-variant": "#c5c5d8", "outline": "#757687", "surface-dim": "#d4d9f4", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#eff0ff", "on-tertiary-container": "#f3fffe", "primary": "#2a49df", "tertiary-fixed": "#6df7f8", "on-primary": "#ffffff", "surface-container-high": "#e3e7ff", "tertiary-fixed-dim": "#4bdadc", "error": "#ba1a1a", "primary-fixed": "#dee0ff", "tertiary-container": "#008283", "on-tertiary-fixed": "#002020", "primary-container": "#4965f9", "surface-tint": "#2d4ce2", "secondary": "#663bd2", "surface-container": "#ebedff", "secondary-fixed": "#e8ddff", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-primary-fixed": "#00105b", "on-surface-variant": "#444655", "on-secondary-fixed-variant": "#501dbc", "surface-container-highest": "#dce1fd", "primary-fixed-dim": "#bac3ff", "on-secondary-fixed": "#21005e", "surface": "#faf8ff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xl": "1.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin": "1rem" }, fontFamily: { "headline-md": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "metric-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "metric-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[120vw] h-[55vh] rounded-full bg-gradient-to-b from-surface-variant/40 via-surface-container/20 to-transparent blur-3xl"></div><div class="absolute top-[40%] right-[-10%] w-[80vw] h-[40vh] rounded-full bg-gradient-to-tr from-secondary-fixed/20 via-tertiary-fixed/10 to-transparent blur-3xl"></div></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface-container-lowest/70 backdrop-blur-2xl shadow-[0_4px_24px_-4px_rgba(80,110,180,0.08)]"><div class="h-16 px-margin flex items-center justify-between relative"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="absolute inset-x-16 flex items-center justify-center pointer-events-none"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate text-center font-semibold">Focus Preferences</h1></div><div class="flex items-center justify-end min-w-[44px] min-h-[44px]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(42,73,223,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin z-10 flex-1"><div class="flex flex-col w-full pb-12">
+<!-- Subtitle Badge & Intro Focus -->
+<div class="flex items-center justify-between mb-4 mt-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Momentum Shield • Vault Security</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Hardware Encrypted</span>
+</div>
+</div>
+<!-- Mode Selector Tabs -->
+<div class="p-1 rounded-full bg-surface-container/70 backdrop-blur-xl flex items-center justify-between shadow-sm mb-4">
+<button class="flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95" id="tab-change">
+<span class="material-symbols-outlined text-[15px]">lock_reset</span>
+<span>Change Existing PIN</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95" id="tab-new">
+<span class="material-symbols-outlined text-[15px]">fiber_new</span>
+<span>Create New PIN</span>
+</button>
+</div>
+<!-- Security Banner Card -->
+<div class="rounded-lg p-space-lg bg-surface-container-lowest/80 backdrop-blur-2xl shadow-sm mb-5 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 rounded-full bg-primary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-3 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Zero-Knowledge Vault</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 leading-relaxed">
+          Your 4-digit PIN secures your personal reflections, financial transactions, and sacred journals via on-device Secure Enclave.
+        </p>
+</div>
+</div>
+</div>
+<!-- Multi-Step Interactive PIN Input Card -->
+<div class="rounded-lg p-space-lg bg-surface-container-lowest/90 backdrop-blur-2xl shadow-md mb-5">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline-sm text-headline-sm text-on-surface">PIN Sequence</span>
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>Validation Active</span>
+</div>
+</div>
+<!-- Stepper Pipeline -->
+<div class="flex flex-col gap-3.5">
+<!-- Step 1: Current PIN -->
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low/70 transition-all duration-200" id="step-row-1">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">1. Enter Current PIN</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Identity authenticated</span>
+</div>
+</div>
+<!-- 4 Masked Completed Dots -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+</div>
+</div>
+<!-- Step 2: New PIN -->
+<div class="flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low/70 transition-all duration-200" id="step-row-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">2. New 4-Digit PIN</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">High entropy matched</span>
+</div>
+</div>
+<!-- 4 Masked Completed Dots -->
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+<span class="w-3 h-3 rounded-full bg-primary shadow-xs"></span>
+</div>
+</div>
+<!-- Step 3: Confirm PIN (Active Focus) -->
+<div class="flex flex-col gap-2 p-3.5 rounded-DEFAULT bg-primary-fixed/20 shadow-sm transition-all duration-200" id="step-row-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">
+              3
+            </div>
+<div class="flex flex-col truncate">
+<span class="font-body-md text-body-md font-semibold text-primary truncate">3. Confirm New PIN</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Awaiting last digit slot</span>
+</div>
+</div>
+<!-- 3 Completed Dots + 1 Blinking Active Slot -->
+<div class="flex items-center gap-2.5" id="pin-slots">
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_8px_rgba(42,73,223,0.4)]"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_8px_rgba(42,73,223,0.4)]"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_8px_rgba(42,73,223,0.4)]"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest animate-pulse"></span>
+</div>
+</div>
+<!-- Dynamic Feedback Callout -->
+<div class="mt-2 pt-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container shadow-xs">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed">task_alt</span>
+<span class="font-label-sm text-label-sm font-semibold">PIN Matched ✓</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">info</span>
+<span>Non-sequential rule OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Hint Warning -->
+<div class="mt-3.5 flex items-center gap-2 px-3 py-2 rounded-DEFAULT bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[16px]">psychology_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avoid obvious codes such as <span class="font-semibold text-on-surface">1234</span>, <span class="font-semibold text-on-surface">0000</span>, or your birth year.</span>
+</div>
+</div>
+<!-- Tactile Keypad -->
+<div class="rounded-lg p-space-lg bg-surface-container-lowest/80 backdrop-blur-2xl shadow-sm mb-5">
+<div class="grid grid-cols-3 gap-3 max-w-[320px] mx-auto">
+<!-- 1 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('1')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">•••</span>
+</button>
+<!-- 2 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('2')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">ABC</span>
+</button>
+<!-- 3 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('3')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">DEF</span>
+</button>
+<!-- 4 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('4')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">GHI</span>
+</button>
+<!-- 5 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('5')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">JKL</span>
+</button>
+<!-- 6 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('6')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">MNO</span>
+</button>
+<!-- 7 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('7')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">PQRS</span>
+</button>
+<!-- 8 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('8')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">TUV</span>
+</button>
+<!-- 9 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('9')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">WXYZ</span>
+</button>
+<!-- Clear Action -->
+<button class="h-14 rounded-DEFAULT bg-surface-container-low/90 text-on-surface-variant flex items-center justify-center shadow-xs active:bg-surface-container-high active:scale-95 transition-all font-label-md text-label-md" onclick="handleClear()">
+        Clear
+      </button>
+<!-- 0 -->
+<button class="h-14 rounded-DEFAULT bg-surface-container/80 text-on-surface flex flex-col items-center justify-center shadow-xs active:bg-primary-fixed active:scale-95 transition-all" onclick="handleKeyTap('0')">
+<span class="font-headline-md text-headline-md font-semibold leading-none">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 tracking-widest mt-0.5 text-[9px]">+</span>
+</button>
+<!-- Delete / Backspace -->
+<button aria-label="Delete last digit" class="h-14 rounded-DEFAULT bg-surface-container-low/90 text-on-surface flex items-center justify-center shadow-xs active:bg-surface-container-high active:scale-95 transition-all" onclick="handleDelete()">
+<span class="material-symbols-outlined text-[20px]">backspace</span>
+</button>
+</div>
+</div>
+<!-- Quick Security Guardrails Section -->
+<div class="rounded-lg p-space-lg bg-surface-container-lowest/80 backdrop-blur-2xl shadow-sm mb-6 flex flex-col gap-3.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Shield Guardrails</span>
+<!-- Guardrail Item 1 -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">motion_blur</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Require PIN on App Switch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate background lock</span>
+</div>
+</div>
+<!-- iOS-style Switch Active -->
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end transition-colors shadow-sm focus:outline-none" role="switch">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-md"></span>
+</button>
+</div>
+<!-- Guardrail Item 2 -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/50 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Failed Attempts Protection</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">15 min lockout after 5 fails</span>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-tertiary">
+        Active
+      </div>
+</div>
+</div>
+<!-- Bottom CTA Actions -->
+<div class="flex flex-col gap-2.5 w-full">
+<button class="w-full h-13 py-3.5 px-6 rounded-DEFAULT bg-gradient-to-r from-primary via-secondary to-tertiary text-on-primary font-headline-sm text-headline-sm font-semibold shadow-[0_10px_24px_-4px_rgba(42,73,223,0.35)] flex items-center justify-center gap-2 active:scale-[0.98] transition-transform" id="save-btn">
+<span>Save New PIN</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-3 px-6 rounded-DEFAULT bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-body-md text-body-md font-semibold hover:bg-surface-container shadow-xs active:scale-[0.98] transition-all text-center" onclick="history.back()">
+      Cancel &amp; Return
+    </button>
+</div>
+</div>
+<script>
+  let pinCount = 3;
+  const pinContainer = document.getElementById('pin-slots');
+  const saveBtn = document.getElementById('save-btn');
+
+  function renderSlots() {
+    if (!pinContainer) return;
+    let html = '';
+    for (let i = 0; i < 4; i++) {
+      if (i < pinCount) {
+        html += '<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_8px_rgba(42,73,223,0.4)]"></span>';
+      } else if (i === pinCount) {
+        html += '<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest animate-pulse"></span>';
+      } else {
+        html += '<span class="w-3.5 h-3.5 rounded-full bg-surface-container-highest"></span>';
+      }
+    }
+    pinContainer.innerHTML = html;
+  }
+
+  function handleKeyTap(num) {
+    if (pinCount < 4) {
+      pinCount++;
+      renderSlots();
+      if (pinCount === 4) {
+        saveBtn.classList.add('ring-2', 'ring-primary-fixed');
+      }
+    }
+  }
+
+  function handleDelete() {
+    if (pinCount > 0) {
+      pinCount--;
+      renderSlots();
+    }
+  }
+
+  function handleClear() {
+    pinCount = 0;
+    renderSlots();
+  }
+
+  // Quick Tab Toggle
+  const tabChange = document.getElementById('tab-change');
+  const tabNew = document.getElementById('tab-new');
+  if (tabChange && tabNew) {
+    tabChange.addEventListener('click', () => {
+      tabChange.className = 'flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95';
+      tabNew.className = 'flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95';
+    });
+    tabNew.addEventListener('click', () => {
+      tabNew.className = 'flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95';
+      tabChange.className = 'flex-1 py-2 px-3 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all duration-200 text-center flex items-center justify-center gap-1.5 active:scale-95';
+    });
+  }
+</script></main></body></html>

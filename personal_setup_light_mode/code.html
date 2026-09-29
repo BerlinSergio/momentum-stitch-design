@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Personal Setup — Momentum</title>
+<!-- Tailwind CSS v3 CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              dark: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Glassmorphism Styles -->
+<style data-purpose="custom-glass-effects">
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Ambient multi-tonal light backdrop matching Momentum Light Mode */
+    .momentum-bg {
+      background: linear-gradient(175deg, #f5f3ff 0%, #eef6ff 35%, #ecfeff 70%, #fdf2f8 100%);
+      background-attachment: fixed;
+    }
+
+    /* Soft ambient orb lighting */
+    .radial-glow-1 {
+      background: radial-gradient(circle at 15% 15%, rgba(199, 210, 254, 0.45) 0%, transparent 60%);
+    }
+    .radial-glow-2 {
+      background: radial-gradient(circle at 85% 65%, rgba(165, 243, 252, 0.4) 0%, transparent 60%);
+    }
+
+    /* Momentum frosted card styling */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.08), 0 4px 16px -2px rgba(15, 23, 42, 0.03);
+    }
+
+    /* Input pill focus and border stylings */
+    .glass-input {
+      background: rgba(248, 250, 252, 0.85);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      transition: all 0.2s ease-in-out;
+    }
+    .glass-input:focus-within {
+      background: #ffffff;
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+    }
+  </style>
+<!-- END: Custom Glassmorphism Styles -->
+</head>
+<body class="momentum-bg min-h-screen flex justify-center text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-800">
+<!-- BEGIN: Phone Simulation Frame -->
+<div class="relative w-full max-w-[412px] min-h-screen flex flex-col justify-between overflow-hidden px-5 pb-8 pt-3">
+<!-- Ambient ambient glow overlays -->
+<div class="pointer-events-none absolute inset-0 radial-glow-1"></div>
+<div class="pointer-events-none absolute inset-0 radial-glow-2"></div>
+<!-- BEGIN: Top Area Container (Status Bar + Header) -->
+<div class="relative z-10 w-full">
+<!-- iOS Mobile Status Bar -->
+<div class="flex justify-between items-center h-10 w-full mb-3 text-slate-800 font-semibold text-xs tracking-tight" data-purpose="status-bar">
+<span class="font-bold text-[14px] pl-1 tracking-tight text-slate-900">9:41</span>
+<div class="flex items-center space-x-1.5 pr-0.5">
+<!-- Cellular Icon -->
+<svg class="w-4 h-4 fill-slate-800" viewbox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.64 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" opacity="0.15"></path>
+<path d="M2 17h3v4H2zm5-4h3v8H7zm5-5h3v13h-3zm5-5h3v18h-3z"></path>
+</svg>
+<!-- Wifi Icon -->
+<svg class="w-4 h-4 fill-slate-800" viewbox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.5c3.73 0 7.15 1.42 9.74 3.76L12 18.52 2.26 11.26C4.85 8.92 8.27 7.5 12 7.5z"></path>
+</svg>
+<!-- Battery Icon -->
+<div class="w-5 h-2.5 border-[1.5px] border-slate-800 rounded-sm p-0.5 flex items-center">
+<div class="w-full h-full bg-slate-800 rounded-2xs"></div>
+</div>
+</div>
+</div>
+<!-- BEGIN: Onboarding Header & Step Counter -->
+<header class="mb-5 pt-1">
+<!-- Step Pill Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 border border-white/80 shadow-xs mb-3">
+<span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+<span class="text-[11px] font-bold tracking-wider text-indigo-700 uppercase">Step 1 of 3 • Getting Started</span>
+</div>
+<h1 class="text-[26px] leading-tight font-extrabold text-slate-900 tracking-tight">
+          Welcome to Momentum
+        </h1>
+<p class="text-[13.5px] leading-relaxed text-slate-500 mt-1.5 max-w-[340px]">
+          Personalize your space for mindful routines, accurate prayer schedules, and daily finances.
+        </p>
+</header>
+<!-- END: Onboarding Header & Step Counter -->
+<!-- BEGIN: Main Configuration Form Card -->
+<main class="glass-card rounded-[28px] p-5 border border-white/90">
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- 1. Full Name Input -->
+<div class="space-y-1.5" data-purpose="field-name">
+<div class="flex justify-between items-center">
+<label class="text-[11px] font-bold uppercase tracking-wider text-slate-500" for="fullName">Your Name</label>
+<span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/50">Verified</span>
+</div>
+<div class="glass-input rounded-2xl px-3.5 py-2.5 flex items-center shadow-xs">
+<div class="w-8 h-8 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mr-3 text-indigo-600 shrink-0">
+<!-- User Icon -->
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="w-full bg-transparent border-0 p-0 text-[14px] font-semibold text-slate-800 focus:ring-0 placeholder:text-slate-400" id="fullName" name="fullName" placeholder="Enter your name" type="text" value="Aisha Mohammed"/>
+<div class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center ml-2 shrink-0">
+<svg class="w-3 h-3 stroke-current stroke-[2.5]" fill="none" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- 2. Preferred Currency Dropdown & Quick Selector -->
+<div class="space-y-1.5 pt-1" data-purpose="field-currency">
+<div class="flex justify-between items-center">
+<label class="text-[11px] font-bold uppercase tracking-wider text-slate-500" for="currency">Preferred Currency</label>
+<span class="text-[11px] font-medium text-slate-400">Finance Tracker</span>
+</div>
+<!-- Custom Dropdown Row -->
+<div class="glass-input rounded-2xl px-3.5 py-2.5 flex items-center justify-between shadow-xs cursor-pointer">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-xl bg-violet-100/70 border border-violet-200 text-violet-700 flex items-center justify-center font-bold text-xs shrink-0">
+                  ؋
+                </div>
+<div class="text-left">
+<p class="text-[13.5px] font-semibold text-slate-800 leading-none">Afghan Afghani</p>
+<p class="text-[11px] font-medium text-slate-400 mt-1">Default Base Currency (؋ AFN)</p>
+</div>
+</div>
+<!-- Dropdown Chevron -->
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- Quick Pill Selector -->
+<div class="flex items-center gap-1.5 pt-1 overflow-x-auto no-scrollbar">
+<button class="px-2.5 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-semibold shadow-xs flex items-center gap-1 shrink-0" type="button">
+<span>؋ AFN</span>
+<svg class="w-3 h-3 stroke-white stroke-[2.5]" fill="none" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button class="px-2.5 py-1 rounded-full bg-white/80 hover:bg-white text-slate-600 border border-slate-200/70 text-[11px] font-semibold transition shrink-0" type="button">
+                $ USD
+              </button>
+<button class="px-2.5 py-1 rounded-full bg-white/80 hover:bg-white text-slate-600 border border-slate-200/70 text-[11px] font-semibold transition shrink-0" type="button">
+                € EUR
+              </button>
+<button class="px-2.5 py-1 rounded-full bg-white/80 hover:bg-white text-slate-600 border border-slate-200/70 text-[11px] font-semibold transition shrink-0" type="button">
+                £ GBP
+              </button>
+</div>
+</div>
+<!-- 3. Timezone Dropdown -->
+<div class="space-y-1.5 pt-1" data-purpose="field-timezone">
+<label class="text-[11px] font-bold uppercase tracking-wider text-slate-500" for="timezone">Prayer &amp; Calendar Timezone</label>
+<div class="glass-input rounded-2xl px-3.5 py-2.5 flex items-center justify-between shadow-xs cursor-pointer">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<p class="text-[13.5px] font-semibold text-slate-800 leading-none">Asia/Kabul</p>
+<p class="text-[11px] font-medium text-slate-400 mt-1">Afghanistan Time (UTC +04:30)</p>
+</div>
+</div>
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- 4. Location / City Input -->
+<div class="space-y-1.5 pt-1" data-purpose="field-city">
+<div class="flex justify-between items-center">
+<label class="text-[11px] font-bold uppercase tracking-wider text-slate-500" for="city">Current City</label>
+<div class="flex items-center gap-1 text-[10px] font-semibold text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                Auto-detected
+              </div>
+</div>
+<div class="glass-input rounded-2xl px-3.5 py-2.5 flex items-center justify-between shadow-xs">
+<div class="flex items-center space-x-3 w-full">
+<div class="w-8 h-8 rounded-xl bg-rose-50 border border-rose-100 text-rose-500 flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="w-full bg-transparent border-0 p-0 text-[13.5px] font-semibold text-slate-800 focus:ring-0 placeholder:text-slate-400" id="city" name="city" type="text" value="Kabul, Afghanistan"/>
+</div>
+<button class="text-[11px] font-semibold text-indigo-600 shrink-0 hover:text-indigo-800" type="button">
+                Change
+              </button>
+</div>
+</div>
+</form>
+</main>
+<!-- END: Main Configuration Form Card -->
+<!-- Privacy & Local Storage Micro Notice -->
+<div class="mt-3.5 px-2 flex items-start gap-2 text-slate-400">
+<svg class="w-3.5 h-3.5 mt-0.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<p class="text-[11px] leading-tight text-slate-500">
+          Stored locally &amp; encrypted securely. You can modify prayer calculation algorithms &amp; currency anytime in Settings.
+        </p>
+</div>
+</div>
+<!-- END: Top Area Container -->
+<!-- BEGIN: Primary Bottom Action Section -->
+<div class="relative z-10 w-full pt-4">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-[#4f46e5] to-[#6366f1] text-white font-bold text-[15px] flex items-center justify-center gap-2 shadow-[0_12px_28px_-6px_rgba(79,70,229,0.45)] hover:shadow-indigo-500/50 active:scale-[0.985] transition-all duration-200" type="button">
+<span>Continue to Dashboard</span>
+<svg class="w-4 h-4 stroke-white stroke-[2.2]" fill="none" viewbox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Home Indicator / Bar for iOS -->
+<div class="w-32 h-1 bg-slate-300/80 rounded-full mx-auto mt-4"></div>
+</div>
+<!-- END: Primary Bottom Action Section -->
+</div>
+<!-- END: Phone Simulation Frame -->
+</body></html>

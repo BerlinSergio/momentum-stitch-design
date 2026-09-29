@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#002fc9", "secondary-fixed-dim": "#cebdff", "secondary-container": "#7f58ed", "surface-variant": "#dce1fd", "background": "#faf8ff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-surface": "#151b2e", "on-secondary-container": "#fffbff", "on-primary-container": "#fffbff", "tertiary": "#006768", "inverse-primary": "#bac3ff", "surface-container-low": "#f2f3ff", "on-secondary": "#ffffff", "inverse-surface": "#2a3044", "surface-bright": "#faf8ff", "outline-variant": "#c5c5d8", "outline": "#757687", "surface-dim": "#d4d9f4", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#eff0ff", "on-tertiary-container": "#f3fffe", "primary": "#2a49df", "tertiary-fixed": "#6df7f8", "on-primary": "#ffffff", "surface-container-high": "#e3e7ff", "tertiary-fixed-dim": "#4bdadc", "error": "#ba1a1a", "primary-fixed": "#dee0ff", "tertiary-container": "#008283", "on-tertiary-fixed": "#002020", "primary-container": "#4965f9", "surface-tint": "#2d4ce2", "secondary": "#663bd2", "surface-container": "#ebedff", "secondary-fixed": "#e8ddff", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-primary-fixed": "#00105b", "on-surface-variant": "#444655", "on-secondary-fixed-variant": "#501dbc", "surface-container-highest": "#dce1fd", "primary-fixed-dim": "#bac3ff", "on-secondary-fixed": "#21005e", "surface": "#faf8ff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xl": "1.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin": "1rem" }, fontFamily: { "headline-md": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "metric-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "metric-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[120vw] h-[55vh] rounded-full bg-gradient-to-b from-surface-variant/40 via-surface-container/20 to-transparent blur-3xl"></div><div class="absolute top-[40%] right-[-10%] w-[80vw] h-[40vh] rounded-full bg-gradient-to-tr from-secondary-fixed/20 via-tertiary-fixed/10 to-transparent blur-3xl"></div></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface-container-lowest/70 backdrop-blur-2xl shadow-[0_4px_24px_-4px_rgba(80,110,180,0.08)]"><div class="h-16 px-margin flex items-center justify-between relative"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="absolute inset-x-16 flex items-center justify-center pointer-events-none"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate text-center font-semibold">Account &amp; Cloud Sync</h1></div><div class="flex items-center justify-end min-w-[44px] min-h-[44px]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(42,73,223,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin z-10 flex-1"><div class="flex flex-col w-full pb-28 space-y-4">
+<!-- Active Selection Hero Display -->
+<section class="relative w-full rounded-2xl bg-surface-container-lowest/80 backdrop-blur-xl p-5 shadow-[0_12px_32px_-6px_rgba(42,73,223,0.12)] overflow-hidden transition-all duration-300">
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-gradient-to-br from-primary-fixed/60 via-secondary-fixed/40 to-transparent blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Active Geolocation</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Selected</span>
+</div>
+</div>
+<div class="flex items-start gap-3.5 pt-1">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-on-primary shadow-[0_8px_20px_-4px_rgba(42,73,223,0.38)] flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">location_on</span>
+</div>
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight truncate">Kabul</h2>
+<p class="font-body-md text-body-md text-on-surface-variant -mt-0.5">Afghanistan</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">explore</span>
+<span class="font-body-sm text-body-sm font-medium">34.5553° N, 69.2075° E</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">landscape</span>
+<span class="font-body-sm text-body-sm font-medium">1,791m MSL</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-3 rounded-xl bg-surface-container-low/70">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Accurate elevation and coordinate geocoding ensures exact astronomical solar angle calculations for prayer and fasting schedules.
+        </p>
+</div>
+</div>
+</section>
+<!-- Search & Instant GPS Locate -->
+<section class="flex flex-col space-y-2.5">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[22px]">search</span>
+<input class="w-full h-12 pl-11 pr-10 rounded-2xl bg-surface-container-lowest/80 backdrop-blur-xl font-body-lg text-body-lg text-on-surface placeholder:text-outline focus:outline-none focus:ring-0 shadow-sm" id="citySearchInput" placeholder="Search city or country name..." type="search"/>
+<button aria-label="Clear query" class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant items-center justify-center" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- GPS Button -->
+<button class="w-full flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm text-left hover:bg-surface-container-low active:scale-[0.99] transition-all" id="gpsLocateBtn">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">my_location</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Use Current GPS Location</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant high-precision geocoding via device sensors</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</button>
+</section>
+<!-- Region Quick Filter Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="region-filter active-tab px-3.5 py-1.5 rounded-full font-label-md text-label-md flex-shrink-0 bg-primary text-on-primary shadow-[0_4px_12px_rgba(42,73,223,0.25)] transition-colors" data-region="afghanistan">Afghanistan</button>
+<button class="region-filter px-3.5 py-1.5 rounded-full font-label-md text-label-md flex-shrink-0 bg-surface-container-lowest/80 text-on-surface hover:bg-surface-container shadow-sm transition-colors" data-region="regional">Regional Capitals</button>
+<button class="region-filter px-3.5 py-1.5 rounded-full font-label-md text-label-md flex-shrink-0 bg-surface-container-lowest/80 text-on-surface hover:bg-surface-container shadow-sm transition-colors" data-region="islamic">Global Islamic Centers</button>
+<button class="region-filter px-3.5 py-1.5 rounded-full font-label-md text-label-md flex-shrink-0 bg-surface-container-lowest/80 text-on-surface hover:bg-surface-container shadow-sm transition-colors" data-region="global">Europe &amp; Americas</button>
+</div>
+<!-- Dynamic Scannable City List -->
+<section class="flex flex-col space-y-2" id="cityList">
+<!-- Kabul (Selected Item) -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_6px_20px_-4px_rgba(42,73,223,0.15)] flex items-center justify-between cursor-pointer transition-transform active:scale-[0.99]" data-coords="34.5553° N, 69.2075° E" data-country="Afghanistan" data-elevation="1,791m" data-name="Kabul" data-region="afghanistan">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 shadow-[0_0_16px_rgba(42,73,223,0.28)]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Kabul</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Current</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afghanistan • 34.5553° N, 69.2075° E • 1,791m</p>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Herat -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="34.3529° N, 62.2040° E" data-country="Afghanistan" data-elevation="920m" data-name="Herat" data-region="afghanistan">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Herat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afghanistan • 34.3529° N, 62.2040° E • 920m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Mazar-i-Sharif -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="36.7061° N, 67.1108° E" data-country="Afghanistan" data-elevation="380m" data-name="Mazar-i-Sharif" data-region="afghanistan">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Mazar-i-Sharif</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afghanistan • 36.7061° N, 67.1108° E • 380m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Kandahar -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="31.6289° N, 65.7372° E" data-country="Afghanistan" data-elevation="1,010m" data-name="Kandahar" data-region="afghanistan">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Kandahar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afghanistan • 31.6289° N, 65.7372° E • 1,010m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Jalalabad -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="34.4265° N, 70.4515° E" data-country="Afghanistan" data-elevation="575m" data-name="Jalalabad" data-region="afghanistan">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Jalalabad</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Afghanistan • 34.4265° N, 70.4515° E • 575m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Makkah -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="21.3891° N, 39.8579° E" data-country="Saudi Arabia" data-elevation="277m" data-name="Makkah" data-region="islamic">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">mosque</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Makkah</h3>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Holy Sanctuary</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Saudi Arabia • 21.3891° N, 39.8579° E</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Madinah -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="24.5247° N, 39.5692° E" data-country="Saudi Arabia" data-elevation="608m" data-name="Madinah" data-region="islamic">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">mosque</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Madinah</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">The Prophet's City</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Saudi Arabia • 24.5247° N, 39.5692° E</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Istanbul -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="41.0082° N, 28.9784° E" data-country="Turkey" data-elevation="40m" data-name="Istanbul" data-region="regional">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Istanbul</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Turkey • 41.0082° N, 28.9784° E • 40m</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Dubai -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="25.2048° N, 55.2708° E" data-country="United Arab Emirates" data-elevation="11m" data-name="Dubai" data-region="regional">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Dubai</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">United Arab Emirates • 25.2048° N, 55.2708° E</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- London -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="51.5072° N, 0.1276° W" data-country="United Kingdom" data-elevation="25m" data-name="London" data-region="global">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">London</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">United Kingdom • 51.5072° N, 0.1276° W</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+<!-- Toronto -->
+<div class="city-item w-full p-3.5 rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl shadow-sm flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all active:scale-[0.99]" data-coords="43.6532° N, 79.3832° W" data-country="Canada" data-elevation="76m" data-name="Toronto" data-region="global">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Toronto</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Canada • 43.6532° N, 79.3832° W</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</div>
+</section>
+<!-- Manual Coordinates Entry Accordion -->
+<section class="w-full rounded-2xl bg-surface-container-lowest/70 backdrop-blur-xl p-4 shadow-sm">
+<button class="w-full flex items-center justify-between text-left group" id="toggleManualFormBtn">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span>Enter custom latitude, longitude &amp; elevation</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="accordionArrow">expand_more</span>
+</button>
+<div class="hidden mt-3 pt-3 flex-col space-y-3" id="manualForm">
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Latitude (°N/S)</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container" placeholder="e.g. 34.5553" type="text"/>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Longitude (°E/W)</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container" placeholder="e.g. 69.2075" type="text"/>
+</div>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Elevation (Meters Above Sea Level)</label>
+<input class="h-10 px-3 rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container" placeholder="e.g. 1791" type="number"/>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors">
+        Apply Custom Coordinates
+      </button>
+</div>
+</section>
+<!-- Sticky Confirmation Bar -->
+<div class="fixed bottom-4 inset-x-margin z-40 max-w-[calc(100vw-2rem)] mx-auto">
+<button class="w-full h-14 rounded-2xl bg-gradient-to-r from-primary via-primary-container to-secondary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_12px_28px_-4px_rgba(42,73,223,0.45)] hover:opacity-95 active:scale-[0.98] transition-all" id="confirmCityBtn">
+<span>Confirm City &amp; Update Solar Rhythms</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('citySearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const filterTabs = document.querySelectorAll('.region-filter');
+    const cityItems = document.querySelectorAll('.city-item');
+    const accordionBtn = document.getElementById('toggleManualFormBtn');
+    const manualForm = document.getElementById('manualForm');
+    const accordionArrow = document.getElementById('accordionArrow');
+    const confirmBtn = document.getElementById('confirmCityBtn');
+
+    let activeRegion = 'afghanistan';
+
+    function filterCities() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      cityItems.forEach(item => {
+        const name = (item.getAttribute('data-name') || '').toLowerCase();
+        const country = (item.getAttribute('data-country') || '').toLowerCase();
+        const region = item.getAttribute('data-region') || '';
+
+        const matchesQuery = !query || name.includes(query) || country.includes(query);
+        const matchesTab = !query ? (activeRegion === 'all' || region === activeRegion) : true;
+
+        if (matchesQuery && matchesTab) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', () => {
+      if (searchInput.value.length > 0) {
+        clearBtn.classList.remove('hidden');
+        clearBtn.classList.add('flex');
+      } else {
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('flex');
+      }
+      filterCities();
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+      filterCities();
+      searchInput.focus();
+    });
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'shadow-[0_4px_12px_rgba(42,73,223,0.25)]');
+          t.classList.add('bg-surface-container-lowest/80', 'text-on-surface');
+        });
+        tab.classList.remove('bg-surface-container-lowest/80', 'text-on-surface');
+        tab.classList.add('bg-primary', 'text-on-primary', 'shadow-[0_4px_12px_rgba(42,73,223,0.25)]');
+        activeRegion = tab.getAttribute('data-region');
+        filterCities();
+      });
+    });
+
+    cityItems.forEach(item => {
+      item.addEventListener('click', () => {
+        cityItems.forEach(ci => {
+          ci.classList.remove('shadow-[0_6px_20px_-4px_rgba(42,73,223,0.15)]');
+          ci.classList.add('shadow-sm');
+          const indicator = ci.querySelector('.material-symbols-outlined:last-child');
+          if (indicator && indicator.parentElement === ci) {
+            indicator.textContent = 'radio_button_unchecked';
+            indicator.className = 'material-symbols-outlined text-outline text-[20px]';
+          }
+        });
+
+        item.classList.add('shadow-[0_6px_20px_-4px_rgba(42,73,223,0.15)]');
+        const indicator = item.querySelector('.material-symbols-outlined:last-child');
+        if (indicator && indicator.parentElement === item) {
+          indicator.textContent = 'check_circle';
+          indicator.className = 'material-symbols-outlined text-primary text-[20px]';
+        }
+      });
+    });
+
+    accordionBtn.addEventListener('click', () => {
+      const isHidden = manualForm.classList.contains('hidden');
+      if (isHidden) {
+        manualForm.classList.remove('hidden');
+        manualForm.classList.add('flex');
+        accordionArrow.style.transform = 'rotate(180deg)';
+      } else {
+        manualForm.classList.add('hidden');
+        manualForm.classList.remove('flex');
+        accordionArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    confirmBtn.addEventListener('click', () => {
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Calculating Horizons...</span>';
+      setTimeout(() => {
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Updated Successfully!</span>';
+        setTimeout(() => {
+          if (window.history.length > 1) {
+            window.history.back();
+          }
+        }, 600);
+      }, 700);
+    });
+
+    filterCities();
+  })();
+</script></main></body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "surface-container": "#ebedff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed": "#21005e", "primary-container": "#4965f9", "surface": "#faf8ff", "outline": "#757687", "secondary-fixed-dim": "#cebdff", "primary-fixed-dim": "#bac3ff", "outline-variant": "#c5c5d8", "on-primary-fixed": "#00105b", "secondary-container": "#7f58ed", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-tertiary-fixed": "#002020", "on-primary-container": "#fffbff", "primary-fixed": "#dee0ff", "secondary-fixed": "#e8ddff", "on-primary": "#ffffff", "tertiary-container": "#008283", "surface-tint": "#2d4ce2", "on-surface-variant": "#444655", "on-secondary": "#ffffff", "surface-container-highest": "#dce1fd", "on-tertiary-container": "#f3fffe", "on-primary-fixed-variant": "#002fc9", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "surface-dim": "#d4d9f4", "surface-container-high": "#e3e7ff", "surface-variant": "#dce1fd", "tertiary-fixed": "#6df7f8", "background": "#faf8ff", "on-error": "#ffffff", "inverse-surface": "#2a3044", "tertiary": "#006768", "surface-container-lowest": "#ffffff", "secondary": "#663bd2", "on-secondary-fixed-variant": "#501dbc", "error-container": "#ffdad6", "on-surface": "#151b2e", "inverse-on-surface": "eff0ff", "inverse-primary": "#bac3ff", "primary": "#2a49df", "on-tertiary": "#ffffff", "surface-bright": "#faf8ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", gutter: "0.75rem", "space-sm": "0.5rem", margin: "1rem", "space-lg": "1.25rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "metric-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen relative antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container/60 transition-colors text-on-surface -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="text-headline-md font-headline-md text-on-surface tracking-tight truncate max-w-[200px]">Background Library</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28 space-y-space-lg">
+<!-- Top Context Header Area (Filter & Subtitle Info) -->
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-tertiary uppercase tracking-wider">Atmosphere Engine</span>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Curated Wallpapers</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Toggle preview accent" class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shadow-sm active:scale-95 transition-transform" id="themeToggleMini">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+</button>
+<button aria-label="Library details" class="w-9 h-9 rounded-full bg-surface-container text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[19px]">info</span>
+</button>
+</div>
+</div>
+<!-- Hero Card: Current Active Background -->
+<div class="relative w-full rounded-lg overflow-hidden bg-surface-container-lowest shadow-xl backdrop-blur-2xl p-space-md">
+<div class="relative w-full h-44 rounded-[1.25rem] overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Breathtaking ethereal morning horizon with pastel blush, lavender, and celestial golden light reflecting across calm stillness, minimalist aesthetic, subtle soft gradients, 8k resolution, serene digital art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7HG8IgbMiz06B3avmxyKaP61rI0qTZkJK5Yg-6pHMhNs92nuiimuhbX6S_Cj7R99Pr9zn--xjCe20Q6wSB62x1AuK1eof0JZS3E7D4HUMlnsQqSJEadazcxFYm0pcBCZMcqPj74Te_33eLmVXCpnWPMDCAAWGq8jQwplt4lrX9o5jnLGYo6HQZ1wPWS6vYASjLBMiSNItlZgVGvmWQ_-MxHIEeNT_BGd5AwAOn98XoQXh3E0osxk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-on-background/20 to-transparent"></div>
+<!-- Top Active Pill Badge -->
+<div class="absolute top-space-sm left-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          Current Active Background
+        </span>
+</div>
+<!-- Quick stats chip on active card -->
+<div class="absolute top-space-sm right-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-md">
+<span class="material-symbols-outlined text-[13px]">wb_twilight</span>
+          Adaptive
+        </span>
+</div>
+<!-- Bottom Card Details -->
+<div class="absolute bottom-space-md left-space-md right-space-md flex flex-col gap-0.5">
+<span class="text-label-sm font-label-sm text-tertiary-fixed tracking-wide">Paired Light &amp; Dark Edition</span>
+<h3 class="text-headline-md font-headline-md text-on-primary drop-shadow-sm truncate">04 • Serene Horizon (Dawn)</h3>
+</div>
+</div>
+<!-- Hero Card Actions Row -->
+<div class="mt-space-md flex items-center justify-between gap-space-sm px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]">contrast</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Calibrated for glass contrast</span>
+</div>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm active:scale-95 transition-all">
+<span>Adjust Blur</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Source Mode Switcher -->
+<div class="p-1 rounded-full bg-surface-container-high flex items-center gap-1 shadow-sm">
+<button class="flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm text-center transition-all" id="srcBtnMomentum">
+      Coordinated Set (30)
+    </button>
+<button class="flex-1 py-2 px-3 rounded-full text-on-surface-variant font-label-md text-label-md text-center hover:text-on-surface transition-all" id="srcBtnCurated">
+      Curated Sanctuary
+    </button>
+</div>
+<!-- Filter Pills Carousel -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-margin px-margin py-1">
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform">
+      All (30)
+    </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform hover:text-on-surface">
+      Atmospheric Skies
+    </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform hover:text-on-surface">
+      Minarets &amp; Heritage
+    </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform hover:text-on-surface">
+      Calm Nature
+    </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform hover:text-on-surface">
+      Abstract Glass
+    </button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm whitespace-nowrap active:scale-95 transition-transform hover:text-on-surface">
+      Custom / Upload
+    </button>
+</div>
+<!-- Dynamic Pairing Concept Note -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">routine</span>
+</div>
+<div class="flex flex-col gap-0.5 min-w-0">
+<span class="text-label-md font-label-md text-secondary">Momentum Dynamic Pairing</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+        Each wallpaper includes calibrated Light and Dark variants designed to preserve card legibility and glass translucency seamlessly.
+      </p>
+</div>
+</div>
+<!-- 30-Background Curated Grid Section Header -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-baseline gap-2">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Master Collection</h3>
+<span class="text-label-sm font-label-sm text-outline">Showing 8 of 30</span>
+</div>
+<button class="text-label-md font-label-md text-primary flex items-center gap-1 active:opacity-75">
+<span>Auto-Rotate</span>
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+<!-- 2-Column Curated Wallpapers Grid -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Card 01 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Gentle pastel dawn with soft pink clouds floating across tranquil turquoise-blue morning sky, minimalist meditation atmosphere, serene aesthetic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5uWpBFhLtJE_CzLc_rXDSzmK-rCsEuKskS2uxZxnHCMDNP_uDUq472xsEWbbU4H0fiSoXwXWAIOrvuqWUBFaHP0fHVckaQ-zA7E3NIrjexIXqpj5Tp91DfMysvz6cEMGAtN27M7enEq8FUs9DUDcF8cJt8EzbYoDACXYxWQF9hQmWRz4XnNyplhjecryCuFGaif4b-909zydTdjzH6eJxH2tmHglJb0h7daR2wgcfXPu3pXqg8Zw"/>
+<!-- Dual light/dark badge -->
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<!-- Favorite Toggle -->
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Atmospheric Sky</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">01 • Dawn Tranquility</h4>
+<span class="text-label-sm font-label-sm text-tertiary mt-0.5">Calm / Balance</span>
+</div>
+</div>
+<!-- Card 02 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Majestic mountains during peaceful mist sunrise, soft blue fog blankets mountain valley, peaceful solitary vista with gentle pastel warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR36Q5ekCwBTAgQLo1hD3sFG_nWzh8M6DfnIrM9nLlKTkMdVNuOlIHIdj3ezECvlylkESROmXPRheO_kBUoM-7Zy9Y4ZGYHqFeK3X7_Jxx9aCQaVCQ6fcKOmIDo0Jy-aG5HN2l1R4wdkzbDdHVlEYXN_jS40mfGFYh8LKG37uWH3dT-bQyiqR1OMuWfh1vcffWSMQkS7da372FIn3ABnlBsIqnXlUG2IngK4UtdFrYnsAS4gxGv4k"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Calm Nature</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">02 • Kabul Solitude</h4>
+<span class="text-label-sm font-label-sm text-secondary mt-0.5">Focus / Clarity</span>
+</div>
+</div>
+<!-- Card 03 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Silhouette of an elegant historic minaret rising gently against glowing golden-apricot dawn sky, peaceful Islamic architectural serenity with clean lines and soft haze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3SEuILWtH31ONeTC67HJeg-_bcuA_E4rdgIVbSgqbt5Hi32lNLr_M4i9RPE_oE36VreO-5sTGFy9HpAf8eN3k9iCPVoaQtquE0cPJBQtKBCVeuKVkaheE8Wa-kT8f1tsxDYLFqHCh2aZuFx82odqtm_ZIfqebg3dS3GGNDbXgOC7QuRpjhwWfhgrj9kNRE57KsImmnCCCYxsaOGtpTrhXaQ-A3Q78rimGwyYoC1NQ0s5RYOpMxns"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Minarets &amp; Heritage</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">03 • Minaret Sunrise</h4>
+<span class="text-label-sm font-label-sm text-primary mt-0.5">Spiritual Warmth</span>
+</div>
+</div>
+<!-- Card 04 (SELECTED) -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-md transition-all duration-200 scale-[1.02]">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Serene horizon view at break of dawn, soft gradient violet and light cerulean colors melting into light amber glow, pure tranquility for contemplation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSIeDNP5E9rhEHW88x8487AsrAZFYz3_ZpBAGZg4eny-WrozvXPerDq3BCO_HqGAhm3lOB2z6yjLMb2sMRwvjG68M2S8D-Nz5C9cYcbUSyxj4KFolDg3ZxBRLbb9D324iE4sLC7v3v3fHbZ10KmtPXdlxqk_ZWBqNB74QXghvqUVixmgVDjQp_gTy0i4ZmL1yxxX04u5WxuYELraI74RH0D57tAbDPJ42qLCeN98Le3CCMMpxNZK8"/>
+<!-- Selection Ring Overlay -->
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-center justify-center">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-label-sm font-label-sm font-bold text-primary">Active</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-primary font-semibold truncate">Selected Theme</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface truncate">04 • Serene Horizon</h4>
+<span class="text-label-sm font-label-sm text-outline mt-0.5">Original Benchmark</span>
+</div>
+</div>
+<!-- Card 05 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Emerald green tropical palm fronds with morning dewdrops, backlit by soft ethereal luminous sunbeams, calming natural refuge aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8aqO9jh6ZJDbnN9PUNWUQFEBMCBAVbklsueoQcBfMYO_Ef38AUXVyZRNnh8685mlJKyasRyKCSgMUx8NyZTo63w7y0dK02-CZ3tig5ah5QZie_XisecQ9C0HWFvCdaneU8e6al8xYFbMjt9hUtN7o7qwM59CsytUdQvlv9GjlnW-MkP7RUo8uPaCWz8uTk4ZqbOVZazwKYvHbJBZJWmzN5BPTFP0l5JdBUNvtZkpoXFYkFiE5QUU"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Calm Nature</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">05 • Emerald Oasis</h4>
+<span class="text-label-sm font-label-sm text-tertiary mt-0.5">Revitalization</span>
+</div>
+</div>
+<!-- Card 06 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Abstract flowing translucent fluid ribbon in pastel lavender, iris violet, and light magenta tones against clean daylight background, soft curved reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjCj_-xHxA20QDSYA7zT_ltMiTfPvj8ymbX8fiib9vCdMw2bys8AAwF9GE5H29dRfAXnrPX_Vs68T5b7slJAFJ4OYo_NTbvpizsGUNVNEftjRTbKUQhzQJ6nzZaQY5Ta1Do-fxulYzDfm0pe9pvjMPjJqiT_fVCA4OOApPpt-SW93hT7PREct5d_cbsRmJL-JCU1fDKlTZrI3dk7xOPen0hS3ega6UwQ_tajUwAGpDjPkLNq1DyXQ"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Abstract Glass</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">06 • Lavender Haze</h4>
+<span class="text-label-sm font-label-sm text-secondary mt-0.5">Dream State</span>
+</div>
+</div>
+<!-- Card 07 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Subtle Arabesque geometric mandala embossed on iridescent ivory silk canvas, soft diffuse ambient illumination, elegant serene Islamic heritage motif." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZbEL5rwDoqcr4TX7uTEF2VR9y5p6gs6Yjqied-IMhkW4Z0-cpzIFVTvhyZQbFXEqcQB6IfNNSbW8itN8nTTru7xZP_ob2v6vpVcm8VA4cZnmViXw-tyMXPT2jkbeiLgl4ut2sPVEjmgIy2Tcmv6j8FpZgVBtCQS7ZQiOKJNJs51PRPhjXOdqanj2hv451NmJ3IRV3Q0kQ9WY_u7G8JnD3wj2DS7FvBvpHhn6fp1JA7AicK79bhpo"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Minarets &amp; Heritage</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">07 • Sacred Geometry</h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">Intricate Calm</span>
+</div>
+</div>
+<!-- Card 08 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-2 shadow-sm transition-all duration-200 hover:shadow-md">
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Snowcapped mountain peak touching high celestial blue atmosphere with soft crystal cloud wisps, pristine clarity, zen morning illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG7tatWBHPK8mrtUFS5MYZx9TF2QQM5AzjB8TSwk_qWRQ6BGvlUbravdzjbhoQtlkOtrnSBOP7KiGZpeDRtygmAHAQ6TKK9gdmtoNvMJQu21HNInoiDMIh4yDQ5kDDoOjsxMJsO3vZz9p_WNItktetaOKMvqU7r9iuQNgwBq2SNcZtVuZdGAqx4xfEYko3Mu3An13dNY7r8c_YF5M7FkYAOPRVVVrSnyuDbm8gINiNqj98TkJlS0E"/>
+<div class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md flex items-center gap-1 text-on-surface shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-tertiary">wb_sunny</span>
+<span class="material-symbols-outlined text-[11px] text-secondary">bedtime</span>
+</div>
+<button class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[15px]">favorite</span>
+</button>
+</div>
+<div class="mt-2.5 px-1 pb-1 flex flex-col">
+<span class="text-label-sm font-label-sm text-outline truncate">Calm Nature</span>
+<h4 class="text-body-lg font-body-lg font-semibold text-on-surface truncate">08 • Mountain Zenith</h4>
+<span class="text-label-sm font-label-sm text-primary mt-0.5">High Perspective</span>
+</div>
+</div>
+</div>
+<!-- Load More / Full Library Indicator -->
+<div class="w-full flex flex-col items-center justify-center py-space-sm gap-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant text-body-sm font-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>22 additional themes available in Sanctuary Cloud</span>
+</div>
+<button class="px-space-lg py-2 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm active:scale-95 transition-all">
+      Load All 30 Backgrounds
+    </button>
+</div>
+<!-- Floating Sticky Action Container Above Shell Safe Margin -->
+<div class="fixed bottom-4 left-margin right-margin z-40 flex flex-col gap-2">
+<div class="p-2 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl flex flex-col gap-2">
+<!-- Primary Action Button -->
+<button class="w-full h-12 rounded-xl bg-gradient-to-r from-primary via-secondary to-tertiary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform">
+<span>Customize Selected Background</span>
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<!-- Secondary Action Button -->
+<button class="w-full h-10 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px] text-tertiary">add_photo_alternate</span>
+<span>Upload Custom Wallpaper</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for tab selectors and favorite buttons
+  document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+    if (icon.textContent.trim() === 'favorite') {
+      const btn = icon.parentElement;
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-error');
+          btn.classList.add('text-on-surface-variant');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.add('text-error');
+          btn.classList.remove('text-on-surface-variant');
+        }
+      });
+    }
+  });
+
+  const srcMomentum = document.getElementById('srcBtnMomentum');
+  const srcCurated = document.getElementById('srcBtnCurated');
+  if (srcMomentum && srcCurated) {
+    srcMomentum.addEventListener('click', () => {
+      srcMomentum.className = 'flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm text-center transition-all';
+      srcCurated.className = 'flex-1 py-2 px-3 rounded-full text-on-surface-variant font-label-md text-label-md text-center hover:text-on-surface transition-all';
+    });
+    srcCurated.addEventListener('click', () => {
+      srcCurated.className = 'flex-1 py-2 px-3 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm text-center transition-all';
+      srcMomentum.className = 'flex-1 py-2 px-3 rounded-full text-on-surface-variant font-label-md text-label-md text-center hover:text-on-surface transition-all';
+    });
+  }
+</script></main></body></html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "surface-container": "#ebedff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed": "#21005e", "primary-container": "#4965f9", "surface": "#faf8ff", "outline": "#757687", "secondary-fixed-dim": "#cebdff", "primary-fixed-dim": "#bac3ff", "outline-variant": "#c5c5d8", "on-primary-fixed": "#00105b", "secondary-container": "#7f58ed", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-tertiary-fixed": "#002020", "on-primary-container": "#fffbff", "primary-fixed": "#dee0ff", "secondary-fixed": "#e8ddff", "on-primary": "#ffffff", "tertiary-container": "#008283", "surface-tint": "#2d4ce2", "on-surface-variant": "#444655", "on-secondary": "#ffffff", "surface-container-highest": "#dce1fd", "on-tertiary-container": "#f3fffe", "on-primary-fixed-variant": "#002fc9", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "surface-dim": "#d4d9f4", "surface-container-high": "#e3e7ff", "surface-variant": "#dce1fd", "tertiary-fixed": "#6df7f8", "background": "#faf8ff", "on-error": "#ffffff", "inverse-surface": "#2a3044", "tertiary": "#006768", "surface-container-lowest": "#ffffff", "secondary": "#663bd2", "on-secondary-fixed-variant": "#501dbc", "error-container": "#ffdad6", "on-surface": "#151b2e", "inverse-on-surface": "eff0ff", "inverse-primary": "#bac3ff", "primary": "#2a49df", "on-tertiary": "#ffffff", "surface-bright": "#faf8ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", gutter: "0.75rem", "space-sm": "0.5rem", margin: "1rem", "space-lg": "1.25rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "metric-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen relative antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container/60 transition-colors text-on-surface -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="text-headline-md font-headline-md text-on-surface tracking-tight truncate max-w-[200px]">Appearance</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- Top Utility Bar: Secondary Action Context -->
+<div class="flex items-center justify-between py-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">palette</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Visual Language</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors px-space-sm py-1 rounded-full bg-surface-container/60 hover:bg-surface-container active:scale-95 transition-all" id="reset-btn" type="button">
+      Reset Default
+    </button>
+</div>
+<!-- Live Mini Mockup Preview Box -->
+<div class="relative w-full rounded-lg overflow-hidden bg-gradient-to-b from-primary-fixed/40 via-surface-container-low to-secondary-fixed/30 p-space-md shadow-md mb-space-lg backdrop-blur-2xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="flex h-2.5 w-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface">Interactive Canvas Preview</span>
+</div>
+<!-- Instant Toggle Preview Button -->
+<button class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-lowest/80 text-primary font-label-sm text-label-sm shadow-sm hover:bg-surface-container-lowest active:scale-95 transition-all" id="toggle-preview-mode" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+<span id="preview-toggle-text">Preview Dark</span>
+</button>
+</div>
+<!-- The Micro Phone Shell -->
+<div class="relative w-full rounded-DEFAULT p-space-md transition-all duration-500 bg-surface-container-lowest/80 backdrop-blur-xl shadow-xl overflow-hidden" id="preview-canvas">
+<!-- Ambient Gradient Aura inside preview -->
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary/15 blur-2xl pointer-events-none transition-colors duration-500" id="aura-pill"></div>
+<!-- Mini Header in Preview -->
+<div class="flex items-center justify-between mb-space-md relative z-10">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-gradient-to-tr from-primary to-tertiary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[13px]">spa</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface leading-none" id="preview-app-title">Momentum</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant" id="preview-app-sub">Morning Sanctuary</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary/10 text-primary font-semibold">Active</span>
+</div>
+<!-- Mini Frosted Widget Card inside preview -->
+<div class="relative rounded-DEFAULT p-space-sm mb-space-md bg-surface-container-low/70 backdrop-blur-lg shadow-sm transition-all duration-500" id="preview-inner-card">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface" id="preview-card-headline">Daily Centering</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">85% Clear</span>
+</div>
+<!-- Progress Bar Mockup -->
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-tertiary h-1.5 rounded-full w-[85%] transition-all duration-300" id="preview-progress-fill"></div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-primary text-on-primary text-[10px]">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="preview-task-name">Pranayama Breathwork (12m)</span>
+</div>
+</div>
+<!-- Mini Bottom Navigation Dock in preview -->
+<div class="w-full rounded-full py-1 px- space-md flex items-center justify-between bg-surface-container-lowest/90 backdrop-blur-2xl shadow-sm transition-all duration-500" id="preview-dock">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">cottage</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">checklist</span>
+<div class="w-8 h-8 -my-2 rounded-full bg-gradient-to-r from-primary via-secondary-container to-tertiary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">insights</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+</div>
+</div>
+</div>
+<!-- Primary Theme Mode Selection (3 Cards) -->
+<div class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Display Theme</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Atmosphere</span>
+</div>
+<div aria-label="Theme Mode Selection" class="flex flex-col gap-space-sm" role="radiogroup">
+<!-- Option 1: Light Mode (Active) -->
+<div class="group relative rounded-DEFAULT p-space-md cursor-pointer transition-all duration-200 bg-surface-container-lowest shadow-md" id="theme-card-light" onclick="selectTheme('light')">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-fixed to-primary-container/20 flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Light Mode</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary/10 text-primary">Selected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Clean, luminous aesthetic with frosted glass and atmospheric radiance. Optimized for daylight clarity and focus.
+            </p>
+</div>
+<div class="absolute top-space-md right-space-md w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</div>
+<!-- Option 2: Dark Mode -->
+<div class="group relative rounded-DEFAULT p-space-md cursor-pointer transition-all duration-200 bg-surface-container-low/60 hover:bg-surface-container-low active:scale-[0.99]" id="theme-card-dark" onclick="selectTheme('dark')">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-inverse-surface/10 flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[24px]">dark_mode</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dark Sanctuary</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Deep nocturnal sanctuary with restful obsidian depths and low-light visual comfort for evening reflection.
+            </p>
+</div>
+<div class="hidden absolute top-space-md right-space-md w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center" id="check-dark">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</div>
+<!-- Option 3: System Match -->
+<div class="group relative rounded-DEFAULT p-space-md cursor-pointer transition-all duration-200 bg-surface-container-low/60 hover:bg-surface-container-low active:scale-[0.99]" id="theme-card-system" onclick="selectTheme('system')">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">routine</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<span class="font-headline-sm text-headline-sm text-on-surface">System Rhythm</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Follows celestial daylight cycles. Seamlessly shifts between dawn brilliance and nocturnal twilight.
+            </p>
+</div>
+<div class="hidden absolute top-space-md right-space-md w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center" id="check-system">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Accent Luminescence / Tint Presets -->
+<div class="rounded-lg p-space-md bg-surface-container-low/80 backdrop-blur-xl mb-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Chromatic Aura</h3>
+<span class="font-label-md text-label-md text-primary" id="current-accent-label">Luminous Indigo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+      Subtle ambient glow reflected across frosted navigation docks, buttons, and metrics.
+    </p>
+<!-- Color Swatches Grid -->
+<div aria-label="Accent Palette Selection" class="grid grid-cols-5 gap-space-sm" role="radiogroup">
+<!-- Preset 1: Indigo (Active) -->
+<button aria-label="Luminous Indigo" class="accent-swatch group flex flex-col items-center gap-1.5 focus:outline-none" onclick="setAccent('indigo', 'Luminous Indigo', '#2a49df')" type="button">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-md ring-offset-2 ring-primary" id="swatch-indigo">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface text-center font-medium">Indigo</span>
+</button>
+<!-- Preset 2: Emerald -->
+<button aria-label="Emerald Oasis" class="accent-swatch group flex flex-col items-center gap-1.5 focus:outline-none" onclick="setAccent('emerald', 'Emerald Oasis', '#006768')" type="button">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shadow-sm hover:scale-105 transition-transform" id="swatch-emerald">
+<span class="material-symbols-outlined text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Oasis</span>
+</button>
+<!-- Preset 3: Amber -->
+<button aria-label="Amber Dawn" class="accent-swatch group flex flex-col items-center gap-1.5 focus:outline-none" onclick="setAccent('amber', 'Amber Dawn', '#e67e22')" type="button">
+<div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white shadow-sm hover:scale-105 transition-transform" id="swatch-amber">
+<span class="material-symbols-outlined text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Dawn</span>
+</button>
+<!-- Preset 4: Rose -->
+<button aria-label="Rose Radiance" class="accent-swatch group flex flex-col items-center gap-1.5 focus:outline-none" onclick="setAccent('rose', 'Rose Radiance', '#e11d48')" type="button">
+<div class="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center text-white shadow-sm hover:scale-105 transition-transform" id="swatch-rose">
+<span class="material-symbols-outlined text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Rose</span>
+</button>
+<!-- Preset 5: Cyan -->
+<button aria-label="Sky Cyan" class="accent-swatch group flex flex-col items-center gap-1.5 focus:outline-none" onclick="setAccent('cyan', 'Sky Cyan', '#0ea5e9')" type="button">
+<div class="w-12 h-12 rounded-full bg-sky-500 flex items-center justify-center text-white shadow-sm hover:scale-105 transition-transform" id="swatch-cyan">
+<span class="material-symbols-outlined text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Cyan</span>
+</button>
+</div>
+</div>
+<!-- Translucency & Motion Preferences -->
+<div class="rounded-lg p-space-md bg-surface-container-low/80 backdrop-blur-xl mb-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">Glassmorphic Physics</h3>
+<div class="flex flex-col gap-space-md">
+<!-- Toggle 1: Frosted Translucency -->
+<div class="flex items-center justify-between">
+<div class="pr-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">blur_on</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Frosted Glass Effects</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Render multi-layer blur filters and edge reflections over wallpaper.
+          </p>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary p-0.5 transition-colors duration-200 ease-in-out focus:outline-none shadow-sm" id="toggle-glass" onclick="toggleSwitch('toggle-glass')" role="switch" type="button">
+<span class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface shadow-md ring-0 transition duration-200 ease-in-out translate-x-5" id="knob-glass"></span>
+</button>
+</div>
+<!-- Toggle 2: Gentle Motion -->
+<div class="flex items-center justify-between pt-space-sm">
+<div class="pr-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">air</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Gentle Transitions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Calm, physics-based page morphing and organic card elevations.
+          </p>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary p-0.5 transition-colors duration-200 ease-in-out focus:outline-none shadow-sm" id="toggle-motion" onclick="toggleSwitch('toggle-motion')" role="switch" type="button">
+<span class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface shadow-md ring-0 transition duration-200 ease-in-out translate-x-5" id="knob-motion"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Background Library & Wallpaper Shortcut -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Atmospheric Canvas</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Default Ambient</span>
+</div>
+<div class="relative rounded-DEFAULT overflow-hidden bg-surface-container-low p-space-md shadow-sm group cursor-pointer hover:shadow-md transition-shadow">
+<div class="flex items-center gap-space-md">
+<!-- Thumbnail Placeholder with data-alt -->
+<div class="relative w-16 h-16 rounded-DEFAULT overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A tranquil morning seascape with pastel watercolor gradients, soft powder blue, delicate lilac mist, and warm golden sunrise reflection on gentle ripples, shot in ethereal minimalist style with luminous airy lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDssiR26j8sTUNO43pGWN3KRoiha4FHhqKVhpQeOLpkTXcgXeeGOH3ie0QZfAReV8GDn2RYUMOXjdS-L0kcA_ltLvDbZIR0RzUqYmMy43fzZklx7JqVsfEVwFEKvm4o8MOodHYI4BrOwH_GM8bZHhNPAsHOnRPklY6JbAseRtsTwr6ipWPB1lcKqd7KGMtwGem9UBz8DhNMSlU6_ifnSTbgb7lTJhLCkexS5wx6pIgUNlpHmbbjpUE"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Serene Horizon</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">
+            Pastel sky and mist with 32px diffuse glass refraction.
+          </p>
+<div class="flex items-center gap-1 mt-1 text-primary font-label-md text-label-md">
+<span>Customize Wallpaper</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Apply Action Button -->
+<div class="w-full mt-auto mb-space-md">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary-container text-on-primary font-headline-sm text-headline-sm shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 active:scale-[0.98] transition-all flex items-center justify-center gap-space-xs" id="apply-btn" onclick="applyPreferences()" type="button">
+<span>Apply Appearance Preferences</span>
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<div class="opacity-0 transition-opacity duration-300 text-center font-label-md text-label-md text-tertiary mt-2" id="toast-message">
+      Preferences saved and applied to your ecosystem
+    </div>
+</div>
+</div>
+<script>
+  let activeTheme = 'light';
+  let isDarkPreview = false;
+
+  function selectTheme(theme) {
+    activeTheme = theme;
+    const lightCard = document.getElementById('theme-card-light');
+    const darkCard = document.getElementById('theme-card-dark');
+    const sysCard = document.getElementById('theme-card-system');
+
+    // Reset base styles
+    [lightCard, darkCard, sysCard].forEach(card => {
+      card.className = "group relative rounded-DEFAULT p-space-md cursor-pointer transition-all duration-200 bg-surface-container-low/60 hover:bg-surface-container-low active:scale-[0.99]";
+      const chk = card.querySelector('.absolute.top-space-md.right-space-md');
+      if (chk) chk.classList.add('hidden');
+    });
+
+    const activeEl = document.getElementById('theme-card-' + theme);
+    activeEl.className = "group relative rounded-DEFAULT p-space-md cursor-pointer transition-all duration-200 bg-surface-container-lowest shadow-md";
+    const activeCheck = activeEl.querySelector('.absolute.top-space-md.right-space-md');
+    if (activeCheck) activeCheck.classList.remove('hidden');
+
+    if (theme === 'dark') {
+      setPreviewState(true);
+    } else {
+      setPreviewState(false);
+    }
+  }
+
+  function setPreviewState(dark) {
+    isDarkPreview = dark;
+    const canvas = document.getElementById('preview-canvas');
+    const innerCard = document.getElementById('preview-inner-card');
+    const dock = document.getElementById('preview-dock');
+    const title = document.getElementById('preview-app-title');
+    const sub = document.getElementById('preview-app-sub');
+    const cardTitle = document.getElementById('preview-card-headline');
+    const toggleBtnText = document.getElementById('preview-toggle-text');
+
+    if (dark) {
+      canvas.className = "relative w-full rounded-DEFAULT p-space-md transition-all duration-500 bg-[#0f1422] text-[#f1f5f9] shadow-2xl overflow-hidden";
+      innerCard.className = "relative rounded-DEFAULT p-space-sm mb-space-md bg-[#182035]/80 backdrop-blur-lg shadow-sm transition-all duration-500";
+      dock.className = "w-full rounded-full py-1 px-space-md flex items-center justify-between bg-[#131b2e]/90 backdrop-blur-2xl shadow-sm transition-all duration-500";
+      title.className = "font-headline-sm text-headline-sm text-white leading-none";
+      sub.className = "font-label-sm text-label-sm text-slate-400";
+      cardTitle.className = "font-label-md text-label-md text-slate-100";
+      toggleBtnText.innerText = "Preview Light";
+    } else {
+      canvas.className = "relative w-full rounded-DEFAULT p-space-md transition-all duration-500 bg-surface-container-lowest/80 backdrop-blur-xl shadow-xl overflow-hidden";
+      innerCard.className = "relative rounded-DEFAULT p-space-sm mb-space-md bg-surface-container-low/70 backdrop-blur-lg shadow-sm transition-all duration-500";
+      dock.className = "w-full rounded-full py-1 px-space-md flex items-center justify-between bg-surface-container-lowest/90 backdrop-blur-2xl shadow-sm transition-all duration-500";
+      title.className = "font-headline-sm text-headline-sm text-on-surface leading-none";
+      sub.className = "font-label-sm text-label-sm text-on-surface-variant";
+      cardTitle.className = "font-label-md text-label-md text-on-surface";
+      toggleBtnText.innerText = "Preview Dark";
+    }
+  }
+
+  document.getElementById('toggle-preview-mode').addEventListener('click', () => {
+    setPreviewState(!isDarkPreview);
+  });
+
+  function toggleSwitch(id) {
+    const btn = document.getElementById(id);
+    const knob = btn.firstElementChild;
+    const isChecked = btn.getAttribute('aria-checked') === 'true';
+
+    if (isChecked) {
+      btn.setAttribute('aria-checked', 'false');
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-surface-variant');
+      knob.classList.remove('translate-x-5');
+      knob.classList.add('translate-x-0');
+    } else {
+      btn.setAttribute('aria-checked', 'true');
+      btn.classList.remove('bg-surface-variant');
+      btn.classList.add('bg-primary');
+      knob.classList.remove('translate-x-0');
+      knob.classList.add('translate-x-5');
+    }
+  }
+
+  function setAccent(key, label) {
+    document.getElementById('current-accent-label').innerText = label;
+    const swatches = document.querySelectorAll('.accent-swatch div');
+    swatches.forEach(swatch => {
+      const check = swatch.querySelector('span');
+      if (check) check.classList.add('opacity-0');
+    });
+    const selectedSwatch = document.getElementById('swatch-' + key);
+    if (selectedSwatch) {
+      const activeCheck = selectedSwatch.querySelector('span');
+      if (activeCheck) activeCheck.classList.remove('opacity-0');
+    }
+  }
+
+  function applyPreferences() {
+    const toast = document.getElementById('toast-message');
+    toast.classList.remove('opacity-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0');
+    }, 2800);
+  }
+
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    selectTheme('light');
+    setAccent('indigo', 'Luminous Indigo');
+    const toast = document.getElementById('toast-message');
+    toast.innerText = "Preferences reset to Momentum Default";
+    toast.classList.remove('opacity-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0');
+      toast.innerText = "Preferences saved and applied to your ecosystem";
+    }, 2400);
+  });
+</script></main></body></html>

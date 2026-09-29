@@ -1,0 +1,430 @@
+# Momentum Application: Master Design System Specification
+**Version 2.0.0 — Final & Authoritative Production Reference for Flutter Implementation**
+*Derived strictly from the 38 Approved Momentum Pages (76 UI Screens across Light Mode & Dark Mode) and the 30-Scene Atmospheric Wallpaper System.*
+
+---
+
+## 1. Executive Vision & Core Architectural Model
+
+**Momentum** is an intentional, offline-first personal productivity, halal-conscious daily lifestyle, and personal finance mobile application designed for serenity, clarity, and mindful focus. It harmoniously bridges daily civil commitments, habit tracking, personal bookkeeping, reflective journaling, and sacred spiritual routines (prayer timings, tri-calendar confluence, and tasbeeh) within an atmospheric, translucent mobile canvas.
+
+### 1.1 Inviolable Product & Architectural Boundaries
+1. **Local-First & Zero-Knowledge Sanctuary:**
+   - **No Login / No Cloud Account / No Firebase:** The app operates completely locally on the device without registration, email capture, or third-party cloud auth.
+   - **Zero Analytics / No Tracking:** Personal reflections, daily habits, and financial logs reside entirely within on-device encrypted local storage.
+2. **Generic Hardware-Agnostic Biometrics:**
+   - Use the generic term **Biometric Authentication** across all UI labels and settings.
+   - Strictly forbidden: vendor-specific trademarks (such as Face ID, Touch ID, Android Biometric Prompt v3).
+3. **No Financial Charts or Zakat Calculators:**
+   - Personal finance focuses on straightforward, scannable clarity: balances, income vs. expense transactions, categories, transaction notes, search, filtering, and simple numerical progress targets.
+   - Strictly forbidden: pie charts, sparklines, circular donut charts, or unapproved Zakat quota calculators.
+4. **Standardized Locale & Astronomical Simplicity:**
+   - Standard city selection is a clean, searchable list of cities with country context.
+   - Strictly forbidden: requirements for live GPS sensor tracking, coordinate geocoding (latitude/longitude), or elevation (MSL) meters in UI.
+   - Fixed default locale:
+     - **Default Currency:** `AFN / ؋` (Afghan Afghani)
+     - **Default Timezone:** `Asia/Kabul` (UTC+4:30)
+     - **Default City:** `Kabul, Afghanistan`
+5. **Atmospheric Glassmorphism & Translucency:**
+   - Interfaces float gracefully above curated serene backgrounds using multi-layer backdrop blurs, subtle border highlights, and controlled opacity levels.
+6. **Zero-Drift 1:1 Light & Dark Parity:**
+   - Light Mode and Dark Mode screens share identical layouts, component dimensions, typography scales, padding, and information architecture. Only surface tokens, text colors, and backdrop lighting shift.
+7. **Calm Ergonomics & Fixed Centered Navigation:**
+   - Bottom-anchored interactions, consistent 48px touch targets, balanced vertical cadence, and a physically centered primary action trigger (`+`).
+
+---
+
+## 2. Color Palette & Token System
+
+### 2.1 Brand & Accent Palette
+- **Primary Brand Indigo:** `#4f6bff` (Light Mode) / `#6366f1` (Dark Mode)
+- **Primary Indigo Hover / Pressed:** `#3b55e6` (Light Mode) / `#4f51e0` (Dark Mode)
+- **Primary Gradient:**
+  - *Light Mode:* `linear-gradient(135deg, #4f6bff 0%, #7059ff 100%)`
+  - *Dark Mode:* `linear-gradient(135deg, #6366f1 0%, #38bdf8 100%)`
+- **Secondary Atmospheric Aura Colors (Chromatic Aura Selection):**
+  - *Indigo (Default):* `#4f6bff` (Light) / `#6366f1` (Dark)
+  - *Oasis (Teal):* `#0d9488` (Light) / `#14b8a6` (Dark)
+  - *Dawn (Gold / Amber):* `#d97706` (Light) / `#f59e0b` (Dark)
+  - *Rose (Coral):* `#e11d48` (Light) / `#fb7185` (Dark)
+  - *Cyan (Celestial):* `#0284c7` (Light) / `#38bdf8` (Dark)
+
+### 2.2 Semantic & Feedback Colors
+- **Success / Positive Cashflow (Income) / Completed Task:**
+  - *Light Mode:* Text `#059669`, Surface `rgba(16, 185, 129, 0.12)`, Border `#10b981`
+  - *Dark Mode:* Text `#34d399`, Surface `rgba(16, 185, 129, 0.20)`, Border `#059669`
+- **Warning / Pending / Adhan Approaching:**
+  - *Light Mode:* Text `#d97706`, Surface `rgba(245, 158, 11, 0.12)`, Border `#f59e0b`
+  - *Dark Mode:* Text `#fbbf24`, Surface `rgba(245, 158, 11, 0.20)`, Border `#b45309`
+- **Destructive / Expense / Danger Zone:**
+  - *Light Mode:* Text `#dc2626`, Surface `rgba(239, 68, 68, 0.10)`, Border `#ef4444`
+  - *Dark Mode:* Text `#f87171`, Surface `rgba(239, 68, 68, 0.22)`, Border `#991b1b`
+- **Neutral Info / Verification Badges:**
+  - *Light Mode:* Text `#2563eb`, Surface `rgba(37, 99, 235, 0.08)`, Border `rgba(37, 99, 235, 0.20)`
+  - *Dark Mode:* Text `#60a5fa`, Surface `rgba(96, 165, 250, 0.16)`, Border `rgba(96, 165, 250, 0.30)`
+
+### 2.3 Surface & Canvas Tokens
+
+| Token | Light Mode Value | Dark Mode Value | Usage Description |
+|---|---|---|---|
+| `bg-app-base` | `#faf8ff` (or wallpaper image) | `#0e131f` (or wallpaper image) | Base screen canvas behind wallpaper scrim |
+| `surface-scrim` | `rgba(255, 255, 255, 0.35)` | `rgba(14, 19, 31, 0.70)` | Full-bleed readability overlay |
+| `surface-card-base` | `rgba(255, 255, 255, 0.78)` | `rgba(22, 28, 40, 0.75)` | Standard card background |
+| `surface-card-elevated`| `rgba(255, 255, 255, 0.90)` | `rgba(30, 38, 54, 0.85)` | Modal cards, popovers, active items |
+| `surface-card-subtle` | `rgba(242, 243, 255, 0.60)` | `rgba(16, 23, 35, 0.60)` | Inset rows, disabled sections, readouts |
+| `border-card-hairline`| `rgba(255, 255, 255, 0.80)` / `rgba(79, 107, 255, 0.08)` | `rgba(255, 255, 255, 0.08)` | 1px card perimeter border |
+| `border-card-active`  | `rgba(79, 107, 255, 0.35)` | `rgba(99, 102, 241, 0.45)` | Selected item perimeter glow |
+| `dock-surface`        | `rgba(255, 255, 255, 0.82)` | `rgba(14, 19, 31, 0.88)` | Floating bottom dock container |
+
+### 2.4 Typography Color Tokens
+
+| Token | Light Mode Value | Dark Mode Value | Usage Description |
+|---|---|---|---|
+| `text-primary` | `#0f172a` (Slate 900) | `#f8fafc` (Slate 50) | Main headings, critical numbers, labels |
+| `text-secondary` | `#475569` (Slate 600) | `#94a3b8` (Slate 400) | Subtitles, supporting notes, meta tags |
+| `text-tertiary` | `#64748b` (Slate 500) | `#64748b` (Slate 500) | Timestamps, inactive states, hints |
+| `text-disabled` | `#94a3b8` (Slate 400) | `#475569` (Slate 600) | Disabled buttons, unavailable options |
+| `text-accent` | `#4f6bff` | `#818cf8` | Active links, inline metrics, emphasis |
+
+---
+
+## 3. Typography Hierarchy
+
+### 3.1 Typeface Families
+- **Primary Body & UI Font:** `Inter`, system-ui, -apple-system, sans-serif
+- **Headings, Display Metrics & Branding:** `Space Grotesk`, `Inter`, sans-serif
+- **Monospace Coordinates & Version Identifiers:** `ui-monospace`, `SFMono-Regular`, `Menlo`, monospace (masked PIN slots, build identifiers)
+- **Arabic Script Engine:** `Amiri`, `Scheherazade New`, system Arabic fonts (for Quranic verses, Adhan lines, and Tasbeeh phrases)
+
+### 3.2 Type Scale Specifications
+
+| Level | Size | Weight | Line Height | Tracking | Recommended Context |
+|---|---|---|---|---|---|
+| **Display Hero** | 28px–32px | 700 (Bold) | 1.15 | -0.02em | Large counter values, splash brand mark |
+| **H1 Screen Title** | 22px–24px | 600 (SemiBold) | 1.25 | -0.015em | Top screen title, primary modal titles |
+| **H2 Section Header** | 16px–18px | 600 (SemiBold) | 1.30 | -0.01em | Card titles, group dividers, key metrics |
+| **H3 Subsection Title**| 14px–15px | 600 (SemiBold) | 1.35 | 0.0em | List item titles, row headers, task names |
+| **Body Large** | 15px–16px | 400 (Regular) | 1.45 | 0.0em | Profile statements, long note body text |
+| **Body Regular** | 13px–14px | 400 / 500 | 1.40 | 0.0em | Standard card body, settings descriptions |
+| **Caption / Subtitle**| 12px | 400 / 500 | 1.35 | +0.01em | Secondary metadata, dates, offsets, hints |
+| **Micro Badge / Overline**| 10px–11px | 600 / 700 | 1.20 | +0.05em | Uppercase section badges, tags, pill status |
+
+---
+
+## 4. Elevation, Radii & Glassmorphism System
+
+### 4.1 Border Radii
+- **`rounded-full` (9999px):** Primary circular action button (`+`), category pills, indicator dots, toggle thumbs.
+- **`rounded-2xl` (20px–24px):** Primary hero cards, live preview simulators, large modal bottom-sheets, wallpaper library hero.
+- **`rounded-xl` (14px–16px):** Standard list cards, input fields, search inputs, calendar day blocks, quick action containers.
+- **`rounded-lg` (8px–10px):** Small badges, notification offset chips, numeric keypad keys, secondary buttons.
+- **`rounded-md` (6px):** Checkboxes, radio inner pips, micro tags.
+
+### 4.2 Shadows & Lighting Effects
+- **Floating Card Depth (Light Mode):** `box-shadow: 0 10px 25px -5px rgba(79, 107, 255, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03)`
+- **Floating Card Depth (Dark Mode):** `box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.50), 0 0 1px 1px rgba(255, 255, 255, 0.06)`
+- **Center Action Button Glow (`+`):**
+  - *Light Mode:* `box-shadow: 0 12px 24px -4px rgba(79, 107, 255, 0.45)`
+  - *Dark Mode:* `box-shadow: 0 12px 28px -4px rgba(99, 102, 241, 0.55), 0 0 15px rgba(56, 189, 248, 0.35)`
+- **Inner Rim Highlight:** `border-top: 1px solid rgba(255, 255, 255, 0.40)` (simulates refractive top edge in glass).
+
+### 4.3 Backdrop Blur Hierarchy
+- **`backdrop-blur-none` (0px):** Raw background visibility.
+- **`backdrop-blur-sm` (4px–8px):** Subtle scrims and secondary tooltips.
+- **`backdrop-blur-md` (12px–16px):** Standard list rows, secondary cards, search bars.
+- **`backdrop-blur-xl` (20px–24px):** Primary hero containers, main bottom navigation dock, sticky top app bars, modals.
+- **`backdrop-blur-2xl` (32px–40px):** Deep focus overlays, PIN lock shield screens.
+
+---
+
+## 5. Layout Grid & Spacing System
+
+### 5.1 Base 4px Grid Rhythm
+All padding, margin, height, and spacing values derive strictly from multiples of 4px:
+- `2px` (0.5 unit): Hairline borders, micro gaps.
+- `4px` (1 unit): Icon-to-label spacing, badge inner padding.
+- `8px` (2 units): Compact row spacing, tag gaps, sub-element separation.
+- `12px` (3 units): Standard internal card padding (mobile compact), input inset padding.
+- `16px` (4 units): Standard screen container horizontal margin, standard card padding, stack gaps.
+- `20px` (5 units): Hero card padding, major section vertical spacing.
+- `24px` (6 units): Section-to-section separation rhythm.
+- `32px` (8 units): Major structural dividers, onboarding header offsets.
+- `48px` (12 units): Standard touch target minimum dimension (buttons, row items).
+- `84px` (21 units): Total bottom clearance padding to guarantee zero overlap with the persistent dock.
+
+### 5.2 Mobile Viewport Geometry
+- Target Reference Width: 390px–412px (Adaptive fluid 100% max 440px centered).
+- Target Viewport Height: ~844px–915px.
+- Screen Horizontal Gutter: 16px.
+
+---
+
+## 6. App Chrome & Navigation Architecture
+
+### 6.1 Main Bottom Navigation Dock (Tab Chrome)
+*Present on: Home Dashboard, Finance Tracker, Tasks & Reminders, Calendars Main, Notes Main, Tasbeeh Main, Prayer Times, Settings & Profile.*
+
+```
++-----------------------------------------------------------------------+
+|  [Home]       [Finance]        ( + )        [Tasks]         [More]    |
+|   icon          icon          FLOATING       icon            icon     |
+|   label         label          ACTION        label           label    |
++-----------------------------------------------------------------------+
+```
+
+1. **Slots & Ordering:** Strictly 5 slots in fixed order:
+   `Home` (Index 1) | `Finance` (Index 2) | `+` (Center Trigger) | `Tasks` (Index 4) | `More` (Index 5)
+2. **Physical Centering of `+` (INVIOLABLE INVARIANT):**
+   - The `+` button is placed inside a dedicated flex center container (`flex-1 flex justify-center items-center`) that guarantees mathematical horizontal centering irrespective of viewport width or active tab.
+   - **Dimensions:** 52px × 52px circular medallion.
+   - **Elevation:** Floats -14px above the top rim of the dock with radiant gradient wash.
+   - **Icon:** 24px bold plus icon (`+`), centered with crisp optical balance.
+3. **Tab Item Specs:**
+   - Inactive: 22px outline icon, 10px label text, Slate 500 (`#64748b`).
+   - Active: 22px filled/emphasized icon, 10px medium label text, theme primary (`#4f6bff` Light / `#818cf8` Dark) with subtle bottom indicator dot or pill glow.
+4. **Dock Bar Enclosure:**
+   - Height: 68px + bottom safe-area padding (~16px). Total: ~84px.
+   - Floating Margins: 12px horizontal margin, rounded-3xl (`28px`), `backdrop-blur-xl`.
+
+### 6.2 Focused Top Navigation (Stack Chrome)
+*Present on: Sub-pages, Add/Edit Forms, Category Selectors, About Momentum, Settings detail pages.*
+- **Container Height:** 56px.
+- **Left Slot:** 40px × 40px circular tap target with 20px back chevron (`←`), restoring previous state with smooth pop transition.
+- **Center Slot:** Screen title, 17px–18px font-semibold Space Grotesk/Inter, centered with optical truncation for long titles.
+- **Right Slot:** Context action (e.g., Save text button, reset trigger, or info icon). If no action exists, an empty 40px balancer retains title centering.
+
+---
+
+## 7. Component Library Standardization
+
+### 7.1 Cards & Containers
+1. **Hero / Metric Card:**
+   - Padding: 18px–20px.
+   - Border radius: `rounded-2xl` (20px).
+   - Features: Atmospheric gradient wash, status badge, large metric numeral, simple progress bar. (No charts or sparklines).
+2. **Grouped Settings Card:**
+   - Container wrapping multiple settings rows with 1px divider lines (`rgba(0,0,0,0.04)` Light / `rgba(255,255,255,0.05)` Dark).
+   - Inset row padding: 14px horizontal, 14px vertical.
+   - Right-side accessories: Chevron (`>`), toggle switch, or current value label.
+3. **Interactive List Card:**
+   - Padding: 14px–16px.
+   - Border radius: `rounded-xl` (16px).
+   - Hover / Active state: 2% lighter background, subtle active border highlight.
+
+### 7.2 Buttons & Action Triggers
+1. **Primary Action Button (`.btn-primary`):**
+   - Height: 48px–52px. Full width or dock width.
+   - Geometry: `rounded-xl` (14px) or `rounded-full`.
+   - Gradient: Theme Indigo gradient.
+   - Text: 15px font-semibold, white (`#ffffff`), centered with optional trailing arrow (`→`).
+   - State: Active press scales down by 1.5% (`scale(0.985)`).
+2. **Secondary / Outlined Button (`.btn-secondary`):**
+   - Height: 48px.
+   - Surface: Frosted white (`rgba(255, 255, 255, 0.60)`) / Dark slate (`rgba(30, 38, 54, 0.60)`).
+   - Border: 1px solid theme primary or border hairline.
+   - Text: 14px font-medium theme primary or text-primary.
+3. **Tertiary / Destructive Button (`.btn-danger`):**
+   - Surface: `rgba(239, 68, 68, 0.12)`.
+   - Text: `#ef4444` (Light) / `#f87171` (Dark).
+
+### 7.3 Form Inputs & Search Fields
+1. **Standard Text Input:**
+   - Height: 48px.
+   - Border radius: `rounded-xl` (14px).
+   - Inset: 14px horizontal, leading icon 20px from left.
+   - Surface: `rgba(255, 255, 255, 0.70)` (Light) / `rgba(16, 23, 35, 0.70)` (Dark).
+   - Border: 1px solid hairline; on focus: 2px solid theme primary + soft ring glow.
+   - Placeholder Text: Slate 400 (`#94a3b8`).
+2. **Search Bar:**
+   - Height: 44px.
+   - Surface: Frosted container with leading magnifying glass icon and trailing clear `✕` button when active.
+   - Filter Chips Row: Horizontal scrolling row of pill buttons (`rounded-full`) directly below search bar.
+
+### 7.4 Toggles & Segmented Controls
+1. **Toggle Switch:**
+   - Track Dimensions: 48px width × 28px height.
+   - Thumb Diameter: 22px circle with soft drop shadow.
+   - Off State: Slate 300 track (`#cbd5e1`) Light / Slate 700 track (`#334155`) Dark.
+   - On State: Primary Indigo gradient track with white thumb translated 20px right.
+2. **Segmented Multi-Choice (e.g., Light / Dark / System):**
+   - Height: 40px.
+   - Outer container: `rounded-full`, 4px internal padding.
+   - Active Segment: Pill surface with subtle shadow and primary text color.
+   - Inactive Segment: Transparent with secondary text color.
+
+### 7.5 Security PIN Pad & Biometrics
+1. **Masked PIN Indicator:**
+   - 4 discrete circular slots (16px diameter).
+   - Empty slot: 2px border ring (`rgba(255, 255, 255, 0.30)` or Slate 300).
+   - Filled slot: Solid primary indigo fill (`••••`).
+   - Active slot: Blinking border pulse.
+   - Plaintext values are strictly forbidden in UI and DOM.
+2. **Numeric Keypad (3×4 Grid):**
+   - Keys 1–9, `Clear`, `0`, Backspace.
+   - Key Dimensions: Minimum 56px height, `rounded-xl`, high contrast numeral with secondary alpha letters (ABC, DEF).
+   - Haptic Feedback / Active state: Frosted button depress visual state.
+3. **Biometric Authentication:**
+   - Described strictly as generic **Biometric Authentication** across all labels, dialogs, and toggles.
+
+### 7.6 Selection Controls (Radio & Checkbox)
+1. **Checkbox:**
+   - 22px × 22px, `rounded-md` (6px).
+   - Checked: Primary indigo gradient with crisp white checkmark SVG.
+2. **Radio Pip:**
+   - 22px outer circle, 10px inner solid pip when selected.
+
+---
+
+## 8. Atmospheric Wallpaper & Blur System
+
+### 8.1 30-Scene Paired Architecture (60 Variants Total)
+Momentum features an engineered collection of 30 scenic environments organized into 4 distinct categories:
+1. **Atmospheric Skies (01–06):** Dawn Tranquility, Serene Horizon, Twilight Cloudscape, Aurora Solitude, Dusk Radiance, High Noon Mist.
+2. **Minarets & Heritage (07–14):** Minaret Sunrise, Sacred Geometry, Blue Mosque Dusk, Archway Reflections, Andalusian Courtyard, Samarkand Azure, Palm Oasis Silhouette, Desert Minaret.
+3. **Calm Nature & Solitude (15–22):** Kabul Solitude, Emerald Oasis, Mountain Zenith, Quiet Pine Mist, Alpine Reflection, Dune Silence, Cascading Spring, Cedar Grove.
+4. **Abstract Glass & Refraction (23–30):** Lavender Haze, Prismatic Fluid, Indigo Silk, Radiant Sphere, Amber Quartz, Obsidian Refraction, Luminous Void, Opal Ribbon.
+
+### 8.2 Light & Dark Pairing Rules
+- Every scene has an exact **Light Mode variant** and **Dark Mode variant** sharing the same physical subject and composition (30 scenes × 2 themes = **60 background variants**).
+- The Light variant provides luminous daylight or golden sunrise illumination.
+- The Dark variant converts the scene into twilight, nocturnal moonlight, or starry obsidian tones without moving landscape elements.
+- Wallpapers must never contain baked-in text, simulated widgets, mock phones, or buttons.
+
+### 8.3 Precision Blur Calibration Scale
+
+| Blur Preset | Pixel Radius | Scrim Compensation | Recommended Usability Case |
+|---|---|---|---|
+| **Crisp** | `0px` | +15% dark/light scrim | Maximum scenery visibility; card backdrops handle legibility |
+| **Subtle** | `8px` | +10% scrim | Softens sharp photographic edges while retaining landscape forms |
+| **Soft (Standard)** | `18px` | Default (0% offset) | **Official Momentum Default.** Perfect balance of depth and contrast |
+| **Deep** | `28px` | -5% scrim | Abstracted colors, emphasizes floating card elevation |
+| **Dreamy** | `40px` | -10% scrim | Pure chromatic aura gradient wash; lowest visual distraction at night |
+
+### 8.4 Wallpaper System Operation
+- **Default / Offline Collection:** High-resolution assets packaged locally with the app for full offline functionality.
+- **Daily Rotation:** Optional daily cycle through the collection aligned to daylight hours.
+- **Online Update Concept:** Ability to download future seasonal scenic packs into local storage without requiring app redeployment.
+- **Content Readability Guardrails:**
+  - Card surfaces never drop below 70% opacity over wallpapers.
+  - Header scrim dynamically applies `backdrop-blur-xl` and a 15% gradient scrim during scroll.
+
+---
+
+## 9. State Conventions & Interaction Micro-Patterns
+
+1. **Active / Pressed State:**
+   - Clickable cards and buttons apply `transform: scale(0.985)` with a 150ms ease-out curve.
+2. **Selected State:**
+   - Checked list items (cities, timezones, currencies) feature a solid filled badge with checkmark (`✓`) and a 1.5px primary border ring around the entire container row.
+3. **Empty States:**
+   - Friendly, serene icon (peaceful leaf, empty inbox outline, or crescent), concise heading (*"No transactions yet"*), and one clear primary action button (*"Record First Expense"*).
+4. **Loading & Skeleton States:**
+   - Translucent shimmer cards with soft horizontal sweep gradient:
+     `linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%)`.
+
+---
+
+## 10. Master Screen Inventory & Route Mapping
+
+The definitive 38 application pages mapped across both Light and Dark Modes (**76 production UI screens total**):
+
+| ID | Screen / Feature Area | Category | Navigation Type | Primary Role & Features |
+|---|---|---|---|---|
+| 01 | **Splash Screen** | Onboarding | Full-screen Blank | App launch & brand entry |
+| 02 | **Personal Setup** | Onboarding | Stack Modal | Initial setup: Name, Currency, Timezone, City |
+| 03 | **Home Dashboard** | Core Hub | Main Tab (`Home`) | Daily glance, habit rings, routine, prayer countdown |
+| 04 | **Expense Tracker** | Finance Hub | Main Tab (`Finance`) | Balance, expense list, income totals, category filters |
+| 05 | **Add / Edit Expense** | Finance Flow | Stack Modal | Record debit with amount, category, date, and note |
+| 06 | **Income Management** | Finance Flow | Stack Modal | Detailed cashflow breakdown, income history, and archive |
+| 07 | **Add / Edit Income** | Finance Flow | Stack Modal | Record credit with amount, source category, and recurrence |
+| 08 | **Tasks & Reminders** | Productivity | Main Tab (`Tasks`) | Checklists, priorities, calendar links |
+| 09 | **Add / Edit Task** | Productivity | Stack Modal | Create reminder with timing & recurrence |
+| 10 | **Daily Routine** | Productivity | Main Tab / Sub-view | Step-by-step morning & evening routine flow |
+| 11 | **Add / Edit Routine** | Productivity | Stack Modal | Routine cadence configuration |
+| 12 | **Prayer Times** | Spiritual Hub | Main Tab / Sub-view | 5 daily prayer schedule with solar countdown |
+| 13 | **Prayer Notification Settings** | Spiritual Flow | Stack Modal | Adhan offsets (exact, 5m, 10m, 15m) & notification tone |
+| 14 | **Tasbeeh Main** | Spiritual Hub | Main Tab / Sub-view | Interactive digital counter with haptic feedback |
+| 15 | **New / Edit Tasbeeh** | Spiritual Flow | Stack Modal | Custom dhikr formula and target count |
+| 16 | **Tasbeeh Settings** | Spiritual Flow | Stack Modal | Sound, haptics, and reset preferences |
+| 17 | **Tasbeeh History** | Spiritual Flow | Stack Modal | Historical dhikr volume & session logs |
+| 18 | **Notes Main** | Journal Hub | Main Tab / Sub-view | Sacred reflection cards, search & tags |
+| 19 | **Quick Note Editor** | Journal Flow | Stack Modal | Fast text capture with category chips |
+| 20 | **Long Note Editor** | Journal Flow | Stack Modal | Rich formatted journal with spiritual headers |
+| 21 | **Note Media / Attachment Viewer**| Journal Flow | Stack Modal | Media viewer with full-screen view & notes |
+| 22 | **Calendars Main** | Calendar Hub | Main Tab / Sub-view | Confluence of 3 calendars & day agenda |
+| 23 | **Gregorian Calendar** | Calendar Hub | Stack View | Standard civil solar grid & scheduling |
+| 24 | **Islamic / Hijri Calendar** | Calendar Hub | Stack View | Lunar Hijri dates, sacred months & events |
+| 25 | **Afghan Solar / Hijri Shamsi Calendar** | Calendar Hub | Stack View | Afghan national solar calendar & seasons |
+| 26 | **Settings & Profile** | Settings Hub | Main Tab (`More`) | Profile summary, quick theme/security/notification switches |
+| 27 | **Edit Profile** | Settings Flow | Stack Modal | Edit Name, Currency, Timezone, City (No Email) |
+| 28 | **Appearance** | Settings Flow | Stack Modal | Light/Dark switch, aura swatches & blur preview |
+| 29 | **Background / Wallpaper Library**| Settings Flow | Stack Modal | 30-scene gallery with paired variants |
+| 30 | **Background Preview & Blur** | Settings Flow | Stack Modal | Real-time 5-step blur slider simulator (18px default) |
+| 31 | **App Lock** | Security Flow | Stack Modal | Master lock toggle, PIN & Biometric Authentication |
+| 32 | **PIN Setup / Change** | Security Flow | Stack Modal | 3-step masked PIN entry with 3×4 numeric keypad |
+| 33 | **Biometric Settings** | Security Flow | Stack Modal | Enable Biometric Authentication, PIN fallback, gates |
+| 34 | **Notifications Settings** | Settings Flow | Stack Modal | Global alert toggles & routine schedules |
+| 35 | **Currency Selection** | Locale Flow | Stack Modal | AFN default selection & financial formatting |
+| 36 | **Timezone Selection** | Locale Flow | Stack Modal | Asia/Kabul default & astronomical solar noon |
+| 37 | **City Selection** | Locale Flow | Stack Modal | Kabul default with standard searchable city list |
+| 38 | **About Momentum** | Settings Flow | Stack Modal | Brand story, Milad Wardak authorship, credits, version |
+
+---
+
+## 11. Engineering Implementation Tokens (Flutter & Web Architecture)
+
+### 11.1 Dart / Flutter Design Tokens
+
+```dart
+import 'package:flutter/material.dart';
+
+class MomentumTokens {
+  // Brand Colors
+  static const Color primaryLight = Color(0xFF4F6BFF);
+  static const Color primaryDark = Color(0xFF6366F1);
+  
+  // Surfaces - Light Mode (Luminous Serenity)
+  static const Color bgSurfaceLight = Color(0xC7FFFFFF); // 78% Opacity
+  static const Color bgSurfaceElevatedLight = Color(0xE6FFFFFF); // 90% Opacity
+  static const Color borderHairlineLight = Color(0xCCFFFFFF); // 80% Opacity
+  static const Color textPrimaryLight = Color(0xFF0F172A);
+  static const Color textSecondaryLight = Color(0xFF475569);
+  static const Color textTertiaryLight = Color(0xFF64748B);
+
+  // Surfaces - Dark Mode (Luminous Serenity Nocturne)
+  static const Color bgBaseDark = Color(0xFF0E131F);
+  static const Color bgSurfaceDark = Color(0xBF161C28); // 75% Opacity
+  static const Color bgSurfaceElevatedDark = Color(0xD91E2636); // 85% Opacity
+  static const Color borderHairlineDark = Color(0x14FFFFFF); // 8% Opacity
+  static const Color textPrimaryDark = Color(0xFFF8FAFC);
+  static const Color textSecondaryDark = Color(0xFF94A3B8);
+  static const Color textTertiaryDark = Color(0xFF64748B);
+
+  // Default Atmospheric Blur
+  static const double standardBlur = 18.0;
+
+  // Geometry
+  static const double radiusSm = 8.0;
+  static const double radiusMd = 14.0;
+  static const double radiusLg = 20.0;
+  static const double radiusDock = 28.0;
+  static const double dockHeight = 84.0;
+  static const double centerButtonSize = 52.0;
+
+  // Inviolable Defaults
+  static const String defaultCurrency = 'AFN';
+  static const String defaultCurrencySymbol = '؋';
+  static const String defaultTimezone = 'Asia/Kabul';
+  static const String defaultCity = 'Kabul, Afghanistan';
+}
+```
+
+### 11.2 Verification Checklist for Implementation
+- [x] **Local-First Boundary:** No email field in profile, no login/signup screens, no cloud/Firebase dependencies.
+- [x] **Finance Boundaries:** Simple balance, income/expense transaction records, categories, search, filtering. No financial charts, pie charts, sparklines, or Zakat calculation features.
+- [x] **Security Terminology:** Generic term "Biometric Authentication" used exclusively across all screens; no vendor-specific brand names.
+- [x] **Security Integrity:** Masked PIN dots (`••••`) strictly enforced; no plaintext PIN leakage in UI or DOM.
+- [x] **Locale Boundaries:** Kabul, Afghanistan default with standard searchable city list; no live GPS tracking, latitude/longitude, or elevation requirements.
+- [x] **Navigation Dock:** Strictly 5 slots (`Home` | `Finance` | `+` | `Tasks` | `More`); `+` button mathematically centered in a dedicated flex container.
+- [x] **1:1 Light/Dark Mode Parity:** All 38 pages share identical bounding boxes, layouts, and typography across both Light and Dark Mode variants.
+- [x] **Atmospheric Wallpaper Engine:** 30 coordinated scenes × 2 themes = 60 background variants with 18px default blur.

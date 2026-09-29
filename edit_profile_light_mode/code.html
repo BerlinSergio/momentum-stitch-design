@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "surface-container": "#ebedff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed": "#21005e", "primary-container": "#4965f9", "surface": "#faf8ff", "outline": "#757687", "secondary-fixed-dim": "#cebdff", "primary-fixed-dim": "#bac3ff", "outline-variant": "#c5c5d8", "on-primary-fixed": "#00105b", "secondary-container": "#7f58ed", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-tertiary-fixed": "#002020", "on-primary-container": "#fffbff", "primary-fixed": "#dee0ff", "secondary-fixed": "#e8ddff", "on-primary": "#ffffff", "tertiary-container": "#008283", "surface-tint": "#2d4ce2", "on-surface-variant": "#444655", "on-secondary": "#ffffff", "surface-container-highest": "#dce1fd", "on-tertiary-container": "#f3fffe", "on-primary-fixed-variant": "#002fc9", "on-secondary-container": "#fffbff", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "surface-dim": "#d4d9f4", "surface-container-high": "#e3e7ff", "surface-variant": "#dce1fd", "tertiary-fixed": "#6df7f8", "background": "#faf8ff", "on-error": "#ffffff", "inverse-surface": "#2a3044", "tertiary": "#006768", "surface-container-lowest": "#ffffff", "secondary": "#663bd2", "on-secondary-fixed-variant": "#501dbc", "error-container": "#ffdad6", "on-surface": "#151b2e", "inverse-on-surface": "eff0ff", "inverse-primary": "#bac3ff", "primary": "#2a49df", "on-tertiary": "#ffffff", "surface-bright": "#faf8ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", gutter: "0.75rem", "space-sm": "0.5rem", margin: "1rem", "space-lg": "1.25rem", "space-md": "0.75rem", "space-xs": "0.25rem" }, fontFamily: { "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "metric-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen relative antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container/60 transition-colors text-on-surface -ml-2" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><h1 class="text-headline-md font-headline-md text-on-surface tracking-tight truncate max-w-[200px]">Edit Profile</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28">
+<!-- Dynamic Atmospheric Glow Background Decoration -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/15 rounded-full blur-3xl"></div>
+<div class="absolute top-1/3 -right-20 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<div class="absolute top-2/3 -left-20 w-80 h-80 bg-tertiary-container/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Profile Photo & Identity Section -->
+<section class="flex flex-col items-center mt-2 mb-6">
+<div class="relative group cursor-pointer" id="avatar-container">
+<div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary via-secondary-container to-tertiary-fixed-dim shadow-xl">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Serene and luminous portrait photograph of an Afghan woman smiling gently, soft morning ambient light, wearing a minimalist modern sky-blue hijab, clean serene studio aesthetic matching peaceful mindfulness design language." id="profile-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-7kvRTHAojZx33Bscw2aThkwhIhMfO9vCQhV023_4nf7KXmJHbx7V9tXe8n3TnXcevaZNPJDaVpySSkq4ugHKzT-NGSJo2rl1WEbhFbPDT9IcCWiQecpZ_IKD4_x2MckN7TVlOCw4HoqEcV23ZYlLV3PZ6Ajm_tsGh5gz7y46qBkXlM_NuRWMIOC_3FMci5gn0gqa8U9CzOJrgtM7496ae3d4SuRAL7GdYLpSQJYq74AMhX3cTjU"/>
+<div class="absolute inset-0 bg-on-background/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+<span class="material-symbols-outlined text-surface text-[24px]">photo_camera</span>
+</div>
+</div>
+</div>
+<button aria-label="Upload new photo" class="absolute bottom-1 right-1 w-9 h-9 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center transform transition-transform active:scale-90 hover:scale-105" id="camera-badge">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm mt-4">
+<button class="h-8 px-4 rounded-full bg-surface-container-highest/80 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all active:scale-95 shadow-sm flex items-center gap-1.5" id="change-photo-btn" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">edit</span>
+        Change Photo
+      </button>
+<button class="h-8 px-3 rounded-full bg-error-container/40 hover:bg-error-container/60 text-error font-label-md text-label-md transition-all active:scale-95 flex items-center gap-1" id="remove-photo-btn" type="button">
+<span class="material-symbols-outlined text-[15px]">delete_outline</span>
+        Remove
+      </button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 mt-2 text-center">PNG, JPG or WEBP · Max 5MB</span>
+</section>
+<!-- Form Fields Container -->
+<form class="flex flex-col gap-space-md" id="edit-profile-form" onsubmit="event.preventDefault();">
+<!-- Group 1: Core Account Details Card -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-lg p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+          Identity &amp; Account
+        </h2>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-medium">Standard</span>
+</div>
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant" for="fullname">Full Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">person</span>
+<input class="w-full h-12 pl-11 pr-4 rounded-DEFAULT bg-surface-container-low/70 focus:bg-surface-container-lowest text-on-surface font-body-lg text-body-lg transition-colors outline-none focus:ring-0 shadow-xs" id="fullname" placeholder="Your official name" type="text" value="Aisha Rahmani"/>
+</div>
+</div>
+<!-- Email Address (Verified) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email Address</label>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Verified
+          </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">mail</span>
+<input class="w-full h-12 pl-11 pr-24 rounded-DEFAULT bg-surface-container-low/70 focus:bg-surface-container-lowest text-on-surface font-body-lg text-body-lg transition-colors outline-none focus:ring-0 shadow-xs" id="email" placeholder="address@momentum.app" type="email" value="aisha.rahmani@example.com"/>
+<button class="absolute right-3 font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">Change</button>
+</div>
+</div>
+</div>
+<!-- Group 2: Regional & Temporal Preferences -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-lg p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">public</span>
+          Regional Settings
+        </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Locale &amp; Sync</span>
+</div>
+<!-- Primary Currency Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant" for="currency-select">Primary Currency</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">payments</span>
+<button class="w-full h-12 pl-11 pr-10 rounded-DEFAULT bg-surface-container-low/70 text-left flex items-center justify-between text-on-surface font-body-lg text-body-lg hover:bg-surface-container-low transition-colors shadow-xs" id="currency-select" type="button">
+<span class="truncate">AFN / ؋ (Afghan Afghani)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] absolute right-3">unfold_more</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 pl-1">All financial trackers and zakat quotas default to this currency.</p>
+</div>
+<!-- Timezone Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant" for="timezone-select">Timezone</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">schedule</span>
+<button class="w-full h-12 pl-11 pr-10 rounded-DEFAULT bg-surface-container-low/70 text-left flex items-center justify-between text-on-surface font-body-lg text-body-lg hover:bg-surface-container-low transition-colors shadow-xs" id="timezone-select" type="button">
+<span class="truncate">Asia/Kabul (UTC+4:30)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] absolute right-3">unfold_more</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant/90 pl-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">wb_sunny</span>
+<span class="font-body-sm text-body-sm">Local Solar Noon Offset: +12m 40s</span>
+</div>
+</div>
+<!-- City & Country with Geocoding Badge -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant" for="location">City &amp; Country</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">location_on</span>
+<input class="w-full h-12 pl-11 pr-10 rounded-DEFAULT bg-surface-container-low/70 focus:bg-surface-container-lowest text-on-surface font-body-lg text-body-lg transition-colors outline-none focus:ring-0 shadow-xs" id="location" type="text" value="Kabul, Afghanistan"/>
+<button aria-label="Use current GPS" class="absolute right-3 text-primary flex items-center" type="button">
+<span class="material-symbols-outlined text-[20px]">my_location</span>
+</button>
+</div>
+<!-- Automatic Geocode Pill -->
+<div class="mt-1 flex items-center gap-2 p-2.5 rounded-DEFAULT bg-tertiary-container/15 text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">satellite_alt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary font-semibold">Geocoded for Prayer Calculations</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lat 34.5553° N, Long 69.2075° E (Elevation 1,791m)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Group 3: Spiritual & Mindful Framework -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-lg p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">brightness_7</span>
+          Spiritual Routine Context
+        </h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-medium">Momentum</span>
+</div>
+<!-- Calculation Method Card Selector -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Calculation Convention</span>
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low/60 flex items-start justify-between cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col gap-0.5 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Univ. of Islamic Sciences, Karachi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fajr: 18.0°, Isha: 18.0° (Hanafi Asr ratio: 2x shadow)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">tune</span>
+</div>
+</div>
+<!-- Solar Hijri Toggle Card -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Calendar Synchronization</span>
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low/60 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hijri Shamsi (Solar Calendar)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Afghan national astronomical solar reckoning</span>
+</div>
+</div>
+<!-- Tactile Switch Component -->
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary flex items-center px-0.5 transition-colors duration-300" id="shamsi-toggle" role="switch" type="button">
+<div class="w-6 h-6 rounded-full bg-on-primary shadow-sm transform translate-x-5 transition-transform duration-300"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- Group 4: Account Privacy & Data Health Status -->
+<div class="p-4 rounded-lg bg-surface-container/40 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">cloud_done</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cloud Sync Encrypted</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Last backed up 3 minutes ago</span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">Sync Now</button>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-sm pt-2">
+<!-- Radiant Gradient Save Changes Button -->
+<button class="w-full h-14 rounded-DEFAULT bg-gradient-to-r from-primary via-primary-container to-tertiary-fixed-dim text-on-primary font-headline-sm text-headline-sm shadow-xl flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.99] transition-all" id="save-profile-btn" type="submit">
+<span>Save Changes</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Discard / Cancel Button -->
+<button class="w-full h-12 rounded-DEFAULT bg-transparent text-on-surface-variant font-label-md text-label-md hover:bg-surface-container/50 active:scale-[0.99] transition-all flex items-center justify-center" id="cancel-btn" type="button">
+        Discard Changes
+      </button>
+</div>
+</form>
+<!-- Notification Toast (Hidden by default, triggered on save) -->
+<div class="fixed bottom-6 left-4 right-4 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="save-toast">
+<div class="mx-auto max-w-sm rounded-DEFAULT bg-inverse-surface text-inverse-on-surface p-4 shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Profile Updated</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80">Your regional and spiritual settings are saved.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive Toggle for Solar Calendar Switch
+    const shamsiToggle = document.getElementById('shamsi-toggle');
+    if (shamsiToggle) {
+      let isChecked = true;
+      shamsiToggle.addEventListener('click', function() {
+        isChecked = !isChecked;
+        this.setAttribute('aria-checked', isChecked ? 'true' : 'false');
+        const knob = this.querySelector('div');
+        if (isChecked) {
+          this.classList.remove('bg-surface-dim');
+          this.classList.add('bg-primary');
+          knob.classList.add('translate-x-5');
+          knob.classList.remove('translate-x-0');
+        } else {
+          this.classList.remove('bg-primary');
+          this.classList.add('bg-surface-dim');
+          knob.classList.remove('translate-x-5');
+          knob.classList.add('translate-x-0');
+        }
+      });
+    }
+
+    // Interactive Toast trigger on Save
+    const saveBtn = document.getElementById('save-profile-btn');
+    const toast = document.getElementById('save-toast');
+    
+    if (saveBtn && toast) {
+      saveBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(function() {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-24', 'opacity-0');
+        }, 2800);
+      });
+    }
+
+    // Cancel Button feedback
+    const cancelBtn = document.getElementById('cancel-btn');
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function() {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          alert('Changes discarded.');
+        }
+      });
+    }
+
+    // Photo Button micro-behaviors
+    const changeBtn = document.getElementById('change-photo-btn');
+    const removeBtn = document.getElementById('remove-photo-btn');
+    const profileImg = document.getElementById('profile-img');
+
+    if (changeBtn) {
+      changeBtn.addEventListener('click', function() {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = function(e) {
+          if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(re) {
+              if (profileImg) profileImg.src = re.target.result;
+            };
+            reader.readAsDataURL(e.target.files[0]);
+          }
+        };
+        input.click();
+      });
+    }
+
+    if (removeBtn && profileImg) {
+      removeBtn.addEventListener('click', function() {
+        profileImg.style.opacity = '0.3';
+        setTimeout(function() {
+          profileImg.style.opacity = '1';
+        }, 300);
+      });
+    }
+  })();
+</script></main></body></html>

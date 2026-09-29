@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "tertiary-fixed": "#6df7f8", "tertiary-container": "#008283", "on-secondary-fixed": "#21005e", "surface-container-low": "#f2f3ff", "surface-container-highest": "#dce1fd", "on-primary-container": "#fffbff", "inverse-on-surface": "#eff0ff", "on-surface-variant": "#444655", "on-tertiary-fixed": "#002020", "on-background": "#151b2e", "surface-container": "#ebedff", "primary-container": "#4965f9", "secondary-fixed-dim": "#cebdff", "on-primary": "#ffffff", "on-tertiary-container": "#f3fffe", "error-container": "#ffdad6", "surface-tint": "#2d4ce2", "outline-variant": "#c5c5d8", "primary-fixed": "#dee0ff", "on-primary-fixed": "#00105b", "on-tertiary-fixed-variant": "#004f50", "on-tertiary": "#ffffff", "outline": "#757687", "tertiary": "#006768", "background": "#faf8ff", "surface-dim": "#d4d9f4", "secondary-fixed": "#e8ddff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed-variant": "#501dbc", "on-surface": "#151b2e", "surface": "#faf8ff", "inverse-surface": "#2a3044", "error": "#ba1a1a", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container-high": "#e3e7ff", "secondary": "#663bd2", "on-secondary": "#ffffff", "primary": "#2a49df", "on-primary-fixed-variant": "#002fc9", "inverse-primary": "#bac3ff", "secondary-container": "#7f58ed", "surface-bright": "#faf8ff", "surface-variant": "#dce1fd", "primary-fixed-dim": "#bac3ff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xl": "1.75rem", "space-lg": "1.25rem", "space-md": "0.75rem", gutter: "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", margin: "1rem" }, fontFamily: { "metric-lg": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"] }, fontSize: { "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/75 backdrop-blur-xl shadow-[0_1px_12px_rgba(42,73,223,0.05)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Back or Close" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary hover:bg-surface-container-high/60 transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Create New Note</h1><span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim inline-block animate-pulse"></span>Saved to Cloud</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Share Note" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high/60 transition-colors"><span class="material-symbols-outlined text-[20px]">share</span></button><button aria-label="More Options" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high/60 transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(42,73,223,0.15)]" src="https://lh3.googleusercontent.com/aida/AEtjO1Xqivgb8WnRmLof77BnZPzyZBpzbvUP1AVCrs3mvDfnB_f1RZXcFmBFA_a6HG6vfOogCi-CZxVreOdw6r686Kaf2HymZuMc7nO4lOXpxAOngehZRKb6t3YLAb7DlypVWHqhxt-xTwWeYAmsI6XFcvhYPOLlUX2ysjARmRemkhivrzCI4_28-zoF78qcnwkZuMSSN64w1b-y6TJvnm0moiPO0NRZ0PsoCWGadzO9EQbk1caL1rDfzQ7UFe5rUxR7vqgqDpSqy2PQ"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28 space-y-space-md px-margin relative">
+<!-- Ambient Gradient Luminescence Glows -->
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-gradient-to-br from-primary-fixed/40 via-secondary-fixed/30 to-tertiary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-96 -right-16 w-64 h-64 bg-tertiary-fixed/20 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<!-- Breadcrumb & Note Context Bar -->
+<section class="w-full pt-space-xs">
+<div class="bg-surface-container-lowest/80 backdrop-blur-2xl rounded-2xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary">collections</span>
+<span class="font-label-md text-label-md text-primary tracking-wide uppercase">Media Viewer</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Attached to: Q4 Strategic Reflection</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Download">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Share">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-error-container/60 flex items-center justify-center text-error hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">Dawn_Reflection_Sky.jpg</p>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-2.5 py-0.5 rounded-full font-medium">Synced Cloud Asset</span>
+</div>
+</div>
+</section>
+<!-- Media Category Switcher Filter Tabs -->
+<section class="w-full">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary font-label-md text-label-md shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">image</span>
+        Photos (4)
+      </button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+        Videos (2)
+      </button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[16px]">mic</span>
+        Voice Memos (1)
+      </button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[16px]">description</span>
+        Docs (3)
+      </button>
+</div>
+</section>
+<!-- Hero Photo Showcase Container with Overlays -->
+<section class="w-full relative">
+<div class="relative w-full h-80 rounded-xl overflow-hidden shadow-xl bg-surface-container-high group">
+<!-- Dawn Sky Image Representation -->
+<img class="w-full h-full object-cover select-none" data-alt="Peaceful serene dawn sky with pastel lavender and periwinkle clouds over misty distant mosque domes and minarets silhouette, soft golden morning rim lighting, tranquil atmospheric photography, ultra realistic 8k resolution, serene spiritual mindfulness aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNjiD-1LfA-Gp-FxeZ-V3BpIr5fhlnJ50ZHidge-KyQv19TMvWz7tJJcLGNMjChU8VQHJxQ3F5btGkJP54ALv8iqG8sF9nCgWyOZSp03T2n_vGaxlJ2IJJtV5lK8M2-JaoCL_RTgWpbuLxKCqKHA-SM12i6_FklJOR31Ra015M3rroDrtitoiHVnGdFzNVYkFeUbuP_FgXngaBZyJ-cu4t4fQ_WWK5j4KcUb-L61BELNCqCmWeduM"/>
+<!-- Delicate Light Reflections -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/20 to-transparent pointer-events-none"></div>
+<!-- Top Overlay Controls -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-auto">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/75 backdrop-blur-xl shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">photo_camera</span>
+<span class="font-label-sm text-label-sm font-semibold">1 / 4</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="flex items-center bg-surface-container-lowest/75 backdrop-blur-xl rounded-full p-0.5 shadow-sm text-on-surface">
+<button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-[16px]">zoom_out</span>
+</button>
+<span class="font-label-sm text-label-sm px-1 font-medium">100%</span>
+<button class="w-7 h-7 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest/75 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-sm hover:text-primary transition-colors" title="Fullscreen">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Left / Right Carousel Navigation Controls -->
+<div class="absolute inset-y-0 left-2 flex items-center">
+<button aria-label="Previous Media" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-md hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+</div>
+<div class="absolute inset-y-0 right-2 flex items-center">
+<button aria-label="Next Media" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-md hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Bottom Metadata Pill Inside Image -->
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between pointer-events-auto">
+<div class="flex flex-col text-on-primary drop-shadow-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">schedule</span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Oct 24, 2026 • 06:14 AM</span>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-low/90">Shot on iPhone 16 Pro • 24mm f/1.78</span>
+</div>
+<button class="px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-xl text-primary font-label-sm text-label-sm shadow-md flex items-center gap-1 hover:bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+          Enhance
+        </button>
+</div>
+</div>
+</section>
+<!-- Horizontal Media Carousel Strip & Quick Upload -->
+<section class="w-full">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">ALL ATTACHMENTS (7)</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 cursor-pointer">
+        Select Multiple
+        <span class="material-symbols-outlined text-[14px]">checklist</span>
+</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<!-- Thumbnail 1 (Active) -->
+<div class="relative shrink-0 w-20 h-20 rounded-2xl overflow-hidden shadow-md ring-2 ring-primary bg-surface-container-highest cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Dawn twilight blue and purple sky with distant soft clouds and calm serene mood, macro thumbnail aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_zfr050eJct1tiPjvUmoiBc0KBcI2cxtaiT4cheTfgnf9bLqUDMG1HAbGyceX3rDuhT-THATWZIvRZBh6j3wQGg_1P6B8tQl2OFR0PkAB9pGK6Za2qsVdQfImETKtwfSMyFiqCGvO6p66CnOqQQDkcOmTt0_zRoClfhH8hR8kjA6UWUsBPMD4vI6_zMxjSM30BH_6XcXdlIpytX3bY2wIo0NwR50afy6Gz8AEQX6H2dSNdUmvwX4"/>
+<div class="absolute top-1 right-1 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+</div>
+<!-- Thumbnail 2 (Handwritten Note) -->
+<div class="relative shrink-0 w-20 h-20 rounded-2xl overflow-hidden shadow-sm bg-surface-container-highest hover:opacity-90 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Aesthetic cream paper journal page with neat handwritten fountain pen cursive reflections and botanical sketches, soft ambient window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDekRN-0uCVVUCM2x7_NRnPjMADbeJKN6A6fulQrtXPFFFdpaa6Q6WRpFW_dyTTjfY8PCx8FLeA69uyOMMREPB7Zl0blB8gWv2DOptMwyFyOs7MzYyE6wAIwX3qyOnkvASj6WeJcRiQT9RS2IzWWeDtvGGpG1AvGM26sS700B-6NZgwCo-OcqQ5yf0iIPhFZdEjsImrC5Agr26ebfxnx1FD43ebLGz9O38FDB8DmKcZZJoGqGMBbwg"/>
+<div class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md">
+<span class="font-label-sm text-[10px] text-on-surface font-medium leading-none">Photo</span>
+</div>
+</div>
+<!-- Thumbnail 3 (Video) -->
+<div class="relative shrink-0 w-20 h-20 rounded-2xl overflow-hidden shadow-sm bg-surface-container-highest hover:opacity-90 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Lush green botanical courtyard garden with clear reflective water pond and serene stone fountain, bright soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb8a1OqsooCO1dn5x7265hw5WO7Xftw0OnkceoZYcFY7vd5sCWenyr8SV445lCzLnV3HJP__HHNbuQff2RAP58dJuIFJH5Bxm2_zsehWiDQqbYOHL-JWSfKnh6p8LlmJ2boi3afiSzH1EmqRCSZEKBlbpDfOcGPu60sW_cDoomWGIiWXD3-Xd6wnbduyLBpTLyOqs9cn56LjuwOed-t2206RAerZGBjR1OSvZ566bkBq7EfeI5sMo"/>
+<div class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-lowest/90 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-1 right-1 px-1 rounded bg-inverse-surface/75 text-on-primary font-label-sm text-[9px] leading-none py-0.5">
+          01:24
+        </div>
+</div>
+<!-- Thumbnail 4 (Voice Memo) -->
+<div class="relative shrink-0 w-20 h-20 rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm p-2 flex flex-col justify-between hover:opacity-90 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-[16px] text-secondary">mic</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium">Voice</span>
+</div>
+<div class="flex items-end gap-0.5 h-6 px-1">
+<span class="w-1 bg-secondary rounded-full h-2"></span>
+<span class="w-1 bg-secondary rounded-full h-5"></span>
+<span class="w-1 bg-secondary rounded-full h-3"></span>
+<span class="w-1 bg-secondary rounded-full h-6"></span>
+<span class="w-1 bg-secondary rounded-full h-4"></span>
+<span class="w-1 bg-secondary rounded-full h-2"></span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant truncate">03:45</span>
+</div>
+<!-- Action: Add Attachment -->
+<button class="shrink-0 w-20 h-20 rounded-2xl bg-surface-container-high/60 hover:bg-surface-container-high transition-colors flex flex-col items-center justify-center gap-1 text-primary shadow-sm">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</div>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface">Add File</span>
+</button>
+</div>
+</section>
+<!-- Video Companion Attachment Card Preview -->
+<section class="w-full">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-headline-sm text-body-lg text-on-surface truncate">Garden_Mindfulness_Walk.mp4</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4K 60fps • HEVC • 42.1 MB</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/50 px-2 py-0.5 rounded-full font-medium shrink-0">Video 01:24</span>
+</div>
+<!-- Embedded Video Preview Mockup with Glowing Play Trigger -->
+<div class="relative w-full h-40 rounded-xl overflow-hidden shadow-inner bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Sunlit courtyard garden pathway with delicate water fountain and morning mist, peaceful cinematic composition, realistic natural colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF4iVjImaQ-lWY7UKEhR1XdY4taUIBmT84bdq4CSJHy618TeN55KK_ljEAWAKT_KgSx7jjd5oKzqEvbXyF2G5Is3aW067HNHcUI524shmkbRpi4QdK7-Pue2O-vcpUK0eVTK35sfroP0-QrzppYL9xbeYHGtoHnBldOYPlN6ALVFRr3nAH_BBwPK3nez9R3IJ67eB9VTcbsd9o7TrENZppCUrT8YAOD0Yw5WB_OlSYrztBI5n965I"/>
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-[1px] flex flex-col justify-between p-3">
+<div class="flex justify-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              Live Buffer
+            </span>
+</div>
+<!-- Centered Glowing Play Button -->
+<div class="self-center">
+<button aria-label="Play video preview" class="w-13 h-13 p-3 rounded-full bg-gradient-to-tr from-primary via-secondary to-tertiary-fixed text-on-primary shadow-[0_8px_20px_rgba(79,107,255,0.45)] flex items-center justify-center transform active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Video Seek Bar Scrub Line & Controls -->
+<div class="flex flex-col gap-1 w-full">
+<div class="w-full bg-surface-container-lowest/40 h-1.5 rounded-full overflow-hidden flex items-center">
+<div class="bg-gradient-to-r from-tertiary-fixed via-primary-container to-secondary h-full w-[45%] rounded-full relative"></div>
+</div>
+<div class="flex items-center justify-between text-on-primary font-label-sm text-label-sm drop-shadow">
+<span>00:38</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+<span>01:24</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Metadata & Management Card -->
+<section class="w-full">
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Asset Properties</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+          Read & Write
+        </span>
+</div>
+<!-- Properties Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Resolution</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">3840 × 2160 (4K)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">File Size</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">3.2 MB (JPEG)</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Color Space</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Display P3 Wide</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Storage State</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+            Encrypted & Cached
+          </span>
+</div>
+</div>
+<!-- Editable Caption / Notes Field -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="media-caption">Attachment Caption</label>
+<span class="font-label-sm text-label-sm text-outline">98 / 250</span>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md p-space-md rounded-xl resize-none focus:outline-none focus:bg-surface-container transition-colors" id="media-caption" rows="3">Captured immediately after morning Fajr prayer while meditating on the courtyard terrace.</textarea>
+<div class="absolute bottom-2.5 right-2.5 flex items-center gap-1 text-on-surface-variant">
+<button class="w-6 h-6 rounded-full hover:bg-surface-container-high flex items-center justify-center transition-colors" title="Speech to text">
+<span class="material-symbols-outlined text-[15px]">mic</span>
+</button>
+<button class="w-6 h-6 rounded-full hover:bg-surface-container-high flex items-center justify-center transition-colors" title="Tag location">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Buttons Pair -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-3 px-space-md rounded-xl bg-gradient-to-r from-primary via-primary-container to-secondary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(42,73,223,0.3)] active:scale-[0.99] transition-transform">
+<span>Save Media Changes</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-xl bg-error-container/40 hover:bg-error-container/60 text-on-error-container font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete_outline</span>
+          Remove Attachment from Note
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interactions for thumbnail click selection and enhancement feedback
+  document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('.overflow-x-auto > div');
+    thumbnails.forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        thumbnails.forEach(t => t.classList.remove('ring-2', 'ring-primary'));
+        thumb.classList.add('ring-2', 'ring-primary');
+      });
+    });
+  });
+</script></main></body></html>

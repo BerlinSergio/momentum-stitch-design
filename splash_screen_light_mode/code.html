@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Momentum — Splash Screen</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Custom Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          },
+          colors: {
+            momentum: {
+              primary: '#4F46E5',
+              violet: '#6366F1',
+              cyan: '#06B6D4',
+              softCyan: '#E0F2FE',
+              softPurple: '#F3E8FF',
+              dark: '#0F172A',
+              muted: '#64748B',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s linear infinite',
+            'spin-slow': 'spin 18s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+              '50%': { transform: 'translateY(-8px) scale(1.015)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Layout & Custom Decorative CSS -->
+<style data-purpose="ambient-gradients">
+    /* Subtle celestial atmospheric canvas matching Momentum Light Mode */
+    .momentum-bg {
+      background: radial-gradient(circle at 15% 15%, #F4F2FF 0%, transparent 45%),
+                  radial-gradient(circle at 85% 20%, #E8F7FF 0%, transparent 40%),
+                  radial-gradient(circle at 50% 65%, #EFF6FF 0%, transparent 55%),
+                  radial-gradient(circle at 80% 90%, #E0F7FA 0%, transparent 50%),
+                  linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #E2E8F0 100%);
+    }
+
+    /* Ambient chromatic aura behind the main brand mark */
+    .brand-glow {
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(6, 182, 212, 0.2) 42%, rgba(255, 255, 255, 0) 72%);
+      filter: blur(28px);
+    }
+
+    /* Glassmorphic border and card polish */
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    }
+
+    .brand-glass-disc {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 245, 255, 0.6) 100%);
+      backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 
+        0 20px 35px -10px rgba(79, 70, 229, 0.22),
+        0 8px 16px -4px rgba(6, 182, 212, 0.15),
+        inset 0 1px 2px rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen p-0 sm:p-6 antialiased font-sans select-none">
+<!-- BEGIN: MobileFrameContainer -->
+<!-- Mimics mobile viewport (iPhone standard size: 390px x 844px) -->
+<main class="relative w-full max-w-[390px] h-[844px] max-h-screen sm:max-h-[844px] overflow-hidden momentum-bg sm:rounded-[44px] shadow-2xl flex flex-col justify-between border-0 sm:border-[8px] sm:border-slate-800/10">
+<!-- BEGIN: iOSStatusBar -->
+<header class="w-full pt-3 px-7 flex justify-between items-center z-30 tracking-tight" data-purpose="ios-status-bar">
+<!-- iOS Clock Time -->
+<span class="text-[15px] font-semibold text-slate-800 tracking-tight">9:41</span>
+<!-- iOS System Indicators (Cellular, WiFi, Battery) -->
+<div class="flex items-center space-x-2 text-slate-800">
+<!-- Cellular Signal -->
+<svg class="w-4 h-4 fill-current" viewbox="0 0 16 16">
+<rect height="4" rx="0.5" width="2" x="1" y="11"></rect>
+<rect height="7" rx="0.5" width="2" x="5" y="8"></rect>
+<rect height="10" rx="0.5" width="2" x="9" y="5"></rect>
+<rect height="13" rx="0.5" width="2" x="13" y="2"></rect>
+</svg>
+<!-- WiFi Icon -->
+<svg class="w-4 h-4 fill-current" viewbox="0 0 16 16">
+<path d="M8 12.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5zm3.18-3.03a4.5 4.5 0 0 0-6.36 0 .75.75 0 0 1-1.06-1.06 6 6 0 0 1 8.48 0 .75.75 0 0 1-1.06 1.06zm2.12-2.12a7.5 7.5 0 0 0-10.6 0 .75.75 0 0 1-1.06-1.06 9 9 0 0 1 12.72 0 .75.75 0 1 1-1.06 1.06z" fill-rule="evenodd"></path>
+</svg>
+<!-- Battery Icon with Level -->
+<div class="flex items-center">
+<div class="w-6 h-[12px] border-[1.5px] border-slate-800 rounded-sm p-[1.5px] flex items-center">
+<div class="bg-slate-800 h-full w-[82%] rounded-[0.5px]"></div>
+</div>
+<div class="w-[1.5px] h-[4px] bg-slate-800 rounded-r-sm ml-[1px]"></div>
+</div>
+</div>
+</header>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: AtmosphericOrbs -->
+<!-- Soft diffuse lighting effects for serenity -->
+<div class="absolute -top-16 -left-16 w-72 h-72 rounded-full bg-indigo-200/35 filter blur-3xl pointer-events-none animate-pulse-slow"></div>
+<div class="absolute top-1/3 -right-20 w-80 h-80 rounded-full bg-cyan-200/30 filter blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 left-10 w-80 h-80 rounded-full bg-violet-200/40 filter blur-3xl pointer-events-none"></div>
+<!-- END: AtmosphericOrbs -->
+<!-- BEGIN: CenterBrandContent -->
+<section class="relative z-20 flex-1 flex flex-col items-center justify-center px-6 -mt-8" data-purpose="brand-hero-section">
+<!-- Logo Container with Ambient Glow -->
+<div class="relative flex items-center justify-center animate-float">
+<!-- Glow backing -->
+<div class="brand-glow absolute w-48 h-48 -inset-2 rounded-full"></div>
+<!-- Outer Glass Ring -->
+<div class="brand-glass-disc w-28 h-28 rounded-[36px] flex items-center justify-center relative p-[2px]">
+<!-- Inner Dynamic Gradient Orb -->
+<div class="w-full h-full rounded-[34px] bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1.5px] flex items-center justify-center shadow-inner">
+<!-- Momentum Flow Icon Symbol -->
+<div class="w-full h-full rounded-[33px] bg-gradient-to-br from-indigo-500 via-indigo-600 to-cyan-500 flex items-center justify-center relative overflow-hidden">
+<!-- Subtle decorative light arc inside badge -->
+<div class="absolute -top-6 -right-6 w-16 h-16 bg-white/30 rounded-full blur-md"></div>
+<!-- Refined Momentum Infinite Flow Graphic (3 Nodes / Seamless Harmony) -->
+<svg class="w-14 h-14 text-white drop-shadow-md" fill="none" stroke="currentColor" viewbox="0 0 54 54">
+<!-- Outer orbital balance loops -->
+<circle class="opacity-40 animate-spin-slow origin-center" cx="27" cy="27" r="14" stroke="currentColor" stroke-dasharray="2 3" stroke-width="2.75"></circle>
+<!-- Continuous energy flow shape -->
+<path d="M19 27C19 22.5817 22.5817 19 27 19C31.4183 19 35 22.5817 35 27C35 31.4183 31.4183 35 27 35" stroke="currentColor" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Radiant Momentum Focus Dots -->
+<circle cx="19" cy="27" fill="#FFFFFF" r="3.25"></circle>
+<circle cx="27" cy="35" fill="#A5F3FC" r="3"></circle>
+<circle cx="35" cy="27" fill="#FFFFFF" r="3.25"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- App Branding Titles -->
+<div class="mt-8 text-center flex flex-col items-center">
+<!-- Main Application Name -->
+<h1 class="text-[26px] font-extrabold tracking-[0.22em] text-slate-800 uppercase pl-1 drop-shadow-sm font-sans">
+          Momentum
+        </h1>
+<!-- Harmonic Subtitle -->
+<p class="mt-2 text-[13.5px] font-medium text-slate-500 tracking-wide max-w-[240px] text-center leading-relaxed">
+          Spiritual tools, mindful finance &amp; daily routines
+        </p>
+<!-- Subtle category pill tags -->
+<div class="flex items-center gap-1.5 mt-3 text-[11px] font-medium text-indigo-700/80">
+<span class="px-2.5 py-0.5 rounded-full bg-white/70 border border-white/80 shadow-xs">Focus</span>
+<span class="text-slate-300">•</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/70 border border-white/80 shadow-xs">Barakah</span>
+<span class="text-slate-300">•</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/70 border border-white/80 shadow-xs">Growth</span>
+</div>
+</div>
+</section>
+<!-- END: CenterBrandContent -->
+<!-- BEGIN: LoadingAndFooterStatus -->
+<footer class="relative z-20 pb-10 px-8 flex flex-col items-center space-y-4" data-purpose="splash-status-and-footer">
+<!-- Interactive Glassmorphic Status Capsule -->
+<div class="glass-pill w-full max-w-[280px] py-2.5 px-4 rounded-2xl flex items-center space-x-3.5 shadow-sm">
+<!-- Pulsing Indicator Ring -->
+<div class="relative flex items-center justify-center w-5 h-5 flex-shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-30"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-gradient-to-tr from-indigo-600 to-cyan-500"></span>
+</div>
+<!-- Sync Progress Bar & Label -->
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex justify-between items-center mb-1.5">
+<span class="text-[12px] font-medium text-slate-700 tracking-tight" id="status-text">Aligning your day</span>
+<span class="text-[10px] font-semibold text-indigo-600 font-mono tracking-tighter">98%</span>
+</div>
+<!-- Micro Progress Bar -->
+<div class="w-full h-[4px] bg-slate-200/80 rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-indigo-500 via-indigo-600 to-cyan-400 rounded-full w-[98%] transition-all duration-700 ease-out"></div>
+<!-- Shimmer effect -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shimmer" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+<!-- Release Signature & Philosophy Tagline -->
+<div class="text-center pt-2">
+<p class="text-[11px] font-medium text-slate-400 tracking-wider">
+          v2.4.0 <span class="text-slate-300 mx-1">•</span> Crafted for intentional living
+        </p>
+</div>
+<!-- iOS Home Indicator -->
+<div class="pt-2 w-full flex justify-center items-center">
+<div class="w-32 h-[4px] bg-slate-400/40 rounded-full"></div>
+</div>
+</footer>
+<!-- END: LoadingAndFooterStatus -->
+</main>
+<!-- END: MobileFrameContainer -->
+<!-- Subtle status tick script for visual realism -->
+<script data-purpose="status-transition">
+    document.addEventListener('DOMContentLoaded', () => {
+      const phrases = [
+        "Aligning your day",
+        "Preparing daily radiance",
+        "Harmonizing timetable",
+        "Welcome to Momentum"
+      ];
+      let index = 0;
+      const label = document.getElementById('status-text');
+      
+      setInterval(() => {
+        index = (index + 1) % phrases.length;
+        if (label) {
+          label.style.opacity = '0';
+          setTimeout(() => {
+            label.textContent = phrases[index];
+            label.style.opacity = '1';
+          }, 200);
+        }
+      }, 2600);
+    });
+  </script>
+</body></html>

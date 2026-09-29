@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#c0c1ff", "secondary-container": "#03b5d3", "background": "#0e131f", "on-primary-fixed": "#07006c", "error": "#ffb4ab", "secondary-fixed-dim": "#4cd7f6", "on-surface-variant": "#c7c4d7", "primary": "#c0c1ff", "error-container": "#93000a", "on-error-container": "#ffdad6", "surface-container-lowest": "#080e1a", "tertiary-fixed": "#e9ddff", "surface-variant": "#2f3542", "on-secondary-fixed": "#001f26", "on-primary-container": "#0d0096", "surface-dim": "#0e131f", "on-surface": "#dde2f3", "on-secondary-container": "#00424e", "on-tertiary-fixed-variant": "#5516be", "secondary-fixed": "#acedff", "inverse-surface": "#dde2f3", "outline": "#908fa0", "on-tertiary": "#3c0091", "on-error": "#690005", "on-secondary": "#003640", "primary-container": "#8083ff", "tertiary": "#d0bcff", "tertiary-container": "#a078ff", "on-background": "#dde2f3", "outline-variant": "#464554", "surface": "#0e131f", "tertiary-fixed-dim": "#d0bcff", "surface-container-highest": "#2f3542", "inverse-primary": "#494bd6", "on-tertiary-fixed": "#23005c", "on-primary": "#1000a9", "on-primary-fixed-variant": "#2f2ebe", "primary-fixed-dim": "#c0c1ff", "on-tertiary-container": "#340080", "surface-container-high": "#242a36", "surface-container": "#1a202c", "surface-container-low": "#161c28", "secondary": "#4cd7f6", "on-secondary-fixed-variant": "#004e5c", "inverse-on-surface": "#2b303d", "primary-fixed": "#e1e0ff", "surface-bright": "#343946" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "margin-mobile": "1rem", "margin": "3rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem" }, fontFamily: { "display-hero-mobile": ["Space Grotesk"], "label-sm": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "label-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "label-md": ["JetBrains Mono"], "display-hero": ["Space Grotesk"] }, fontSize: { "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "500" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }] } } } };</script><style>@layer base { html, body { width: 100vw; min-height: 100vh; margin: 0; padding: 0; background-color: #0e131f; color: #dde2f3; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant/40 transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[220px]">Appearance — Dark Mode</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Actions" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-safe">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="relative w-full overflow-hidden px-gutter-mobile space-y-space-lg pt-space-md">
+<!-- Top Section: Visual Language Header & Preview -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-label-md text-label-md tracking-wider text-on-surface-variant uppercase">Visual Language</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+          Reset Default
+        </button>
+</div>
+<!-- Interactive Canvas Preview Card -->
+<div class="relative rounded-xl bg-surface-container-low shadow-xl overflow-hidden backdrop-blur-xl">
+<div class="px-space-md py-space-sm bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Interactive Canvas Preview</span>
+</div>
+<button class="px-space-sm py-0.5 rounded-full bg-surface-container-highest hover:bg-surface-bright text-secondary font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[13px]">light_mode</span>
+            Preview Light
+          </button>
+</div>
+<!-- Simulated Mobile Mockup Stage -->
+<div class="p-space-md flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest">
+<!-- Ambient Backlight Reflection -->
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-32 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Mini Phone Viewport Canvas -->
+<div class="w-full max-w-[280px] rounded-xl bg-surface-container/90 shadow-2xl p-space-sm space-y-3 relative z-10 backdrop-blur-md">
+<!-- Mini Canvas Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[13px]">all_inclusive</span>
+</div>
+<span class="font-headline-sm text-[13px] tracking-tight font-bold text-on-surface">Momentum</span>
+</div>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-semibold">Active</span>
+</div>
+<!-- Mini Daily Centering Card -->
+<div class="p-2.5 rounded-lg bg-surface-container-high/70 space-y-1.5 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Daily Centering</span>
+<span class="font-label-sm text-[11px] font-semibold text-secondary">85% Clear</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-variant/80 overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary w-[85%]"></div>
+</div>
+</div>
+<!-- Mini Checklist Item -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-lowest/80 text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[15px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-[11px] truncate">Pranayama Breathwork</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant flex-shrink-0">12m</span>
+</div>
+<!-- Mini Bottom Navigation Dock -->
+<div class="h-8 rounded-full bg-surface-container-highest/60 flex items-center justify-around px-2 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">timeline</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">bedtime</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">person</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Display Theme -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Display Theme</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-medium">Atmosphere</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Option 1: Light Mode (Unselected) -->
+<label class="group relative flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<input class="sr-only" name="display-theme" type="radio"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high group-hover:bg-surface-variant flex items-center justify-center flex-shrink-0 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[22px]">light_mode</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">Light Mode</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              Clean, luminous aesthetic with frosted glass and atmospheric radiance. Optimized for daylight clarity and focus.
+            </p>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center absolute top-4 right-4 group-hover:scale-105 transition-transform">
+<span class="w-2 h-2 rounded-full bg-transparent"></span>
+</div>
+</label>
+<!-- Option 2: Dark Sanctuary (Selected) -->
+<label class="relative flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container shadow-lg shadow-black/40 cursor-pointer overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<input checked="" class="sr-only" name="display-theme" type="radio"/>
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">Dark Sanctuary</h3>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-primary/20 text-primary font-bold uppercase tracking-wider">Selected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              Deep nocturnal sanctuary with restful obsidian depths and low-light visual comfort for evening reflection.
+            </p>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center absolute top-4 right-4 shadow-md shadow-primary/30">
+<span class="material-symbols-outlined text-[16px] text-on-primary font-bold">check</span>
+</div>
+</label>
+<!-- Option 3: System Rhythm -->
+<label class="group relative flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer shadow-sm">
+<input class="sr-only" name="display-theme" type="radio"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high group-hover:bg-surface-variant flex items-center justify-center flex-shrink-0 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[22px]">routine</span>
+</div>
+<div class="flex-1 min-w-0 pr-6">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">System Rhythm</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              Follows celestial daylight cycles. Seamlessly shifts between dawn brilliance and nocturnal twilight.
+            </p>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center absolute top-4 right-4 group-hover:scale-105 transition-transform">
+<span class="w-2 h-2 rounded-full bg-transparent"></span>
+</div>
+</label>
+</div>
+</section>
+<!-- Section: Chromatic Aura -->
+<section class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Chromatic Aura</h2>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Luminous Indigo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Subtle ambient glow reflected across frosted navigation docks, buttons, and metrics.
+      </p>
+<!-- 5 Swatches -->
+<div class="flex items-center justify-between pt-1">
+<!-- Indigo Swatch (Selected) -->
+<button aria-label="Select Indigo aura" class="group flex flex-col items-center gap-1.5 focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#6366f1] to-[#8b5cf6] p-0.5 shadow-lg shadow-indigo-500/30 flex items-center justify-center scale-105">
+<div class="w-full h-full rounded-full flex items-center justify-center bg-transparent">
+<span class="material-symbols-outlined text-white text-[20px] font-bold">check</span>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-primary font-semibold">Indigo</span>
+</button>
+<!-- Oasis Swatch -->
+<button aria-label="Select Oasis aura" class="group flex flex-col items-center gap-1.5 focus:outline-none opacity-80 hover:opacity-100 transition-opacity" type="button">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#06b6d4] to-[#10b981] flex items-center justify-center shadow-md">
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant group-hover:text-on-surface">Oasis</span>
+</button>
+<!-- Dawn Swatch -->
+<button aria-label="Select Dawn aura" class="group flex flex-col items-center gap-1.5 focus:outline-none opacity-80 hover:opacity-100 transition-opacity" type="button">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#f59e0b] to-[#fbbf24] flex items-center justify-center shadow-md">
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant group-hover:text-on-surface">Dawn</span>
+</button>
+<!-- Rose Swatch -->
+<button aria-label="Select Rose aura" class="group flex flex-col items-center gap-1.5 focus:outline-none opacity-80 hover:opacity-100 transition-opacity" type="button">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#f43f5e] to-[#fb7185] flex items-center justify-center shadow-md">
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant group-hover:text-on-surface">Rose</span>
+</button>
+<!-- Cyan Swatch -->
+<button aria-label="Select Cyan aura" class="group flex flex-col items-center gap-1.5 focus:outline-none opacity-80 hover:opacity-100 transition-opacity" type="button">
+<div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#38bdf8] to-[#0284c7] flex items-center justify-center shadow-md">
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant group-hover:text-on-surface">Cyan</span>
+</button>
+</div>
+</section>
+<!-- Section: Glassmorphic Physics -->
+<section class="p-space-md rounded-xl bg-surface-container-low space-y-space-md shadow-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Glassmorphic Physics</h2>
+<!-- Toggle 1: Frosted Glass Effects -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="space-y-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">blur_on</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Frosted Glass Effects</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Render multi-layer blur filters and edge reflections over wallpaper.
+          </p>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary flex items-center p-1 cursor-pointer transition-colors shadow-inner flex-shrink-0" role="switch" type="button">
+<span class="w-5 h-5 rounded-full bg-on-primary-fixed shadow-md transform translate-x-5 transition-transform duration-200 ease-out"></span>
+</button>
+</div>
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- Toggle 2: Gentle Transitions -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="space-y-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">motion_photos_on</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Gentle Transitions</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Calm, physics-based page morphing and organic card elevations.
+          </p>
+</div>
+<button aria-checked="true" class="w-12 h-7 rounded-full bg-primary flex items-center p-1 cursor-pointer transition-colors shadow-inner flex-shrink-0" role="switch" type="button">
+<span class="w-5 h-5 rounded-full bg-on-primary-fixed shadow-md transform translate-x-5 transition-transform duration-200 ease-out"></span>
+</button>
+</div>
+</section>
+<!-- Section: Atmospheric Canvas -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Atmospheric Canvas</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Default Ambient</span>
+</div>
+<!-- Wallpaper Preview Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md shadow-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-highest relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A serene nocturnal dusk horizon over smooth undulating mountains with deep indigo twilight, violet atmospheric mist, and a faint starlit nebula, rendered in a contemplative, ultra-soft minimal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYYeyKgOtzlQzTInTC8N3gvuv1eIB0c5lpbHljfcQAt0kDMdxisdm3PHwnW3sUqwgk7-kc4AtXjpe2OSGcSc35NMyLvoiWYTJOpvuTGu0BPx2sLdYVykZw6GLdHYhsT3Qcmc7x6Q0B6k-VtIiOi8rcI7GYBI1lakZINaTM_knVCeSJwSxb0bdnKrD2myxZRBPlUh22uTUsrlh-aY6U-YW75FpBYceMg0f7siCCf_i-0VeTmGdA1OY"/>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold truncate">Serene Horizon</h3>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Pastel sky and mist with 32px diffuse glass r...
+          </p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-white transition-colors pt-0.5" href="#">
+<span>Customize Wallpaper</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Bottom Action Button -->
+<div class="pt-space-xs pb-space-lg">
+<button class="w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-[#6366f1] via-[#756af7] to-[#8b5cf6] text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(99,102,241,0.4)] active:scale-[0.98] transition-all hover:brightness-110" type="button">
+<span>Apply Appearance Preferences</span>
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction for theme options and toggles
+  document.querySelectorAll('input[name="display-theme"]').forEach((radio) => {
+    radio.parentElement.addEventListener('click', () => {
+      document.querySelectorAll('input[name="display-theme"]').forEach(r => {
+        r.checked = false;
+        r.parentElement.classList.remove('bg-surface-container', 'shadow-lg');
+        r.parentElement.classList.add('bg-surface-container-low');
+      });
+      radio.checked = true;
+      radio.parentElement.classList.remove('bg-surface-container-low');
+      radio.parentElement.classList.add('bg-surface-container', 'shadow-lg');
+    });
+  });
+
+  document.querySelectorAll('button[role="switch"]').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const isChecked = toggle.getAttribute('aria-checked') === 'true';
+      toggle.setAttribute('aria-checked', !isChecked);
+      const circle = toggle.querySelector('span');
+      if (isChecked) {
+        toggle.classList.remove('bg-primary');
+        toggle.classList.add('bg-surface-container-highest');
+        circle.classList.remove('translate-x-5', 'bg-on-primary-fixed');
+        circle.classList.add('translate-x-0', 'bg-on-surface-variant');
+      } else {
+        toggle.classList.remove('bg-surface-container-highest');
+        toggle.classList.add('bg-primary');
+        circle.classList.remove('translate-x-0', 'bg-on-surface-variant');
+        circle.classList.add('translate-x-5', 'bg-on-primary-fixed');
+      }
+    });
+  });
+</script></main></body></html>

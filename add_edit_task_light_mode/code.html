@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="form_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#ebedff", "on-primary-fixed": "#00105b", "error-container": "#ffdad6", "surface": "#faf8ff", "secondary": "#663bd2", "on-secondary-fixed-variant": "#501dbc", "inverse-surface": "#2a3044", "on-tertiary": "#ffffff", "on-secondary-container": "#fffbff", "secondary-fixed": "#e8ddff", "surface-variant": "#dce1fd", "primary-fixed-dim": "#bac3ff", "primary": "#2a49df", "on-tertiary-fixed": "#002020", "surface-container-highest": "#dce1fd", "tertiary-fixed-dim": "#4bdadc", "on-primary-fixed-variant": "#002fc9", "on-surface": "#151b2e", "surface-container-lowest": "#ffffff", "surface-bright": "#faf8ff", "outline-variant": "#c5c5d8", "on-secondary-fixed": "#21005e", "on-error-container": "#93000a", "on-error": "#ffffff", "surface-dim": "#d4d9f4", "outline": "#757687", "on-primary": "#ffffff", "tertiary": "#006768", "on-surface-variant": "#444655", "secondary-container": "#7f58ed", "on-background": "#151b2e", "inverse-on-surface": "#eff0ff", "surface-tint": "#2d4ce2", "surface-container-high": "#e3e7ff", "primary-container": "#4965f9", "primary-fixed": "#dee0ff", "background": "#faf8ff", "surface-container-low": "#f2f3ff", "tertiary-container": "#008283", "tertiary-fixed": "#6df7f8", "inverse-primary": "#bac3ff", "on-tertiary-fixed-variant": "#004f50", "on-primary-container": "#fffbff", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-tertiary-container": "#f3fffe", "secondary-fixed-dim": "#cebdff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "0.75rem", "margin": "1rem", "space-lg": "1.25rem", "space-xl": "1.75rem" }, fontFamily: { "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "metric-lg": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-lg": ["24px", { lineHeight: "32px", fontWeight: "700" }], "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }], "metric-lg": ["28px", { lineHeight: "34px", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }], "display-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }], "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen relative flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 -left-20 w-80 h-80 rounded-full bg-gradient-to-br from-primary-fixed/40 to-tertiary-fixed/30 blur-3xl opacity-70"></div><div class="absolute top-1/2 -right-24 w-96 h-96 rounded-full bg-gradient-to-bl from-secondary-fixed/35 to-primary-fixed/20 blur-3xl opacity-60"></div></div><header class="fixed top-0 w-full z-50 pt-safe"><div class="h-16 px-margin flex items-center justify-between bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-95" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Add / Edit Task</h1></div><div class="flex items-center gap-space-sm"><div class="px-space-md py-1 rounded-full bg-white/60 backdrop-blur-md shadow-[0_2px_6px_rgba(0,0,0,0.03)] flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Draft</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(42,73,223,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin pt-16 pb-safe bg-transparent z-10"><div class="flex flex-col w-full pb-24 space-y-4">
+<!-- Status Context Bar -->
+<div class="flex items-center justify-between px-1 py-1">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide">EDITING TASK #TK-104</span>
+</div>
+<button aria-label="Delete Task Quickly" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Main Glass Form Card -->
+<div class="w-full rounded-2xl bg-surface-container-lowest/75 backdrop-blur-2xl shadow-xl shadow-primary/5 p-4 sm:p-5 flex flex-col space-y-5">
+<!-- Section 1: Title & Categories -->
+<div class="flex flex-col space-y-2.5">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center justify-between">
+<span>Task Title</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">Required</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-low/70 focus:bg-surface-container-lowest text-on-surface font-body-lg text-body-lg rounded-xl px-4 py-3 placeholder:text-outline focus:outline-none transition-all shadow-inner" id="task-title-input" type="text" value="Review Q4 product roadmap &amp; quarterly OKRs"/>
+<button class="absolute right-3 text-outline hover:text-on-surface transition-colors p-1" onclick="document.getElementById('task-title-input').value=''" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pt-1 pb-1 -mx-1 px-1 scrollbar-none">
+<button class="category-chip px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm flex items-center gap-1.5 shrink-0 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px]">work</span>
+<span>Work</span>
+</button>
+<button class="category-chip px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-all active:scale-95 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">person</span>
+<span>Personal</span>
+</button>
+<button class="category-chip px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-all active:scale-95 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">self_improvement</span>
+<span>Spiritual</span>
+</button>
+<button class="category-chip px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-all active:scale-95 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span>Health</span>
+</button>
+<button class="category-chip px-3.5 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-all active:scale-95 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>Study</span>
+</button>
+<button class="category-chip px-3 py-1.5 rounded-full bg-surface-container-high/60 text-on-surface-variant hover:text-on-surface font-label-md text-label-md shrink-0 transition-all active:scale-95" type="button">
+<span>Other</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Priority -->
+<div class="flex flex-col space-y-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Priority Level</span>
+<div class="grid grid-cols-4 gap-1.5 p-1 rounded-xl bg-surface-container-low/70">
+<button class="priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">
+          Low
+        </button>
+<button class="priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">
+          Medium
+        </button>
+<button class="priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md bg-secondary text-on-secondary shadow-sm transition-all font-semibold flex items-center justify-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span>High</span>
+</button>
+<button class="priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">
+          Urgent
+        </button>
+</div>
+</div>
+<!-- Section 3: Schedule, Time & Estimated Duration -->
+<div class="flex flex-col space-y-2.5">
+<span class="font-label-md text-label-md text-on-surface-variant">Date &amp; Duration</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<!-- Date -->
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-surface-container-low/70 text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Due Date</span>
+<span class="font-body-md text-body-md font-semibold truncate">Oct 24, 2026</span>
+</div>
+</div>
+<!-- Time -->
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-surface-container-low/70 text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-tertiary text-[20px]">schedule</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Start Time</span>
+<span class="font-body-md text-body-md font-semibold truncate">11:00 AM</span>
+</div>
+</div>
+<!-- Estimated Duration -->
+<div class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-surface-container-low/70 text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-[20px]">timelapse</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Estimate</span>
+<span class="font-body-md text-body-md font-semibold truncate">45 mins</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Reminders & Notification Alert -->
+<div class="p-3.5 rounded-xl bg-surface-container-low/60 flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Reminder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">15 minutes before</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-xs flex items-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span>Change</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Persistent Alert</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Keep alert visible until checked</span>
+</div>
+<button aria-checked="true" class="w-12 h-6 rounded-full bg-tertiary-container relative p-0.5 transition-colors focus:outline-none" id="persistent-toggle" type="button">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-md transform translate-x-6 transition-transform" id="persistent-thumb"></div>
+</button>
+</div>
+</div>
+<!-- Section 5: Description & Notes -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant" for="task-desc">Description &amp; Notes</label>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="char-counter">84 / 200</span>
+</div>
+<textarea class="w-full bg-surface-container-low/70 focus:bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-xl p-3.5 placeholder:text-outline focus:outline-none transition-all shadow-inner resize-none" id="task-desc" maxlength="200" rows="3">Finalize mobile release milestones with design engineering team and prepare presentation deck.</textarea>
+</div>
+<!-- Subtasks / Checklist Preview -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Sub-tasks (2)</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add Step</span>
+</button>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low/50">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface line-through opacity-70">Present slides 1-12</span>
+</div>
+<button class="text-outline hover:text-error transition-colors p-1" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low/50">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">radio_button_unchecked</span>
+<span class="font-body-md text-body-md text-on-surface">Send recap email</span>
+</div>
+<button class="text-outline hover:text-error transition-colors p-1" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 6: Action Buttons -->
+<div class="flex flex-col space-y-2 pt-2">
+<button class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-primary to-secondary text-on-primary font-headline-sm text-headline-sm font-semibold tracking-tight shadow-lg shadow-primary/30 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform" type="button">
+<span>Save Task Changes</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container-high/40 hover:bg-surface-container-high/70 text-on-surface font-body-lg text-body-lg font-medium text-center transition-colors active:scale-[0.98]" onclick="history.back()" type="button">
+        Cancel
+      </button>
+<button class="w-full py-2 px-4 rounded-xl text-error hover:bg-error-container/40 font-body-md text-body-md font-medium text-center transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Delete Task</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Character Counter
+    const descInput = document.getElementById('task-desc');
+    const counter = document.getElementById('char-counter');
+    if (descInput && counter) {
+      descInput.addEventListener('input', () => {
+        counter.textContent = `${descInput.value.length} / 200`;
+      });
+    }
+
+    // Toggle switch interaction
+    const toggle = document.getElementById('persistent-toggle');
+    const thumb = document.getElementById('persistent-thumb');
+    let isActive = true;
+    if (toggle && thumb) {
+      toggle.addEventListener('click', () => {
+        isActive = !isActive;
+        toggle.setAttribute('aria-checked', isActive.toString());
+        if (isActive) {
+          toggle.classList.remove('bg-surface-dim');
+          toggle.classList.add('bg-tertiary-container');
+          thumb.classList.remove('translate-x-0');
+          thumb.classList.add('translate-x-6');
+        } else {
+          toggle.classList.remove('bg-tertiary-container');
+          toggle.classList.add('bg-surface-dim');
+          thumb.classList.remove('translate-x-6');
+          thumb.classList.add('translate-x-0');
+        }
+      });
+    }
+
+    // Interactive Priority Selection
+    const priorityButtons = document.querySelectorAll('.priority-btn');
+    priorityButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        priorityButtons.forEach(b => {
+          b.className = 'priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+        });
+        btn.className = 'priority-btn py-1.5 rounded-lg text-center font-label-md text-label-md bg-secondary text-on-secondary shadow-sm transition-all font-semibold flex items-center justify-center gap-1';
+      });
+    });
+
+    // Interactive Category Selection
+    const categoryChips = document.querySelectorAll('.category-chip');
+    categoryChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        categoryChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          c.classList.add('bg-surface-container-high/60', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container-high/60', 'text-on-surface-variant');
+        chip.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      });
+    });
+  })();
+</script></main></body></html>

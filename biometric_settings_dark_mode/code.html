@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#e1e0ff", "on-primary-container": "#0d0096", "surface-bright": "#343946", "on-secondary-fixed": "#001f26", "primary-container": "#8083ff", "secondary": "#4cd7f6", "background": "#0e131f", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#004e5c", "surface-container-high": "#242a36", "inverse-primary": "#494bd6", "tertiary-fixed-dim": "#d0bcff", "on-tertiary-container": "#340080", "on-primary": "#1000a9", "surface-tint": "#c0c1ff", "on-background": "#dde2f3", "on-error": "#690005", "surface": "#0e131f", "on-tertiary-fixed-variant": "#5516be", "surface-dim": "#0e131f", "on-secondary": "#003640", "surface-container-low": "#161c28", "primary": "#c0c1ff", "surface-container-lowest": "#080e1a", "tertiary-fixed": "#e9ddff", "on-primary-fixed-variant": "#2f2ebe", "primary-fixed-dim": "#c0c1ff", "outline-variant": "#464554", "on-tertiary-fixed": "#23005c", "secondary-container": "#03b5d3", "surface-container": "#1a202c", "on-secondary-container": "#00424e", "tertiary": "#d0bcff", "tertiary-container": "#a078ff", "on-tertiary": "#3c0091", "outline": "#908fa0", "secondary-fixed": "#acedff", "surface-variant": "#2f3542", "on-surface": "#dde2f3", "inverse-surface": "#dde2f3", "on-surface-variant": "#c7c4d7", "error-container": "#93000a", "error": "#ffb4ab", "on-primary-fixed": "#07006c", "secondary-fixed-dim": "#4cd7f6", "surface-container-highest": "#2f3542", "inverse-on-surface": "#2b303d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Space Grotesk"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-md": ["JetBrains Mono"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Space Grotesk"], "display-hero": ["Space Grotesk"] }, fontSize: { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; background-color: #0e131f; color: #dde2f3; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between relative"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] w-11 h-11 -ml-space-xs rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="absolute inset-x-16 flex items-center justify-center pointer-events-none"><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate select-none">Security &amp; Biometrics</h1></div><div class="flex items-center gap-space-xs"><button aria-label="More options" class="min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-all" type="button"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col flex-1 relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<div class="px-gutter-mobile flex flex-col space-y-space-lg pb-space-xl">
+<!-- Biometric Sanctuary Hero Header -->
+<div class="flex flex-col items-center text-center pt-space-md">
+<div class="relative flex items-center justify-center mb-space-md">
+<div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-secondary/20 via-primary-container/25 to-tertiary/20 blur-xl opacity-80 pointer-events-none"></div>
+<div class="relative w-20 h-20 rounded-full bg-surface-container-high/90 backdrop-blur-xl flex items-center justify-center shadow-xl">
+<div class="flex items-center -space-x-1.5 text-secondary">
+<span class="material-symbols-outlined text-[32px] drop-shadow-[0_0_12px_rgba(76,215,246,0.6)]">face</span>
+<span class="material-symbols-outlined text-[30px] text-primary drop-shadow-[0_0_12px_rgba(192,193,255,0.6)]">fingerprint</span>
+</div>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary mb-space-xs shadow-[0_0_16px_rgba(76,215,246,0.15)]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">HARDWARE ENCLAVE BOUND</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-space-xs">
+        Biometric Sanctuary Active
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-space-xs">
+        Unlock Momentum instantly using Face ID or Touch ID sensor on this device.
+      </p>
+</div>
+<!-- Master Enable Card -->
+<div class="w-full rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-space-md shadow-lg space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0 pr-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Enable Biometric Authentication</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Apple Face ID / Android Biometric API v3.2 Enrolled</span>
+</div>
+<!-- Radiant Switch Toggle -->
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-gradient-to-r from-primary-container to-inverse-primary transition-colors focus:outline-none shadow-[0_0_14px_rgba(128,131,255,0.45)]" role="switch" type="button">
+<span class="pointer-events-none inline-block h-5 w-5 transform translate-x-6 rounded-full bg-on-background shadow-md transition-transform mt-1 ml-0.5"></span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<div class="w-5 h-5 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[14px]">check</span>
+</div>
+<span class="font-label-md text-label-md text-secondary tracking-normal">
+          Secure hardware keypair authenticated and active
+        </span>
+</div>
+</div>
+<!-- Zero-Knowledge Architecture Section -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center gap-space-xs px-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">shield_lock</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Zero-Knowledge Architecture</h3>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-space-md flex gap-space-md shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">enhanced_encryption</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">Zero-Knowledge Biometrics</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Momentum never reads, stores, or transmits your biometric data. Verification is handled strictly inside your hardware Secure Element.
+            </p>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-space-md flex gap-space-md shadow-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[22px]">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">Seamless Harmony</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Bypass manual entry while keeping your spiritual reflections and private finances impenetrable.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Fallback Mechanism Card -->
+<div class="rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-space-md shadow-lg space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">pin</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Fallback Mechanism</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">
+          Configured (••••)
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Whenever lighting conditions are dim, sensors fail, or the device restarts, your configured PIN will automatically serve as the fallback unlock method.
+      </p>
+<button class="w-full rounded-lg bg-surface-container-high/90 hover:bg-surface-bright active:scale-[0.98] transition-all px-space-md py-space-sm flex items-center justify-between text-on-surface shadow-sm" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">edit_note</span>
+<span class="font-label-lg text-label-lg text-on-surface">Verify or Change Backup PIN</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Selective Biometric Gates Section -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Selective Biometric Gates</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+          4 Checkpoints
+        </span>
+</div>
+<div class="rounded-xl bg-surface-container-low/80 backdrop-blur-xl shadow-lg divide-y divide-surface-variant/30 overflow-hidden">
+<!-- Gate 1 -->
+<div class="p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">power_settings_new</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate">Unlock App on Launch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Requires Face/Touch ID every session</span>
+</div>
+</div>
+<button aria-checked="true" class="gate-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-gradient-to-r from-primary-container to-inverse-primary transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none inline-block h-4 w-4 transform translate-x-6 rounded-full bg-on-background shadow-md transition-transform mt-1 ml-0.5"></span>
+</button>
+</div>
+<!-- Gate 2 -->
+<div class="p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate">Confirm Financial &amp; Zakat Transactions</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Authorize outgoing funds and pledges</span>
+</div>
+</div>
+<button aria-checked="true" class="gate-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-gradient-to-r from-primary-container to-inverse-primary transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none inline-block h-4 w-4 transform translate-x-6 rounded-full bg-on-background shadow-md transition-transform mt-1 ml-0.5"></span>
+</button>
+</div>
+<!-- Gate 3 -->
+<div class="p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate">Access Sacred Journal &amp; Deep Notes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shield personal inner reflections</span>
+</div>
+</div>
+<button aria-checked="true" class="gate-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-gradient-to-r from-primary-container to-inverse-primary transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none inline-block h-4 w-4 transform translate-x-6 rounded-full bg-on-background shadow-md transition-transform mt-1 ml-0.5"></span>
+</button>
+</div>
+<!-- Gate 4 -->
+<div class="p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">toll</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-lg text-body-lg text-on-surface truncate">Quick Dhikr Counter without Unlock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Allow instant rosary tapping from widget</span>
+</div>
+</div>
+<button aria-checked="false" class="gate-toggle relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-surface-variant transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none inline-block h-4 w-4 transform translate-x-1 rounded-full bg-outline shadow-md transition-transform mt-1"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-space-xs">
+<button class="w-full relative group overflow-hidden rounded-xl bg-gradient-to-r from-secondary-container via-primary-container to-tertiary-container p-px shadow-[0_0_24px_rgba(76,215,246,0.25)] active:scale-[0.99] transition-all" id="save-preferences-btn" type="button">
+<div class="w-full h-full bg-surface-container-lowest/20 backdrop-blur-sm rounded-[11px] py-3.5 px-space-md flex items-center justify-center gap-2 group-hover:bg-transparent transition-all">
+<span class="font-label-lg text-label-lg text-on-primary font-semibold tracking-wide">
+            Save Biometric Preferences
+          </span>
+<span class="material-symbols-outlined text-on-primary text-[18px] transition-transform group-hover:translate-x-1">
+            arrow_forward
+          </span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const toggles = document.querySelectorAll('button[role="switch"]');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const isChecked = toggle.getAttribute('aria-checked') === 'true';
+        const nextState = !isChecked;
+        toggle.setAttribute('aria-checked', String(nextState));
+        
+        const knob = toggle.querySelector('span');
+        if (nextState) {
+          toggle.classList.remove('bg-surface-variant');
+          toggle.classList.add('bg-gradient-to-r', 'from-primary-container', 'to-inverse-primary');
+          knob.classList.remove('translate-x-1', 'bg-outline');
+          knob.classList.add('translate-x-6', 'bg-on-background');
+        } else {
+          toggle.classList.remove('bg-gradient-to-r', 'from-primary-container', 'to-inverse-primary');
+          toggle.classList.add('bg-surface-variant');
+          knob.classList.remove('translate-x-6', 'bg-on-background');
+          knob.classList.add('translate-x-1', 'bg-outline');
+        }
+      });
+    });
+
+    const saveBtn = document.getElementById('save-preferences-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        saveBtn.classList.add('opacity-90', 'scale-[0.98]');
+        setTimeout(() => {
+          saveBtn.classList.remove('opacity-90', 'scale-[0.98]');
+        }, 180);
+      });
+    }
+  })();
+</script></main></body></html>

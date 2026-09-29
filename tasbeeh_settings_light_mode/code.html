@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="tasbeeh_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#faf8ff", "surface": "#faf8ff", "on-secondary-container": "#fffbff", "surface-container": "#ebedff", "outline": "#757687", "on-background": "#151b2e", "secondary": "#663bd2", "surface-container-low": "#f2f3ff", "tertiary-fixed": "#6df7f8", "error-container": "#ffdad6", "on-primary-container": "#fffbff", "surface-container-high": "#e3e7ff", "primary": "#2a49df", "secondary-fixed": "#e8ddff", "on-secondary": "#ffffff", "inverse-primary": "#bac3ff", "tertiary-fixed-dim": "#4bdadc", "on-secondary-fixed-variant": "#501dbc", "on-primary-fixed": "#00105b", "on-tertiary-container": "#f3fffe", "on-surface": "#151b2e", "surface-tint": "#2d4ce2", "on-primary": "#ffffff", "on-tertiary-fixed": "#002020", "surface-container-highest": "#dce1fd", "primary-fixed-dim": "#bac3ff", "secondary-container": "#7f58ed", "surface-dim": "#d4d9f4", "surface-container-lowest": "#ffffff", "tertiary-container": "#008283", "on-tertiary-fixed-variant": "#004f50", "secondary-fixed-dim": "#cebdff", "inverse-surface": "#2a3044", "on-primary-fixed-variant": "#002fc9", "error": "#ba1a1a", "on-error-container": "#93000a", "surface-bright": "#faf8ff", "surface-variant": "#dce1fd", "primary-container": "#4965f9", "primary-fixed": "#dee0ff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "tertiary": "#006768", "outline-variant": "#c5c5d8", "inverse-on-surface": "#eff0ff", "on-secondary-fixed": "#21005e", "on-surface-variant": "#444655" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-lg": "1.25rem", "margin": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "space-md": "0.75rem", "space-xl": "1.75rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "metric-lg": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "metric-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen relative antialiased selection:bg-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container/60 transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">Preferences</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Drafts or Secondary Action" class="h-9 px-space-md rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-on-surface flex items-center gap-1 font-label-md text-label-md transition-colors"><span class="material-symbols-outlined text-[18px]">drafts</span><span>Drafts</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shadow-[0_2px_8px_rgba(42,73,223,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Atmospheric Ambient Backdrop Glow -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+<div class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
+<div class="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-secondary/5 blur-3xl"></div>
+<div class="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-tertiary-fixed-dim/10 blur-3xl"></div>
+</div>
+<div class="px-margin flex flex-col gap-space-lg w-full">
+<!-- Header Context & Narrative Framing -->
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-primary-fixed/60 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-primary-fixed font-semibold tracking-wider uppercase">PREFERENCES • SENSORY &amp; COUNTER</span>
+</div>
+<button class="flex items-center gap-1 px-space-md py-1 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant font-label-md text-label-md" id="reset-defaults-btn" title="Restore default settings">
+<span class="material-symbols-outlined text-[15px]">restart_alt</span>
+<span>Reset</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-1 leading-relaxed">
+        Customize tactile haptic feedback, chime sounds, and target completion rituals.
+      </p>
+</div>
+<!-- Section 1: Sensory Feedback Group (Frosted Glass Container) -->
+<section class="bg-surface-container-lowest/80 backdrop-blur-2xl rounded-lg p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">vibration</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Sensory Feedback</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Feel and hear each mindful affirmation</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<!-- Item 1: Haptic Toggle -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Haptic Feedback / Vibration</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Subtle tactile pulse on each bead count</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="haptic" role="switch">
+<span class="translate-x-6 inline-block h-5 w-5 transform rounded-full bg-on-primary shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+<!-- Item 2: Vibration Intensity Selector (Segmented Pills) -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/70 p-space-md rounded-DEFAULT">
+<span class="font-label-md text-label-md text-on-surface font-medium">Vibration Intensity</span>
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<button class="intensity-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-primary text-on-primary shadow-sm" data-intensity="gentle">
+            Gentle
+          </button>
+<button class="intensity-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" data-intensity="medium">
+            Medium
+          </button>
+<button class="intensity-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" data-intensity="firm">
+            Firm
+          </button>
+</div>
+</div>
+<!-- Item 3: Auditory Sound Click Toggle -->
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Auditory Sound / Click</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Soft wooden bead click sound on each count</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="sound" role="switch">
+<span class="translate-x-6 inline-block h-5 w-5 transform rounded-full bg-on-primary shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+<!-- Item 4: Sound Volume Preset Selector -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low/70 p-space-md rounded-DEFAULT">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-medium">Sound Volume</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="volume-indicator">Soft (30%)</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<button class="volume-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-primary text-on-primary shadow-sm" data-volume="soft">
+            Soft
+          </button>
+<button class="volume-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" data-volume="normal">
+            Normal
+          </button>
+<button class="volume-btn py-2 px-space-sm rounded-DEFAULT text-center font-label-md text-label-md font-semibold transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" data-volume="mute">
+            Mute
+          </button>
+</div>
+</div>
+<!-- Item 5: Target Alert Vibration Pulse -->
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Target Vibration Alert</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Longer double pulse when target count is reached</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="target-alert" role="switch">
+<span class="translate-x-6 inline-block h-5 w-5 transform rounded-full bg-on-primary shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+</section>
+<!-- Section 2: Counter Behavior & Display Preferences -->
+<section class="bg-surface-container-lowest/80 backdrop-blur-2xl rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Counter Behavior</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Physical button mappings and screen states</p>
+</div>
+</div>
+<!-- Behavior Row 1: Keep Screen Awake -->
+<div class="flex items-center justify-between gap-space-md py-1">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Keep Screen Awake during Dhikr</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prevents auto-locking while counting beads</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="awake" role="switch">
+<span class="translate-x-6 inline-block h-5 w-5 transform rounded-full bg-on-primary shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+<!-- Behavior Row 2: Full Screen Tap Mode -->
+<div class="flex items-center justify-between gap-space-md py-1">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Full Screen Tap Mode</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tap anywhere on screen to count instead of button</span>
+</div>
+<button aria-checked="false" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-surface-container-highest transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="fullscreen-tap" role="switch">
+<span class="translate-x-1 inline-block h-5 w-5 transform rounded-full bg-on-surface-variant/40 shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+<!-- Behavior Row 3: Hardware Volume Keys -->
+<div class="flex items-center justify-between gap-space-md py-1">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Volume Keys for Counting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Use hardware volume up button to increment</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-primary transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="volume-keys" role="switch">
+<span class="translate-x-6 inline-block h-5 w-5 transform rounded-full bg-on-primary shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+<!-- Behavior Row 4: Auto-Loop to Next Cycle -->
+<div class="flex items-center justify-between gap-space-md py-1">
+<div class="flex flex-col pr-2">
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Auto-Loop to Next Cycle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automatically restart count after reaching target</span>
+</div>
+<button aria-checked="false" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full bg-surface-container-highest transition-colors duration-200 ease-in-out focus:outline-none" data-toggle="auto-loop" role="switch">
+<span class="translate-x-1 inline-block h-5 w-5 transform rounded-full bg-on-surface-variant/40 shadow-sm transition duration-200 ease-in-out mt-1 ml-1 pointer-events-none"></span>
+</button>
+</div>
+</section>
+<!-- Section 3: Target-Completion Experience Showcase (Prominently Featured Ritual Preview) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-on-surface-variant uppercase">COMPLETION RITUAL PREVIEW</span>
+<span class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> Live Preview
+        </span>
+</div>
+<div class="relative overflow-hidden rounded-lg bg-surface-container-lowest/90 backdrop-blur-2xl p-space-xl shadow-md text-center flex flex-col items-center gap-space-md">
+<!-- Ambient radial lighting highlight -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<!-- Ritual Tag -->
+<div class="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide">✨ TARGET REACHED • 33 OF 33</span>
+</div>
+<!-- Completion Icon Badge with glowing rings -->
+<div class="relative z-10 my-1">
+<div class="w-16 h-16 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-on-primary shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+</div>
+<!-- Heading & Barakah Copy -->
+<div class="relative z-10 flex flex-col gap-1 max-w-xs">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Alhamdulillah! Cycle Complete</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            May Allah accept your dhikr and fill your day with barakah and tranquility.
+          </p>
+</div>
+<!-- Completion Action Buttons Group -->
+<div class="relative z-10 flex flex-col w-full gap-space-xs pt-space-xs">
+<!-- Primary Radiant Button -->
+<button class="w-full py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md shadow-primary/25 transition-all flex items-center justify-center gap-2 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Continue Counting (+)</span>
+</button>
+<!-- Secondary Frosted Button -->
+<button class="w-full py-2.5 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Start New Session</span>
+</button>
+<!-- Tertiary Link -->
+<button class="w-full py-1.5 text-primary hover:text-secondary text-center font-label-md text-label-md font-semibold transition-colors mt-1">
+            Log &amp; View in History →
+          </button>
+</div>
+</div>
+</div>
+<!-- Section 4: Save Tasbeeh Preferences CTA -->
+<div class="pt-space-sm flex flex-col items-center gap-space-xs">
+<button class="w-full py-3.5 rounded-full bg-gradient-to-r from-primary to-secondary hover:opacity-95 text-on-primary font-headline-sm text-headline-sm font-semibold shadow-lg shadow-primary/30 active:scale-[0.99] transition-all flex items-center justify-center gap-2" id="save-settings-cta">
+<span>Save Tasbeeh Preferences</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+        Preferences sync automatically to your local device
+      </span>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic switch toggling micro-interaction
+  document.querySelectorAll('[role="switch"]').forEach(switchBtn => {
+    switchBtn.addEventListener('click', () => {
+      const isChecked = switchBtn.getAttribute('aria-checked') === 'true';
+      const newState = !isChecked;
+      switchBtn.setAttribute('aria-checked', newState);
+      
+      const thumb = switchBtn.querySelector('span');
+      if (newState) {
+        switchBtn.classList.remove('bg-surface-container-highest');
+        switchBtn.classList.add('bg-primary');
+        thumb.classList.remove('translate-x-1', 'bg-on-surface-variant/40');
+        thumb.classList.add('translate-x-6', 'bg-on-primary');
+      } else {
+        switchBtn.classList.remove('bg-primary');
+        switchBtn.classList.add('bg-surface-container-highest');
+        thumb.classList.remove('translate-x-6', 'bg-on-primary');
+        thumb.classList.add('translate-x-1', 'bg-on-surface-variant/40');
+      }
+    });
+  });
+
+  // Intensity Segmented Selector
+  const intensityBtns = document.querySelectorAll('.intensity-btn');
+  intensityBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      intensityBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    });
+  });
+
+  // Volume Presets Selector
+  const volumeBtns = document.querySelectorAll('.volume-btn');
+  const volumeIndicator = document.getElementById('volume-indicator');
+  const volumeMap = {
+    soft: 'Soft (30%)',
+    normal: 'Normal (75%)',
+    mute: 'Muted (0%)'
+  };
+
+  volumeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      volumeBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      
+      const volType = btn.getAttribute('data-volume');
+      if (volumeIndicator && volumeMap[volType]) {
+        volumeIndicator.textContent = volumeMap[volType];
+      }
+    });
+  });
+
+  // Save feedback toast effect
+  const saveBtn = document.getElementById('save-settings-cta');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const originalText = saveBtn.innerHTML;
+      saveBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+        <span>Saved Successfully!</span>
+      `;
+      saveBtn.classList.remove('from-primary', 'to-secondary');
+      saveBtn.classList.add('bg-tertiary-container');
+      
+      setTimeout(() => {
+        saveBtn.innerHTML = originalText;
+        saveBtn.classList.add('from-primary', 'to-secondary');
+        saveBtn.classList.remove('bg-tertiary-container');
+      }, 1600);
+    });
+  }
+
+  // Reset to default action
+  const resetBtn = document.getElementById('reset-defaults-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      // Re-arm all default switches
+      const togglesToDefaultTrue = ['haptic', 'sound', 'target-alert', 'awake', 'volume-keys'];
+      togglesToDefaultTrue.forEach(key => {
+        const toggle = document.querySelector(`[data-toggle="${key}"]`);
+        if (toggle && toggle.getAttribute('aria-checked') === 'false') {
+          toggle.click();
+        }
+      });
+
+      const togglesToDefaultFalse = ['fullscreen-tap', 'auto-loop'];
+      togglesToDefaultFalse.forEach(key => {
+        const toggle = document.querySelector(`[data-toggle="${key}"]`);
+        if (toggle && toggle.getAttribute('aria-checked') === 'true') {
+          toggle.click();
+        }
+      });
+
+      // Reset intensity & volume to gentle / soft
+      document.querySelector('[data-intensity="gentle"]')?.click();
+      document.querySelector('[data-volume="soft"]')?.click();
+    });
+  }
+</script></main></body></html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#002fc9", "secondary-fixed-dim": "#cebdff", "secondary-container": "#7f58ed", "surface-variant": "#dce1fd", "background": "#faf8ff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-surface": "#151b2e", "on-secondary-container": "#fffbff", "on-primary-container": "#fffbff", "tertiary": "#006768", "inverse-primary": "#bac3ff", "surface-container-low": "#f2f3ff", "on-secondary": "#ffffff", "inverse-surface": "#2a3044", "surface-bright": "#faf8ff", "outline-variant": "#c5c5d8", "outline": "#757687", "surface-dim": "#d4d9f4", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#eff0ff", "on-tertiary-container": "#f3fffe", "primary": "#2a49df", "tertiary-fixed": "#6df7f8", "on-primary": "#ffffff", "surface-container-high": "#e3e7ff", "tertiary-fixed-dim": "#4bdadc", "error": "#ba1a1a", "primary-fixed": "#dee0ff", "tertiary-container": "#008283", "on-tertiary-fixed": "#002020", "primary-container": "#4965f9", "surface-tint": "#2d4ce2", "secondary": "#663bd2", "surface-container": "#ebedff", "secondary-fixed": "#e8ddff", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#004f50", "on-background": "#151b2e", "on-primary-fixed": "#00105b", "on-surface-variant": "#444655", "on-secondary-fixed-variant": "#501dbc", "surface-container-highest": "#dce1fd", "primary-fixed-dim": "#bac3ff", "on-secondary-fixed": "#21005e", "surface": "#faf8ff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xl": "1.75rem", "space-lg": "1.25rem", "space-xs": "0.25rem", "margin": "1rem" }, fontFamily: { "headline-md": ["Inter"], "label-md": ["Inter"], "display-lg": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "metric-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "headline-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "metric-lg": ["28px", { "lineHeight": "34px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }] } } } };</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[120vw] h-[55vh] rounded-full bg-gradient-to-b from-surface-variant/40 via-surface-container/20 to-transparent blur-3xl"></div><div class="absolute top-[40%] right-[-10%] w-[80vw] h-[40vh] rounded-full bg-gradient-to-tr from-secondary-fixed/20 via-tertiary-fixed/10 to-transparent blur-3xl"></div></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface-container-lowest/70 backdrop-blur-2xl shadow-[0_4px_24px_-4px_rgba(80,110,180,0.08)]"><div class="h-16 px-margin flex items-center justify-between relative"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="absolute inset-x-16 flex items-center justify-center pointer-events-none"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate text-center font-semibold">Account &amp; Cloud Sync</h1></div><div class="flex items-center justify-end min-w-[44px] min-h-[44px]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(42,73,223,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe px-margin z-10 flex-1"><div class="flex flex-col w-full pb-32">
+<!-- Active Currency Highlight Card -->
+<section class="mt-2 w-full">
+<div class="relative overflow-hidden rounded-lg bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg shadow-sm">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-gradient-to-br from-primary-fixed/30 to-secondary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-space-md">
+<div class="w-13 h-13 w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-on-primary font-headline-md text-headline-md shadow-md shadow-primary/20">
+            ؋
+          </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">AFN</span>
+<span class="font-body-md text-body-md text-outline">·</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Afghan Afghani</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-normal">افغانۍ (Afghanistan)</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          Active Default
+        </span>
+</div>
+<div class="mt-space-md pt-space-sm border-t-0 bg-surface-container-low/60 rounded-DEFAULT p-space-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          All financial logs, expense budgets, and Zakat quotas calculate in this currency.
+        </p>
+</div>
+</div>
+</section>
+<!-- Search & Quick Filters -->
+<section class="mt-space-lg flex flex-col gap-space-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-space-md py-3 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm transition-all" id="currency-search" placeholder="Search currency name, code, or country..." type="text"/>
+</div>
+<!-- Category Chips (Horizontal Scrollable) -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="filter-chip px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95">
+        All
+      </button>
+<button class="filter-chip px-space-md py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95">
+        Middle East &amp; Central Asia
+      </button>
+<button class="filter-chip px-space-md py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95">
+        Major Global
+      </button>
+<button class="filter-chip px-space-md py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95">
+        Precious / Metals
+      </button>
+</div>
+</section>
+<!-- Currency List -->
+<section class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs py-1">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Available Currencies</span>
+<span class="font-label-sm text-label-sm text-outline">11 Currencies</span>
+</div>
+<!-- Item: AFN (Active) -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-primary-fixed/70 shadow-sm cursor-pointer transition-all active:scale-[0.99]" data-code="AFN">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0 shadow-sm">
+          ؋
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-primary-fixed font-bold">AFN</span>
+<span class="font-body-md text-body-md text-on-primary-fixed-variant truncate">Afghan Afghani</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-primary-fixed-variant/80">افغانۍ</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+</div>
+<!-- Item: USD -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="USD">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          $
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">USD</span>
+<span class="font-body-md text-body-md text-on-surface truncate">United States Dollar</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">US Dollar ($)</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: EUR -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="EUR">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          €
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">EUR</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Euro</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">European Union</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: GBP -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="GBP">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          £
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">GBP</span>
+<span class="font-body-md text-body-md text-on-surface truncate">British Pound Sterling</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Pound (£)</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: AED -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="AED">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          د.إ
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">AED</span>
+<span class="font-body-md text-body-md text-on-surface truncate">UAE Dirham</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">درهم إماراتي</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: SAR -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="SAR">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          ﷼
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SAR</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Saudi Riyal</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">ريال سعودي</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: QAR -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="QAR">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          ر.ق
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">QAR</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Qatari Riyal</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">ريال قطري</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: TRY -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="TRY">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          ₺
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">TRY</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Turkish Lira</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Türk Lirası</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: PKR -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="PKR">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          ₨
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">PKR</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Pakistani Rupee</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">پاکستانی روپیہ</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: CAD -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="CAD">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          $
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">CAD</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Canadian Dollar</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Dollar canadien</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Item: JPY -->
+<div class="currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]" data-code="JPY">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          ¥
+        </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">JPY</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Japanese Yen</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">日本円 (Yen)</span>
+</div>
+</div>
+<div class="radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+</section>
+<!-- Preferences Card -->
+<section class="mt-space-lg">
+<div class="rounded-lg bg-surface-container-lowest/75 backdrop-blur-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Display Preferences</h3>
+</div>
+<!-- Symbol Position Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Symbol Position</label>
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-DEFAULT bg-surface-container">
+<button class="py-2 rounded-DEFAULT font-label-md text-label-md font-medium text-on-surface-variant transition-colors flex items-center justify-center gap-1" id="pos-left" type="button">
+            Left <span class="text-outline font-normal">($100)</span>
+</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest shadow-sm font-label-md text-label-md font-semibold text-primary transition-colors flex items-center justify-center gap-1" id="pos-right" type="button">
+            Right <span class="text-primary/70 font-normal">(100 ؋)</span>
+</button>
+</div>
+</div>
+<!-- Decimal Precision Selector -->
+<div class="flex items-center justify-between pt-1">
+<div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Decimal Precision</p>
+<p class="font-body-sm text-body-sm text-outline">Standard bookkeeping format</p>
+</div>
+<div class="px-space-md py-1.5 rounded-full bg-surface-container font-label-md text-label-md font-semibold text-on-surface">
+          2 decimals (.00)
+        </div>
+</div>
+</div>
+</section>
+<!-- Sticky Confirmation Action Bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 p-margin bg-gradient-to-t from-background via-background/95 to-transparent pb-safe pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-primary via-primary-container to-secondary text-on-primary font-headline-sm text-headline-sm font-semibold shadow-lg shadow-primary/30 flex items-center justify-center gap-space-sm active:scale-[0.98] transition-transform" id="confirm-button" type="button">
+<span>Confirm Currency Selection</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Filter buttons toggle interaction
+  const filterChips = document.querySelectorAll('.filter-chip');
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.className = 'filter-chip px-space-md py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95';
+      });
+      chip.className = 'filter-chip px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm transition-transform active:scale-95';
+    });
+  });
+
+  // Currency Row Selection Toggle
+  const rows = document.querySelectorAll('.currency-row');
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      rows.forEach(r => {
+        r.className = 'currency-row relative flex items-center justify-between p-space-md rounded-lg bg-surface-container-lowest/70 backdrop-blur-md shadow-sm hover:bg-surface-container-lowest cursor-pointer transition-all active:scale-[0.99]';
+        const circle = r.querySelector('div:first-child > div');
+        if (circle) circle.className = 'w-10 h-10 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center shrink-0';
+        const slot = r.querySelector('.radio-slot');
+        if (slot) slot.className = 'radio-slot w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-transparent shrink-0';
+      });
+
+      row.className = 'currency-row relative flex items-center justify-between p-space-md rounded-lg bg-primary-fixed/70 shadow-sm cursor-pointer transition-all active:scale-[0.99]';
+      const activeCircle = row.querySelector('div:first-child > div');
+      if (activeCircle) activeCircle.className = 'w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0 shadow-sm';
+      const activeSlot = row.querySelector('.radio-slot');
+      if (activeSlot) {
+        activeSlot.className = 'radio-slot w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm shrink-0';
+      }
+    });
+  });
+
+  // Symbol Position Tabs
+  const posLeft = document.getElementById('pos-left');
+  const posRight = document.getElementById('pos-right');
+
+  posLeft.addEventListener('click', () => {
+    posLeft.className = 'py-2 rounded-DEFAULT bg-surface-container-lowest shadow-sm font-label-md text-label-md font-semibold text-primary transition-colors flex items-center justify-center gap-1';
+    posRight.className = 'py-2 rounded-DEFAULT font-label-md text-label-md font-medium text-on-surface-variant transition-colors flex items-center justify-center gap-1';
+  });
+
+  posRight.addEventListener('click', () => {
+    posRight.className = 'py-2 rounded-DEFAULT bg-surface-container-lowest shadow-sm font-label-md text-label-md font-semibold text-primary transition-colors flex items-center justify-center gap-1';
+    posLeft.className = 'py-2 rounded-DEFAULT font-label-md text-label-md font-medium text-on-surface-variant transition-colors flex items-center justify-center gap-1';
+  });
+
+  // Client-side quick search filtering
+  const searchInput = document.getElementById('currency-search');
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    rows.forEach(r => {
+      const text = r.textContent.toLowerCase();
+      r.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  });
+</script></main></body></html>
