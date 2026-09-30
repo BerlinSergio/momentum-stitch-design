@@ -1371,7 +1371,7 @@ class _ExpenseTrackerState extends State<ExpenseTracker> {
                   onTap: () => setState(() => _category = c),
                 );
               },
-              separatorBuilder: (_, __) => const SizedBox(width: 8),
+              separatorBuilder: (_, _) => const SizedBox(width: 8),
             ),
           ),
           const SizedBox(height: 12),
@@ -2195,6 +2195,7 @@ class _AddEditRoutinePageState extends State<AddEditRoutinePage> {
 
   @override
   Widget build(BuildContext context) {
+    final p = Pal.of(context);
     return MomentumScaffold(
       store: widget.store,
       title: widget.existing == null ? 'Add Routine' : 'Edit Routine',
@@ -2801,7 +2802,7 @@ class _NewEditTasbeehState extends State<NewEditTasbeeh> {
               padding: const EdgeInsets.only(bottom: 10),
               child: GlassCard(
                 onTap: () => setState(() => _selected = e.key),
-                tier: _selected == e.key ? GlassTier.deep : GlassTier.base,
+                tier: _selected == e.key ? GlassTier.elevated : GlassTier.base,
                 child: Row(
                   children: [
                     Container(
@@ -3364,7 +3365,7 @@ class _LongNoteEditorState extends State<LongNoteEditor> {
                       ),
                       child: isImage
                           ? Image.file(File(a['path'] ?? ''), fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) => Icon(MSym.brokenImage, color: p.textTertiary))
+                              errorBuilder: (_, _, _) => Icon(MSym.brokenImage, color: p.textTertiary))
                           : Icon(MSym.videocam, color: p.textSecondary, size: 28),
                     ),
                   );
@@ -3402,7 +3403,7 @@ class NoteMediaViewer extends StatelessWidget {
               ? ClipRRect(
                   borderRadius: BorderRadius.circular(MomentumTokens.radiusMd),
                   child: Image.file(File(media['path'] ?? ''),
-                      errorBuilder: (_, __, ___) => Icon(MSym.brokenImage, size: 64, color: p.textTertiary)),
+                      errorBuilder: (_, _, _) => Icon(MSym.brokenImage, size: 64, color: p.textTertiary)),
                 )
               : GlassCard(
                   padding: const EdgeInsets.all(40),
@@ -4190,7 +4191,12 @@ class _AppearancePageState extends State<AppearancePage> {
 
   Future<void> _setTheme(String mode) async {
     await widget.store.prefs.setString('themeMode', mode);
-    MomentumThemeBridge.callback?.call();
+    final themeMode = switch (mode) {
+      'light' => ThemeMode.light,
+      'dark' => ThemeMode.dark,
+      _ => ThemeMode.system,
+    };
+    await MomentumThemeBridge.callback?.call(themeMode);
     setState(() {});
   }
 
@@ -4926,7 +4932,6 @@ class _NotificationsPageState extends State<NotificationsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final p = Pal.of(context);
     return MomentumScaffold(
       store: widget.store,
       title: 'Notifications',
